@@ -1,4 +1,4 @@
-# Mtex
+# ExBook
 一个基于LaTex的刷题本模板
 
 # 使用方法
