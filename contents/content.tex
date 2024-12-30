@@ -5,7 +5,7 @@
 % 答案见原书P4
 \qnum \quad \qanswerloc{4}
 
-\begin{questions}[tr]
+\begin{questions}[strp]
     \begin{bbox}
         \question[2] 可以用\blankbox 定义一个完整的数据结构。
         \fourchoices{数据元素}{数据对象}{数据关系}{抽象数据类型}     
@@ -42,22 +42,22 @@
     \begin{bbox}
         \question[2] 分析以下各程序段， 求出算法的时间复杂度.
         \begin{lstlisting}[escapeinside={(*@}{@*)}]
-        (*@\ding{172}:@*)
-        i=1; k=0;
-        while(i<n-1){
-            k=k+10*i;
-            i++;
-        }
-    
-        (*@\ding{173}:@*)
-        y=0;
-        while((y+1)*(y+1)<=n)
-        y=y+1;
-    
-        (*@\ding{174}:@*)
-        for(i=0;i<n;i++)
-            for(j=0;j<m;j++)
-                a[i][j]=0;
+    (*@\ding{172}:@*)
+    i=1; k=0;
+    while(i<n-1){
+        k=k+10*i;
+        i++;
+    }
+
+    (*@\ding{173}:@*)
+    y=0;
+    while((y+1)*(y+1)<=n)
+    y=y+1;
+
+    (*@\ding{174}:@*)
+    for(i=0;i<n;i++)
+        for(j=0;j<m;j++)
+            a[i][j]=0;
     
         
         \end{lstlisting}
