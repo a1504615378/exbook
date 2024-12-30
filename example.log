@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.9.2)  30 DEC 2024 12:45
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.9.2)  31 DEC 2024 01:55
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -924,7 +924,7 @@ File: pgflibraryshapes.multipart.code.tex 2023-01-15 v3.1.10 (3.1.10)
 ))) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarypositioning.code.tex
 File: tikzlibrarypositioning.code.tex 2023-01-15 v3.1.10 (3.1.10)
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 80.
+Package hyperref Info: Option `colorlinks' set `true' on input line 94.
 \c@Question=\count378
 \myvertspace=\skip82
 \c@subquestionsi=\count379
@@ -972,11 +972,11 @@ Package fontspec Info:
 (fontspec)             Roman/BI/OT:script=latn;language=dflt;"
 
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
-(Font)                  OT1/cmr/m/n --> TU/TimesNewRoman(1)/m/n on input line 381.
+(Font)                  OT1/cmr/m/n --> TU/TimesNewRoman(1)/m/n on input line 443.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> TU/TimesNewRoman(1)/m/it on input line 381.
+(Font)                  OT1/cmr/m/it --> TU/TimesNewRoman(1)/m/it on input line 443.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> TU/TimesNewRoman(1)/b/n on input line 381.
+(Font)                  OT1/cmr/bx/n --> TU/TimesNewRoman(1)/b/n on input line 443.
 
 Package fontspec Info: 
 (fontspec)             Script 'Math' not explicitly supported within font
@@ -1033,42 +1033,42 @@ Package fontspec Info:
 (fontspec)             Roman/B/OT:script=math;language=dflt;"
 
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `normal' on input line 382.
+(Font)              `operators' in the math version `normal' on input line 444.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> TU/TimesNewRoman(3)/m/n on input line 382.
+(Font)                  OT1/cmr/m/n --> TU/TimesNewRoman(3)/m/n on input line 444.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `bold' on input line 382.
+(Font)              `operators' in the math version `bold' on input line 444.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> TU/TimesNewRoman(3)/b/n on input line 382.
+(Font)                  OT1/cmr/bx/n --> TU/TimesNewRoman(3)/b/n on input line 444.
 (/usr/local/texlive/2024/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2024/05/25 1.10b listings language file
 ) (/usr/local/texlive/2024/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2024/05/25 1.10b (Carsten Heinz)
 )
-Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 777.
-) (./example.aux (./contents/pre.aux) (./contents/content.aux))
+Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 1081.
+) (./example.aux (./contents/content.aux))
 \openout1 = `example.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 4.
-LaTeX Font Info:    ... okay on input line 4.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 4.
-LaTeX Font Info:    ... okay on input line 4.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 4.
-LaTeX Font Info:    ... okay on input line 4.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 4.
-LaTeX Font Info:    ... okay on input line 4.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 4.
-LaTeX Font Info:    ... okay on input line 4.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 4.
-LaTeX Font Info:    ... okay on input line 4.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 4.
-LaTeX Font Info:    ... okay on input line 4.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 4.
-LaTeX Font Info:    ... okay on input line 4.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 4.
-LaTeX Font Info:    ... okay on input line 4.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 4.
-LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: hyperref package is loaded.
 Package caption Info: listings package is loaded.
@@ -1078,21 +1078,21 @@ Package caption Info: End \AtBeginDocument code.
 *geometry* detected driver: xetex
 *geometry* verbose mode - [ preamble ] result:
 * driver: xetex
-* paper: a4paper
+* paper: custom
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: 
-* h-part:(L,W,R)=(51.21495pt, 495.07797pt, 51.21495pt)
-* v-part:(T,H,B)=(71.13188pt, 702.78308pt, 71.13188pt)
-* \paperwidth=597.50787pt
-* \paperheight=845.04684pt
-* \textwidth=495.07797pt
-* \textheight=702.78308pt
-* \oddsidemargin=-21.05504pt
-* \evensidemargin=-21.05504pt
-* \topmargin=-21.67392pt
+* h-part:(L,W,R)=(34.1433pt, 500.76852pt, 34.1433pt)
+* v-part:(T,H,B)=(28.45274pt, 640.18703pt, 42.67912pt)
+* \paperwidth=569.05511pt
+* \paperheight=711.3189pt
+* \textwidth=500.76852pt
+* \textheight=640.18703pt
+* \oddsidemargin=-38.1267pt
+* \evensidemargin=-38.1267pt
+* \topmargin=-80.81725pt
 * \headheight=12.0pt
-* \headsep=8.53581pt
+* \headsep=25.0pt
 * \topskip=10.0pt
 * \footskip=30.0pt
 * \marginparwidth=65.0pt
@@ -1109,13 +1109,13 @@ Package caption Info: End \AtBeginDocument code.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> TU/lmss/m/n on input line 4.
+(Font)                  OT1/cmss/m/n --> TU/lmss/m/n on input line 5.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> TU/lmss/b/n on input line 4.
+(Font)                  OT1/cmss/bx/n --> TU/lmss/b/n on input line 5.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 4.
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 5.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> TU/lmtt/b/n on input line 4.
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/b/n on input line 5.
 
 Package fontspec Info: 
 (fontspec)             Font family 'latinmodern-math.otf(0)' created for font
@@ -1145,9 +1145,9 @@ Package fontspec Info:
 (fontspec)             <->"[latinmodern-math.otf]/OT:script=math;language=dflt;"
 
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  TU/TimesNewRoman(3)/m/n --> TU/latinmodern-math.otf(1)/m/n on input line 4.
+(Font)                  TU/TimesNewRoman(3)/m/n --> TU/latinmodern-math.otf(1)/m/n on input line 5.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  TU/TimesNewRoman(3)/b/n --> TU/latinmodern-math.otf(1)/b/n on input line 4.
+(Font)                  TU/TimesNewRoman(3)/b/n --> TU/latinmodern-math.otf(1)/b/n on input line 5.
 
 Package fontspec Info: 
 (fontspec)             latinmodern-math scale = 1.0001.
@@ -1193,13 +1193,13 @@ Package fontspec Info:
 (fontspec)             <->s*[1.0001]"[latinmodern-math.otf]/OT:script=math;language=dflt;"
 
 LaTeX Font Info:    Encoding `OMS' has changed to `TU' for symbol font
-(Font)              `symbols' in the math version `normal' on input line 4.
+(Font)              `symbols' in the math version `normal' on input line 5.
 LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
-(Font)                  OMS/cmsy/m/n --> TU/latinmodern-math.otf(2)/m/n on input line 4.
+(Font)                  OMS/cmsy/m/n --> TU/latinmodern-math.otf(2)/m/n on input line 5.
 LaTeX Font Info:    Encoding `OMS' has changed to `TU' for symbol font
-(Font)              `symbols' in the math version `bold' on input line 4.
+(Font)              `symbols' in the math version `bold' on input line 5.
 LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
-(Font)                  OMS/cmsy/b/n --> TU/latinmodern-math.otf(2)/b/n on input line 4.
+(Font)                  OMS/cmsy/b/n --> TU/latinmodern-math.otf(2)/b/n on input line 5.
 
 Package fontspec Info: 
 (fontspec)             latinmodern-math scale = 0.9999.
@@ -1239,15 +1239,15 @@ Package fontspec Info:
 (fontspec)             <->s*[0.9999]"[latinmodern-math.otf]/OT:script=math;language=dflt;"
 
 LaTeX Font Info:    Encoding `OMX' has changed to `TU' for symbol font
-(Font)              `largesymbols' in the math version `normal' on input line 4.
+(Font)              `largesymbols' in the math version `normal' on input line 5.
 LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
-(Font)                  OMX/cmex/m/n --> TU/latinmodern-math.otf(3)/m/n on input line 4.
+(Font)                  OMX/cmex/m/n --> TU/latinmodern-math.otf(3)/m/n on input line 5.
 LaTeX Font Info:    Encoding `OMX' has changed to `TU' for symbol font
-(Font)              `largesymbols' in the math version `bold' on input line 4.
+(Font)              `largesymbols' in the math version `bold' on input line 5.
 LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
-(Font)                  OMX/cmex/m/n --> TU/latinmodern-math.otf(3)/b/n on input line 4.
+(Font)                  OMX/cmex/m/n --> TU/latinmodern-math.otf(3)/b/n on input line 5.
 \c@lstlisting=\count382
-Package hyperref Info: Link coloring ON on input line 4.
+Package hyperref Info: Link coloring ON on input line 5.
 (./example.out) (./example.out)
 \@outlinefile=\write4
 \openout4 = `example.out'.
@@ -1298,32 +1298,92 @@ Package fontspec Info:
 
 [1
 
-]
-\openout2 = `contents/pre.aux'.
+] (./example.toc)
+\tf@toc=\write5
+\openout5 = `example.toc'.
 
- (./contents/pre.tex
-LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 12.04628pt on input line 7.
-LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 8.4324pt on input line 7.
-LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 6.02315pt on input line 7.
-LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 12.0437pt on input line 7.
-LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 8.43059pt on input line 7.
-LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 6.02185pt on input line 7.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 7.
- (/usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Trying to load font information for U+msb on input line 7.
- (/usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-File: img/qr01.jpg Graphic file (type bmp)
-<img/qr01.jpg>
+
+
+
+LaTeX Font Warning: Font shape `TU/FandolKai-Regular(0)/b/n' undefined
+(Font)              using `TU/FandolKai-Regular(0)/m/n' instead on input line 20.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 91.0602pt, for example:
+(fancyhdr)                \setlength{\headheight}{91.0602pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-79.0602pt}.
+
+[1]
+\openout2 = `contents/content.aux'.
+
+ (./contents/content.tex (/usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/umsa.fd) (/usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/umsb.fd)
+File: img/water.png Graphic file (type bmp)
+<img/water.png>
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 91.0602pt, for example:
+(fancyhdr)                \setlength{\headheight}{91.0602pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-79.0602pt}.
+
+[2
+
+
+
+
+]
+File: img/water.png Graphic file (type bmp)
+<img/water.png>
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 91.0602pt, for example:
+(fancyhdr)                \setlength{\headheight}{91.0602pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-79.0602pt}.
+
+[3]
+File: img/water.png Graphic file (type bmp)
+<img/water.png>
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 91.0602pt, for example:
+(fancyhdr)                \setlength{\headheight}{91.0602pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-79.0602pt}.
+
+[4]
+File: img/water.png Graphic file (type bmp)
+<img/water.png>
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 91.0602pt, for example:
+(fancyhdr)                \setlength{\headheight}{91.0602pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-79.0602pt}.
+
+[5]
+File: img/water.png Graphic file (type bmp)
+<img/water.png>
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 91.0602pt, for example:
+(fancyhdr)                \setlength{\headheight}{91.0602pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-79.0602pt}.
+
+[6]
 
 Package fontspec Info: 
 (fontspec)             Script 'CJK' not explicitly supported within font
@@ -1331,8 +1391,6 @@ Package fontspec Info:
 (fontspec)             it is okay then ignore this warning. Otherwise a
 (fontspec)             different font should be chosen.
 
-LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <12.045> not available
-(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 21.
 
 Package fontspec Info: 
 (fontspec)             Font family 'FandolFang-Regular(0)' created for font
@@ -1345,89 +1403,52 @@ Package fontspec Info:
 (fontspec)             - 'normal' (m/n) with NFSS spec.:
 (fontspec)             <->"[FandolFang-Regular.otf]/OT:script=hani;language=dflt;"
 
-
-
-[1
-
-
-]) (./example.toc)
-\tf@toc=\write5
-\openout5 = `example.toc'.
-
-
-
-[2
-
-
-
-]
-\openout2 = `contents/content.aux'.
-
- (./contents/content.tex
-
-Package fontspec Info: 
-(fontspec)             Script 'CJK' not explicitly supported within font
-(fontspec)             'FandolSong-Regular'. Check the typeset output, and if
-(fontspec)             it is okay then ignore this warning. Otherwise a
-(fontspec)             different font should be chosen.
-
-
-Package fontspec Info: 
-(fontspec)             Font family 'FandolSong-Regular(1)' created for font
-(fontspec)             'FandolSong-Regular' with options
-(fontspec)             [Script={CJK},Extension={.otf},BoldFont={FandolSong-Bold}].
-(fontspec)              
-(fontspec)              This font family consists of the following NFSS
-(fontspec)             series/shapes:
-(fontspec)              
-(fontspec)             - 'normal' (m/n) with NFSS spec.:
-(fontspec)             <->"[FandolSong-Regular.otf]/OT:script=hani;language=dflt;"
-(fontspec)             - 'bold' (b/n) with NFSS spec.:
-(fontspec)             <->"[FandolSong-Bold.otf]/OT:script=hani;language=dflt;"
-
-File: img/water.png Graphic file (type bmp)
-<img/water.png>
-File: img/water.png Graphic file (type bmp)
-<img/water.png>
-File: img/water.png Graphic file (type bmp)
-<img/water.png>
-File: img/water.png Graphic file (type bmp)
-<img/water.png>
+LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <12.045> not available
+(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 47.
 File: img/water.png Graphic file (type bmp)
 <img/water.png>
 
 
-[3
 
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 91.0602pt, for example:
+(fancyhdr)                \setlength{\headheight}{91.0602pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-79.0602pt}.
 
-
-
-]
+[7]
 File: img/water.png Graphic file (type bmp)
 <img/water.png>
-File: img/water.png Graphic file (type bmp)
-<img/water.png>
 
 
-[4])
 
-[5] 
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 91.0602pt, for example:
+(fancyhdr)                \setlength{\headheight}{91.0602pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-79.0602pt}.
+
+[8]) 
 enddocument/afterlastpage: lastpage setting LastPage.
-(./example.aux (./contents/pre.aux) (./contents/content.aux))
+(./example.aux (./contents/content.aux))
  ***********
 LaTeX2e <2024-06-01> patch level 2
 L3 programming layer <2022/08/05>
  ***********
+
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
 Package rerunfilecheck Info: File `example.out' has not changed.
 (rerunfilecheck)             Checksum: 0FF849DE1537CC0C34399F53F6671C09;224.
  ) 
 Here is how much of TeX's memory you used:
- 38889 strings out of 474235
- 799592 string characters out of 5742254
- 1965609 words of memory out of 5000000
- 60858 multiletter control sequences out of 15000+600000
- 567482 words of font info for 136 fonts, out of 8000000 for 9000
+ 38936 strings out of 474235
+ 796301 string characters out of 5742254
+ 1962609 words of memory out of 5000000
+ 60914 multiletter control sequences out of 15000+600000
+ 567122 words of font info for 135 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 108i,13n,126p,460b,1281s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 108i,16n,126p,460b,1268s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on example.xdv (6 pages, 69640 bytes).
+Output written on example.xdv (9 pages, 109112 bytes).
