@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.9.2)  31 DEC 2024 01:55
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.9.2)  31 DEC 2024 02:44
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -924,7 +924,7 @@ File: pgflibraryshapes.multipart.code.tex 2023-01-15 v3.1.10 (3.1.10)
 ))) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarypositioning.code.tex
 File: tikzlibrarypositioning.code.tex 2023-01-15 v3.1.10 (3.1.10)
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 94.
+Package hyperref Info: Option `colorlinks' set `true' on input line 97.
 \c@Question=\count378
 \myvertspace=\skip82
 \c@subquestionsi=\count379
@@ -972,11 +972,11 @@ Package fontspec Info:
 (fontspec)             Roman/BI/OT:script=latn;language=dflt;"
 
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
-(Font)                  OT1/cmr/m/n --> TU/TimesNewRoman(1)/m/n on input line 443.
+(Font)                  OT1/cmr/m/n --> TU/TimesNewRoman(1)/m/n on input line 422.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> TU/TimesNewRoman(1)/m/it on input line 443.
+(Font)                  OT1/cmr/m/it --> TU/TimesNewRoman(1)/m/it on input line 422.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> TU/TimesNewRoman(1)/b/n on input line 443.
+(Font)                  OT1/cmr/bx/n --> TU/TimesNewRoman(1)/b/n on input line 422.
 
 Package fontspec Info: 
 (fontspec)             Script 'Math' not explicitly supported within font
@@ -1033,19 +1033,19 @@ Package fontspec Info:
 (fontspec)             Roman/B/OT:script=math;language=dflt;"
 
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `normal' on input line 444.
+(Font)              `operators' in the math version `normal' on input line 423.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> TU/TimesNewRoman(3)/m/n on input line 444.
+(Font)                  OT1/cmr/m/n --> TU/TimesNewRoman(3)/m/n on input line 423.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `bold' on input line 444.
+(Font)              `operators' in the math version `bold' on input line 423.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> TU/TimesNewRoman(3)/b/n on input line 444.
+(Font)                  OT1/cmr/bx/n --> TU/TimesNewRoman(3)/b/n on input line 423.
 (/usr/local/texlive/2024/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2024/05/25 1.10b listings language file
 ) (/usr/local/texlive/2024/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2024/05/25 1.10b (Carsten Heinz)
 )
-Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 1081.
+Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 1065.
 ) (./example.aux (./contents/content.aux))
 \openout1 = `example.aux'.
 
@@ -1078,21 +1078,22 @@ Package caption Info: End \AtBeginDocument code.
 *geometry* detected driver: xetex
 *geometry* verbose mode - [ preamble ] result:
 * driver: xetex
-* paper: custom
+* paper: a4paper
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
-* modes: 
-* h-part:(L,W,R)=(34.1433pt, 500.76852pt, 34.1433pt)
-* v-part:(T,H,B)=(28.45274pt, 640.18703pt, 42.67912pt)
-* \paperwidth=569.05511pt
-* \paperheight=711.3189pt
-* \textwidth=500.76852pt
-* \textheight=640.18703pt
-* \oddsidemargin=-38.1267pt
-* \evensidemargin=-38.1267pt
-* \topmargin=-80.81725pt
+* bindingoffset: 28.45274pt
+* modes: twoside 
+* h-part:(L,W,R)=(51.21495pt, 466.62523pt, 51.21495pt)
+* v-part:(T,H,B)=(71.13188pt, 702.78308pt, 71.13188pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=466.62523pt
+* \textheight=702.78308pt
+* \oddsidemargin=7.3977pt
+* \evensidemargin=-21.05504pt
+* \topmargin=-27.36447pt
 * \headheight=12.0pt
-* \headsep=25.0pt
+* \headsep=14.22636pt
 * \topskip=10.0pt
 * \footskip=30.0pt
 * \marginparwidth=65.0pt
@@ -1103,8 +1104,8 @@ Package caption Info: End \AtBeginDocument code.
 * \voffset=0.0pt
 * \mag=1000
 * \@twocolumnfalse
-* \@twosidefalse
-* \@mparswitchfalse
+* \@twosidetrue
+* \@mparswitchtrue
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
@@ -1257,25 +1258,6 @@ File: img/cov01.jpg Graphic file (type bmp)
 
 Package fontspec Info: 
 (fontspec)             Script 'CJK' not explicitly supported within font
-(fontspec)             'FandolKai-Regular'. Check the typeset output, and if
-(fontspec)             it is okay then ignore this warning. Otherwise a
-(fontspec)             different font should be chosen.
-
-
-Package fontspec Info: 
-(fontspec)             Font family 'FandolKai-Regular(0)' created for font
-(fontspec)             'FandolKai-Regular' with options
-(fontspec)             [Script={CJK},Extension={.otf}].
-(fontspec)              
-(fontspec)              This font family consists of the following NFSS
-(fontspec)             series/shapes:
-(fontspec)              
-(fontspec)             - 'normal' (m/n) with NFSS spec.:
-(fontspec)             <->"[FandolKai-Regular.otf]/OT:script=hani;language=dflt;"
-
-
-Package fontspec Info: 
-(fontspec)             Script 'CJK' not explicitly supported within font
 (fontspec)             'FandolHei-Regular'. Check the typeset output, and if
 (fontspec)             it is okay then ignore this warning. Otherwise a
 (fontspec)             different font should be chosen.
@@ -1295,8 +1277,38 @@ Package fontspec Info:
 (fontspec)             <->"[FandolHei-Bold.otf]/OT:script=hani;language=dflt;"
 
 
+Package fontspec Info: 
+(fontspec)             Script 'CJK' not explicitly supported within font
+(fontspec)             'FandolKai-Regular'. Check the typeset output, and if
+(fontspec)             it is okay then ignore this warning. Otherwise a
+(fontspec)             different font should be chosen.
+
+
+Package fontspec Info: 
+(fontspec)             Font family 'FandolKai-Regular(0)' created for font
+(fontspec)             'FandolKai-Regular' with options
+(fontspec)             [Script={CJK},Extension={.otf}].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->"[FandolKai-Regular.otf]/OT:script=hani;language=dflt;"
+
+
 
 [1
+
+]
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.45398pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.45398pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.45398pt}.
+
+[2
 
 ] (./example.toc)
 \tf@toc=\write5
@@ -1305,85 +1317,47 @@ Package fontspec Info:
 
 
 
-LaTeX Font Warning: Font shape `TU/FandolKai-Regular(0)/b/n' undefined
-(Font)              using `TU/FandolKai-Regular(0)/m/n' instead on input line 20.
-
-
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 91.0602pt, for example:
-(fancyhdr)                \setlength{\headheight}{91.0602pt}.
+(fancyhdr)                Make it at least 14.45398pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.45398pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-79.0602pt}.
+(fancyhdr)                \addtolength{\topmargin}{-2.45398pt}.
 
-[1]
+[3
+
+]
 \openout2 = `contents/content.aux'.
 
  (./contents/content.tex (/usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/umsa.fd) (/usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/umsb.fd)
+Underfull \hbox (badness 10000) in paragraph at lines 11--12
+
+ []
+
 File: img/water.png Graphic file (type bmp)
 <img/water.png>
 
+Underfull \hbox (badness 10000) in paragraph at lines 16--17
 
+ []
 
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 91.0602pt, for example:
-(fancyhdr)                \setlength{\headheight}{91.0602pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-79.0602pt}.
-
-[2
-
-
-
-
-]
+File: img/water.png Graphic file (type bmp)
+<img/water.png>
 File: img/water.png Graphic file (type bmp)
 <img/water.png>
 
+Underfull \hbox (badness 10000) in paragraph at lines 34--35
 
+ []
 
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 91.0602pt, for example:
-(fancyhdr)                \setlength{\headheight}{91.0602pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-79.0602pt}.
-
-[3]
 File: img/water.png Graphic file (type bmp)
 <img/water.png>
 
+Underfull \hbox (badness 10000) in paragraph at lines 39--40
 
+ []
 
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 91.0602pt, for example:
-(fancyhdr)                \setlength{\headheight}{91.0602pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-79.0602pt}.
-
-[4]
 File: img/water.png Graphic file (type bmp)
 <img/water.png>
-
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 91.0602pt, for example:
-(fancyhdr)                \setlength{\headheight}{91.0602pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-79.0602pt}.
-
-[5]
-File: img/water.png Graphic file (type bmp)
-<img/water.png>
-
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 91.0602pt, for example:
-(fancyhdr)                \setlength{\headheight}{91.0602pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-79.0602pt}.
-
-[6]
 
 Package fontspec Info: 
 (fontspec)             Script 'CJK' not explicitly supported within font
@@ -1411,44 +1385,45 @@ File: img/water.png Graphic file (type bmp)
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 91.0602pt, for example:
-(fancyhdr)                \setlength{\headheight}{91.0602pt}.
+(fancyhdr)                Make it at least 14.45398pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.45398pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-79.0602pt}.
+(fancyhdr)                \addtolength{\topmargin}{-2.45398pt}.
 
-[7]
+[4
+
+
+
+
+]
 File: img/water.png Graphic file (type bmp)
 <img/water.png>
-
+)
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 91.0602pt, for example:
-(fancyhdr)                \setlength{\headheight}{91.0602pt}.
+(fancyhdr)                Make it at least 14.45398pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.45398pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-79.0602pt}.
+(fancyhdr)                \addtolength{\topmargin}{-2.45398pt}.
 
-[8]) 
+[5] 
 enddocument/afterlastpage: lastpage setting LastPage.
 (./example.aux (./contents/content.aux))
  ***********
 LaTeX2e <2024-06-01> patch level 2
 L3 programming layer <2022/08/05>
  ***********
-
-
-LaTeX Font Warning: Some font shapes were not available, defaults substituted.
-
 Package rerunfilecheck Info: File `example.out' has not changed.
 (rerunfilecheck)             Checksum: 0FF849DE1537CC0C34399F53F6671C09;224.
  ) 
 Here is how much of TeX's memory you used:
- 38936 strings out of 474235
- 796301 string characters out of 5742254
- 1962609 words of memory out of 5000000
- 60914 multiletter control sequences out of 15000+600000
- 567122 words of font info for 135 fonts, out of 8000000 for 9000
+ 38791 strings out of 474235
+ 793019 string characters out of 5742254
+ 1965609 words of memory out of 5000000
+ 60773 multiletter control sequences out of 15000+600000
+ 567090 words of font info for 131 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 108i,16n,126p,460b,1268s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 108i,13n,126p,460b,1268s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on example.xdv (9 pages, 109112 bytes).
+Output written on example.xdv (5 pages, 57576 bytes).

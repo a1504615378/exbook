@@ -32,6 +32,9 @@
 \newif\if@list  \@listfalse
 \DeclareOption{list}{\@listtrue}
 
+\newif\if@printmode  \@printmodefalse
+\DeclareOption{printmode}{\@printmodetrue}
+
 
 % 1. 定义默认页面格式
 \def\@pageformat{standard} % 默认格式为 "standard"
@@ -400,30 +403,6 @@
 \newcommand\Rhead[1]{\def\ExBook@value@Rhead{\textbf{#1}}}
 
 
-% \newcommand{\PreTitle}[1][ExBook · 刷题本模板]{\textbf{#1}} % 设置系列标题
-% \newcommand{\Title}[1][此处填写主标题]{\heiti #1} % 设置标题
-% \newcommand{\TitleDescription}[1][此处填写副标题]{#1} % 设置副标题
-
-% \newcommand{\TypeOne}[1][A4紧凑版]{#1}
-% \newcommand{\TypeTwo}[1][A4标准版]{#1}
-% \newcommand{\TypeThree}[1][横版Pad版]{#1}
-% \newcommand{\TypeFour}[1][A4宽松版]{#1}
-% \newcommand{\TypeFive}[1][A4单题版]{#1}
-% \newcommand{\TypeSix}[1][竖版Pad版]{#1}
-% \newcommand{\motto}[1][心无旁骛，行稳致远。]{\kaishu #1}
-% \newcommand{\Creator}[1][研小布]{\textbf{制作人：#1}}
-% \newcommand{\UpdateTime}[1][\today]{\textbf{最后更新时间：#1}}
-
-
-% \newcommand{\Lhead}[1][微信公众号·研小布]{\textbf{#1}}
-% \newcommand{\Chead}[1][2025考研]{\textbf{#1}}
-
-% \newcommand\entitle[1]{\def\XMU@value@entitle{#1}} 
-
-% 封面使用的标题文字
-\newcommand{\RedBook}{小红书·石头剪刀布（ID：4131632984）}
-
-
 % 定义字符串宏，用来自定义页眉
 
 \newcommand{\LheadC}{公众号·研小布·}
@@ -456,7 +435,7 @@
 
 % listings代码样式
 \lstset{
-%   language=C, % 设置默认语言
+  language=C, % 设置默认语言
 %   basicstyle=\ttfamily\small, % 设置基本字体样式
     % keywordstyle=\color{blue}, % 设置关键字样式
     % commentstyle=\color{green!40!black}, % 设置注释样式
@@ -468,7 +447,6 @@
 %   frame=single, % 设置代码框
 %   backgroundcolor=\color{gray!10}, % 设置背景颜色
 %   captionpos=b, % 设置标题位置为底部
-    language=C, 
     % numbers=left, 
     basicstyle=\ttfamily, 
     backgroundcolor=\color{themeColor!6.2}, 
@@ -477,9 +455,15 @@
     escapeinside={(*@}{@*)}, % 设置逃逸字符
 }
 
+
 \ifcase\myPageFormat
+    \if@printmode
+        \geometry{a4paper, twoside, left=18mm, right=18mm, top=25mm, bottom=25mm, headsep=5mm, bindingoffset = 1cm}
+    \else
+        \geometry{a4paper, left=18mm, right=18mm, top=25mm, bottom=25mm, headsep=5mm}   
+    \fi
     % 当变量为0时，选择页面格式为a
-    \geometry{a4paper, left=18mm, right=18mm, top=25mm, bottom=25mm, headsep=3mm}
+    % \geometry{a4paper, twoside, left=18mm, right=18mm, top=25mm, bottom=25mm, headsep=5mm, bindingoffset = 1cm}
 
     % 自定义封面样式
     \renewcommand{\maketitle}{
@@ -491,29 +475,35 @@
 
         \begin{tikzpicture}[remember picture, overlay]
             \fill[themeColor!6.2] ([yshift=2cm]current page.west) rectangle ++(\paperwidth,2cm);
-            \node[anchor=west, align=left, text width=\textwidth, inner sep=0] at ([yshift=3cm, xshift=1cm]current page.west) {\color{themeColor} \fontsize{24pt}{0}{\ExBook@value@PreTitle}};
-            \node[anchor=west, align=left, text width=\textwidth, inner sep=0] at ([yshift=0cm, xshift=1cm]current page.west) {\fontsize{42pt}{0}{\ExBook@value@Title}};
-            \node[anchor=west, align=left, text width=\textwidth, inner sep=0] at ([yshift=-1.8cm, xshift=1cm]current page.west) {\fontsize{36pt}{0}{\ExBook@value@TitleDescription}};
+            \node[anchor=west, align=left, text width=\textwidth, inner sep=0] at ([yshift=3cm, xshift=1.5cm]current page.west) {\color{themeColor} \fontsize{24pt}{0}{\ExBook@value@PreTitle}};
+            \node[anchor=west, align=left, text width=\textwidth, inner sep=0] at ([yshift=0cm, xshift=1.5cm]current page.west) {\fontsize{36pt}{0}{\ExBook@value@Title}};
+            \node[anchor=west, align=left, text width=\textwidth, inner sep=0] at ([yshift=-1.8cm, xshift=1.5cm]current page.west) {\fontsize{32pt}{0}{\ExBook@value@TitleDescription}};
             \fill[themeColor!6.2] (current page.south west) rectangle ++(\paperwidth,2cm);
             \node[anchor=south, align=center] at ([yshift=0.8cm]current page.south) {\color{themeColor}\fontsize{16pt}{0}{\ExBook@value@Creator}};
             \node[anchor=south, align=center] at ([yshift=0.2cm]current page.south) {\color{themeColor}\fontsize{12pt}{0}{\ExBook@value@UpdateTime}};
         \end{tikzpicture}
 
         \begin{tikzpicture}[remember picture, overlay]
-            \node[anchor=south, align=center] at ([yshift=3cm]current page.south) {\color{themeColor}\fontsize{12pt}{0}{\ExBook@value@motto}};
+            \node[anchor=south, align=center] at ([yshift=2.5cm]current page.south) {\color{themeColor}\fontsize{12pt}{0}{\ExBook@value@motto}};
         \end{tikzpicture}
 
         \begin{tikzpicture}[remember picture, overlay]
             \fill[themeColor!6.2, rounded corners=16pt] ([yshift=4cm, xshift=14cm]current page.south west) rectangle ++(5cm,2cm);
-            \node[anchor=south, align=center] at ([yshift=4.5cm, xshift=16.5cm]current page.south west) {\color{themeColor}\fontsize{24pt}{0}\ExBook@value@TypeOne};
+            \node[anchor=south, align=center] at ([yshift=4.5cm, xshift=16.5cm]current page.south west) {\color{themeColor}\fontsize{22pt}{0}\ExBook@value@TypeOne};
         \end{tikzpicture}
-       
+        
     \end{titlepage}
+    \if@printmode
+        \clearpage
+        \null
+        \clearpage
+    \fi
+    
     }
 
-
-    \pagestyle{fancy} % 启用自定义页眉
-
+    % 启用自定义页眉
+    \pagestyle{fancy}
+    
     % 清除当前的页眉和页脚设置
     \fancyhf{}
 
@@ -537,19 +527,13 @@
 
     \newenvironment{bbox}
     {
-    % \clearpage 
-    \begin{minipage}{\textwidth}
+        \begin{minipage}{\textwidth}
     }
     {
-    % \begin{solution}{\the\mylength}
-    % \end{solution} 
-    % \begin{solution}{\the\mylength}
-    % \end{solution} 
-    \end{minipage}
-    \begin{tikzpicture}[overlay,remember picture]
-        \node[anchor=east, opacity=0.01] at ([xshift=-1.2cm, yshift=4.8cm]current page.south east)  {\includegraphics[width=0.16\textwidth]{img/water.png}}; 
-    \end{tikzpicture}
-    % \newpage % 在环境结束时插入新页面
+        \end{minipage}
+        \begin{tikzpicture}[overlay,remember picture]
+            \node[anchor=east, opacity=0.01] at ([xshift=-1.2cm, yshift=4.8cm]current page.south east)  {\includegraphics[width=0.16\textwidth]{img/water.png}}; 
+        \end{tikzpicture}
     }
 \or
     % 当变量为1时，选择页面格式为b
@@ -1082,6 +1066,7 @@
 
 \AtBeginDocument{
 	\pagenumbering{arabic}  % 使用阿拉伯数字页码
+    
 }
 
 
