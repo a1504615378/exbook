@@ -88,7 +88,7 @@
 \RequirePackage{multicol} 
 \RequirePackage{bm} 
 \RequirePackage{fontawesome5} 
-\RequirePackage{fontawesome5} 
+\RequirePackage{graphicx} 
 \usetikzlibrary{fadings}
 \usetikzlibrary{shapes, positioning}
 
@@ -157,17 +157,17 @@
 }
 
 % 定义新增试题命令
-\newcommand{\question}[1][0]{
+\newcommand{\question}{
 	\stepcounter{Question}
 	\if@list
-		\item \if@showscore \kaishu ( #1 分) \songti \fi
+		\item 
 	\else
 		\vspace{2mm}
 
 		% 【\textcolor{black!50}{\kaishu {研小布}} \labelitemi \;\textbf{\arabic{Question}}】
 		% \textbf{\arabic{Question}}.
 		\arabic{Question}.
-		\if@showscore \kaishu ( #1 分) \songti \fi
+		% \if@showscore \kaishu ( #1 分) \songti \fi
 	\fi
 }
 
@@ -266,7 +266,7 @@
 		{
 			\begin{tabularx}{\linewidth}{XXXX}
 				\setlength\tabcolsep{0pt}
-				A.~#1.~~~  & B.~#2~~~ & C.~#3~~~ & D.~#4~~~\\ 
+				A.~#1~~~  & B.~#2~~~ & C.~#3~~~ & D.~#4~~~\\ 
 				% A.~#1~~~  & B.~#2~~~ & C.~#3~~~ & D.~#4~~~\\ 
 			\end{tabularx}
 		}%
@@ -410,7 +410,9 @@
 
 
 \newlength{\mylength} % 定义一个长度，该长度为每个题目后面的空闲高度
-\newcommand{\blankbox}{(\hspace{1.2em})} % 空括号，或者使用 \quad 替代 \hspace{1cm}
+\newcommand{\blankbox}{（\hspace{1.5em}）} % 空括号，或者使用 \quad 替代 \hspace{1cm}
+\newcommand{\eblankbox}{(\hspace{1.5em})} % 空括号，或者使用 \quad 替代 \hspace{1cm}
+\newcommand{\blankline}{\underline{\hspace{3em}}} % 空括号，或者使用 \quad 替代 \hspace{1cm}
 \newcommand{\mycustomtext}{\textcolor{black!38}{\selectfont 【微信公众号·研小布】}}
 \newcommand{\qanswerloc}[1]{\textcolor{themeColor}{\selectfont \ding{226} 此部分答案见原书P#1}}
 \newcommand{\qnum}{\textcolor{black}{\selectfont \textbf{一、单项选择题}}}
@@ -455,8 +457,10 @@
     escapeinside={(*@}{@*)}, % 设置逃逸字符
 }
 
-
 \ifcase\myPageFormat
+ %                         *****************
+ %                         **   A4紧凑版   **
+ %                         *****************
     \if@printmode
         \geometry{a4paper, twoside, left=18mm, right=18mm, top=25mm, bottom=25mm, headsep=5mm, bindingoffset = 1cm}
     \else
@@ -496,6 +500,7 @@
     \if@printmode
         \clearpage
         \null
+        \thispagestyle{empty}
         \clearpage
     \fi
     
@@ -527,16 +532,19 @@
 
     \newenvironment{bbox}
     {
-        \begin{minipage}{\textwidth}
+        % \begin{minipage}{\textwidth}
     }
     {
-        \end{minipage}
-        \begin{tikzpicture}[overlay,remember picture]
-            \node[anchor=east, opacity=0.01] at ([xshift=-1.2cm, yshift=4.8cm]current page.south east)  {\includegraphics[width=0.16\textwidth]{img/water.png}}; 
-        \end{tikzpicture}
+        % \end{minipage}
+        % \begin{tikzpicture}[overlay,remember picture]
+        %     \node[anchor=east, opacity=0.01] at ([xshift=-1.2cm, yshift=4.8cm]current page.south east)  {\includegraphics[width=0.16\textwidth]{img/water.png}}; 
+        % \end{tikzpicture}
     }
+    
 \or
-    % 当变量为1时，选择页面格式为b
+ %                         *****************
+ %                         **   A4标准版   **
+ %                         *****************
     \geometry{a4paper, left=18mm, right=18mm, top=25mm, bottom=25mm, headsep=3mm}
 
     % 自定义封面样式
@@ -612,6 +620,9 @@
     % \newpage % 在环境结束时插入新页面
     }
 \or
+ %                         *****************
+ %                         **   横Pad版    **
+ %                         *****************
     % 当变量为2时，选择页面格式为c
     \newcommand{\myCFormat}{1}
     \geometry{paperheight=150mm, paperwidth=200mm,left=12mm,right=12mm,top=10mm,bottom=15mm}
@@ -738,7 +749,9 @@
     \newpage % 在环境结束时插入新页面
     }
 \or
-
+ %                         *****************
+ %                         **   A4宽松版   **
+ %                         *****************
     \geometry{a4paper, left=18mm, right=18mm, top=25mm, bottom=25mm, headsep=3mm}
 
     % 自定义封面样式
@@ -815,6 +828,9 @@
     }
 
 \or
+ %                         *****************
+ %                         **   A4单题版   **
+ %                         *****************
     % 当变量为1时，选择页面格式为b
     \geometry{a4paper, left=18mm, right=18mm, top=25mm, bottom=25mm, headsep=3mm}
 
@@ -892,7 +908,9 @@
     }
 
 \or
-
+ %                         *****************
+ %                         **   竖Pad版   **
+ %                         *****************
     \newcommand{\myCFormat}{1}
     \geometry{paperheight=250mm, paperwidth=200mm,left=12mm,right=12mm,top=10mm,bottom=15mm}
     
@@ -1060,13 +1078,14 @@
 {2pt plus 2pt minus 2pt} % 上边距
 {2pt plus 2pt minus 2pt} % 下边距
 
+
+
 \hypersetup{
   bookmarksnumbered=true
 } % PDF阅读器显示侧边目录
 
 \AtBeginDocument{
 	\pagenumbering{arabic}  % 使用阿拉伯数字页码
-    
 }
 
 

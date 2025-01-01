@@ -1,79 +1,147 @@
-\clearpage
-\clearpage
-\section{绪论}
-\subsection{数据结构的基本概念}
-% 答案见原书P4
-\qnum \quad \qanswerloc{4}
+\section{章名}
+\subsection{第一章第一节}
 
 \begin{questions}[tr]
     \begin{bbox}
-        \question[2] 可以用\blankbox 定义一个完整的数据结构。
+        \question   设$f(x)$满足$2f(x)+f(1-x)=x^2$，则$f(x)=\blankline.$
+    \end{bbox}
+
+    \begin{bbox}
+        \question   设$f(x)=2x+\sqrt{x^{2}+2x+1}$，$g(x)=
+        \begin{cases}
+        x+2, & x\geqslant0, \\
+        x-1, & x<0,  
+        \end{cases}$，则$g[f(x)]= \blankline$.
+            \end{bbox}
+
+    \begin{bbox}
+ 
+        \question   设某项目用于 发和宣传 总成本为$a$万元 当 发和宣传所 成本分别为$x$万元和 $y$ 万元时， 收益为$R=2x^{\frac{1}{3}}y^{\frac{1}{2}}$万元,则收 最大时，研发所用成本为\blankline.
+        
+    \end{bbox}
+
+    \begin{bbox}
+        \question   已知 $\lim\limits_{x\to0}\dfrac{f(x)}{x}$ 存在，且函数
+        $$f(x)=\ln(1+x)+2x\bullet\lim_{x\to0}\frac{f(x)}{\sin x}$$
+        则$\lim\limits_{x\to0}\dfrac{f(x)}{x}=$ \blankline.
+    \end{bbox}
+    \begin{bbox}
+        \question   可以用\blankbox 定义一个完整的数据结构。
         \fourchoices{数据元素}{数据对象}{数据关系}{抽象数据类型}     
     \end{bbox}
+    \begin{bbox}
+        \question   若某算法的空间复杂度为$O(1)$，则表示该算法\blankbox 。
+        \fourchoices
+        {不需要任何辅助空间}
+        {所需辅助空间大小与问题规模$n$无关}
+        {不需要任何空间}
+        {所需空间大小与问题规模$n$无关}
+    \end{bbox}
 
     \begin{bbox}
-        \question[2] 以下数据结构中，\blankbox 是非线性数据结构。
-        \fourchoices{树}{字符串}{队列}{栈}
+        \question   下列关于时间复杂度的函数中，时间复杂度最小的是\blankbox 。
+        \fourchoices
+        {$T_1(n)=n\log_2n +5000n$}
+        {$T_2(n)=n^2 - 800n$}
+        {$T_3(n)=n\log_2n - 6000n$}
+        {$T_4(n)=20000\log_2n$}
     \end{bbox}
 
     \begin{bbox}
  
-        \question[2] 以下属于逻辑结构的是 \blankbox 。
-        \fourchoices{顺序表}{哈希表}{有序表}{单链表}
-        
-    \end{bbox}
-
-    % \begin{bbox}
- 
-    %     \question[2] 以下与数据的存储结构无关的术语是 \blankbox 。
-    %     \fourchoices{循环队列}{链表}{哈希表}{栈}
-    % \end{bbox}
-
-    \begin{bbox}
-        \question[2] 以下关于数据结构的说法中，正确的是\blankbox 。
-        \fourchoices{数据的逻辑结构独立于其存储结构}{数据的存储结构独立于其逻辑结构}{数据的逻辑结构唯一决定 其存储结构}{数据结构仅由其逻辑结构和存储结构决定}
-    \end{bbox}
-
-    \begin{bbox}
-        \question[2] 在存储数据时，通常不仅要存储各数据元素的值，而且要存储\blankbox
-        \fourchoices{数据的操作方法}{数据元素的类型}{数据元素之间的关系}{数据的存取方法}
-    \end{bbox}
-
-    \begin{bbox}
-        \question[2] 分析以下各程序段， 求出算法的时间复杂度.
-        \begin{lstlisting}[escapeinside={(*@}{@*)}]
-    (*@\ding{172}:@*)
-    i=1; k=0;
-    while(i<n-1){
-        k=k+10*i;
-        i++;
+        \question   【2017 统考真题】 下列函数的时间复杂度是 \blankbox 。
+        \begin{lstlisting}
+    int func(int n){
+        int i=0, sum=0;
+        while(sum<n) sum += ++i;
+        return i;
     }
+        \end{lstlisting}
+        \fourchoices{$O(\log n)$}{$O(n^{\frac{1}{2}})$}{$O(n)$}{$O(n\log n)$}
+    \end{bbox}
 
-    (*@\ding{173}:@*)
-    y=0;
-    while((y+1)*(y+1)<=n)
-    y=y+1;
+    
+    \begin{bbox}
+        \question   分析以下各程序段， 求出算法的时间复杂度.
 
-    (*@\ding{174}:@*)
-    for(i=0;i<n;i++)
-        for(j=0;j<m;j++)
-            a[i][j]=0;
+    \end{bbox}
+
+%     \begin{bbox}
+%         \question   分析以下各程序段， 求出算法的时间复杂度.
+%         \begin{lstlisting}[escapeinside={(*@}{@*)}]
+%     (*@\ding{172}:@*)
+%     i=1; k=0;
+%     while(i<n-1){
+%         k=k+10*i;
+%         i++;
+%     }
+
+%     (*@\ding{173}:@*)
+%     y=0;
+%     while((y+1)*(y+1)<=n)
+%     y=y+1;
+
+%     (*@\ding{174}:@*)
+%     for(i=0;i<n;i++)
+%         for(j=0;j<m;j++)
+%             a[i][j]=0;
     
         
-        \end{lstlisting}
-    \end{bbox}
+%         \end{lstlisting}
+%     \end{bbox}
 
-    \begin{bbox}
-        \question[2] 【2011 统考真题】一个长度为 $L$（$L\geqslant 1$ ）的升序序列$ S$, 处在第$\lceil L/2\rceil $个位置的数称为 $S$
-        的中位数。例如，若序列 $S_1$=（11,13,15,17,19）, 则 $S_1$的中位数是 15, 两 个序列的中位
-        数是含它们所有元素的升序序列的中位数。例如，若 $S_2$ =（2,4,6,8,20）, 则$S_1$和$S_2$的中
-        位数是 11。现在有两 个等长升序序列$A$和$B$, 试设计一个在时间和空间两 方面都尽可能
-        高效的算法，找出两个序列 $A$和$B$的中位数。要求：
-        \begin{subquestions}
-            \subquestion 给出算法的基本设计思想
-            \subquestion  根据设计思想，采用 C 或 C++或 Java 语言描述算法，关键之处给出注释
-            \subquestion 说明你所设计算法的时间复杂度和空间复杂度
-        \end{subquestions}
-    \end{bbox}
+%     \begin{bbox}
+%         \question   【2011 统考真题】一个长度为 $L$（$L\geqslant 1$ ）的升序序列$ S$, 处在第$\lceil L/2\rceil $个位置的数称为 $S$
+%         的中位数。例如，若序列 $S_1$=（11,13,15,17,19）, 则 $S_1$的中位数是 15, 两 个序列的中位
+%         数是含它们所有元素的升序序列的中位数。例如，若 $S_2$ =（2,4,6,8,20）, 则$S_1$和$S_2$的中
+%         位数是 11。现在有两 个等长升序序列$A$和$B$, 试设计一个在时间和空间两 方面都尽可能
+%         高效的算法，找出两个序列 $A$和$B$的中位数。要求：
+%         \begin{subquestions}
+%             \subquestion 给出算法的基本设计思想
+%             \subquestion  根据设计思想，采用 C 或 C++或 Java 语言描述算法，关键之处给出注释
+%             \subquestion 说明你所设计算法的时间复杂度和空间复杂度
+%         \end{subquestions}
+%     \end{bbox}
 \end{questions}
+
+% \subsection{数据结构的基本概念}
+% \subsection{数据结构的基本概念}
+% \subsection{数据结构的基本概念}
+% \subsection{数据结构的基本概念}
+% \subsection{数据结构的基本概念}
+% \subsection{数据结构的基本概念}
+% \subsection{数据结构的基本概念}
+% \subsection{数据结构的基本概念}
+% \subsection{数据结构的基本概念}
+% \subsection{数据结构的基本概念}
+% \subsection{数据结构的基本概念}
+% \subsection{数据结构的基本概念}
+% \subsection{数据结构的基本概念}
+% \subsection{数据结构的基本概念}
+% \subsection{数据结构的基本概念}
+% \subsection{数据结构的基本概念}
+% \subsection{数据结构的基本概念}
+% \subsection{数据结构的基本概念}
+% \subsection{数据结构的基本概念}
+% \subsection{数据结构的基本概念}
+% \subsection{数据结构的基本概念}
+% \subsection{数据结构的基本概念}
+% \subsection{数据结构的基本概念}
+% \subsection{数据结构的基本概念}
+% \subsection{数据结构的基本概念}
+% \subsection{数据结构的基本概念}
+% \subsection{数据结构的基本概念}
+% \subsection{数据结构的基本概念}
+% \subsection{数据结构的基本概念}
+% \subsection{数据结构的基本概念}
+% \subsection{数据结构的基本概念}
+% \subsection{数据结构的基本概念}
+% \subsection{数据结构的基本概念}
+% \subsection{数据结构的基本概念}
+% \subsection{数据结构的基本概念}
+% \subsection{数据结构的基本概念}
+% \subsection{数据结构的基本概念}
+% \subsection{数据结构的基本概念}
+
+
     

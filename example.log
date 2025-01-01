@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.9.2)  31 DEC 2024 02:44
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.9.2)  2 JAN 2025 01:09
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -972,11 +972,11 @@ Package fontspec Info:
 (fontspec)             Roman/BI/OT:script=latn;language=dflt;"
 
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
-(Font)                  OT1/cmr/m/n --> TU/TimesNewRoman(1)/m/n on input line 422.
+(Font)                  OT1/cmr/m/n --> TU/TimesNewRoman(1)/m/n on input line 424.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> TU/TimesNewRoman(1)/m/it on input line 422.
+(Font)                  OT1/cmr/m/it --> TU/TimesNewRoman(1)/m/it on input line 424.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> TU/TimesNewRoman(1)/b/n on input line 422.
+(Font)                  OT1/cmr/bx/n --> TU/TimesNewRoman(1)/b/n on input line 424.
 
 Package fontspec Info: 
 (fontspec)             Script 'Math' not explicitly supported within font
@@ -1033,19 +1033,19 @@ Package fontspec Info:
 (fontspec)             Roman/B/OT:script=math;language=dflt;"
 
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `normal' on input line 423.
+(Font)              `operators' in the math version `normal' on input line 425.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> TU/TimesNewRoman(3)/m/n on input line 423.
+(Font)                  OT1/cmr/m/n --> TU/TimesNewRoman(3)/m/n on input line 425.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `bold' on input line 423.
+(Font)              `operators' in the math version `bold' on input line 425.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> TU/TimesNewRoman(3)/b/n on input line 423.
+(Font)                  OT1/cmr/bx/n --> TU/TimesNewRoman(3)/b/n on input line 425.
 (/usr/local/texlive/2024/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2024/05/25 1.10b listings language file
 ) (/usr/local/texlive/2024/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2024/05/25 1.10b (Carsten Heinz)
 )
-Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 1065.
+Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 1085.
 ) (./example.aux (./contents/content.aux))
 \openout1 = `example.aux'.
 
@@ -1081,15 +1081,14 @@ Package caption Info: End \AtBeginDocument code.
 * paper: a4paper
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
-* bindingoffset: 28.45274pt
-* modes: twoside 
-* h-part:(L,W,R)=(51.21495pt, 466.62523pt, 51.21495pt)
+* modes: 
+* h-part:(L,W,R)=(51.21495pt, 495.07797pt, 51.21495pt)
 * v-part:(T,H,B)=(71.13188pt, 702.78308pt, 71.13188pt)
 * \paperwidth=597.50787pt
 * \paperheight=845.04684pt
-* \textwidth=466.62523pt
+* \textwidth=495.07797pt
 * \textheight=702.78308pt
-* \oddsidemargin=7.3977pt
+* \oddsidemargin=-21.05504pt
 * \evensidemargin=-21.05504pt
 * \topmargin=-27.36447pt
 * \headheight=12.0pt
@@ -1104,8 +1103,8 @@ Package caption Info: End \AtBeginDocument code.
 * \voffset=0.0pt
 * \mag=1000
 * \@twocolumnfalse
-* \@twosidetrue
-* \@mparswitchtrue
+* \@twosidefalse
+* \@mparswitchfalse
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
@@ -1299,17 +1298,6 @@ Package fontspec Info:
 
 [1
 
-]
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.45398pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.45398pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.45398pt}.
-
-[2
-
 ] (./example.toc)
 \tf@toc=\write5
 \openout5 = `example.toc'.
@@ -1323,41 +1311,39 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.45398pt}.
 
-[3
-
-]
+[1]
 \openout2 = `contents/content.aux'.
 
- (./contents/content.tex (/usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/umsa.fd) (/usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/umsb.fd)
-Underfull \hbox (badness 10000) in paragraph at lines 11--12
+ (./contents/content.tex
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
+(Font)              scaled to size 12.04628pt on input line 6.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
+(Font)              scaled to size 8.4324pt on input line 6.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
+(Font)              scaled to size 6.02315pt on input line 6.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
+(Font)              scaled to size 12.0437pt on input line 6.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
+(Font)              scaled to size 8.43059pt on input line 6.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
+(Font)              scaled to size 6.02185pt on input line 6.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 6.
+ (/usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 6.
+ (/usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+Underfull \hbox (badness 10000) in paragraph at lines 38--40
 
  []
 
-File: img/water.png Graphic file (type bmp)
-<img/water.png>
 
-Underfull \hbox (badness 10000) in paragraph at lines 16--17
+Underfull \hbox (badness 10000) in paragraph at lines 47--49
 
  []
 
-File: img/water.png Graphic file (type bmp)
-<img/water.png>
-File: img/water.png Graphic file (type bmp)
-<img/water.png>
-
-Underfull \hbox (badness 10000) in paragraph at lines 34--35
-
- []
-
-File: img/water.png Graphic file (type bmp)
-<img/water.png>
-
-Underfull \hbox (badness 10000) in paragraph at lines 39--40
-
- []
-
-File: img/water.png Graphic file (type bmp)
-<img/water.png>
 
 Package fontspec Info: 
 (fontspec)             Script 'CJK' not explicitly supported within font
@@ -1378,26 +1364,12 @@ Package fontspec Info:
 (fontspec)             <->"[FandolFang-Regular.otf]/OT:script=hani;language=dflt;"
 
 LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <12.045> not available
-(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 47.
-File: img/water.png Graphic file (type bmp)
-<img/water.png>
+(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 54.
 
+Underfull \hbox (badness 10000) in paragraph at lines 60--62
 
+ []
 
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.45398pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.45398pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.45398pt}.
-
-[4
-
-
-
-
-]
-File: img/water.png Graphic file (type bmp)
-<img/water.png>
 )
 
 
@@ -1407,7 +1379,10 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.45398pt}.
 
-[5] 
+[2
+
+
+] 
 enddocument/afterlastpage: lastpage setting LastPage.
 (./example.aux (./contents/content.aux))
  ***********
@@ -1415,15 +1390,15 @@ LaTeX2e <2024-06-01> patch level 2
 L3 programming layer <2022/08/05>
  ***********
 Package rerunfilecheck Info: File `example.out' has not changed.
-(rerunfilecheck)             Checksum: 0FF849DE1537CC0C34399F53F6671C09;224.
+(rerunfilecheck)             Checksum: 63B5F2A40C23A6C8E125EF24EBE73FE8;200.
  ) 
 Here is how much of TeX's memory you used:
- 38791 strings out of 474235
- 793019 string characters out of 5742254
- 1965609 words of memory out of 5000000
- 60773 multiletter control sequences out of 15000+600000
- 567090 words of font info for 131 fonts, out of 8000000 for 9000
+ 38746 strings out of 474235
+ 791449 string characters out of 5742254
+ 1959609 words of memory out of 5000000
+ 60727 multiletter control sequences out of 15000+600000
+ 567114 words of font info for 134 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 108i,13n,126p,460b,1268s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 108i,12n,126p,460b,1221s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on example.xdv (5 pages, 57576 bytes).
+Output written on example.xdv (3 pages, 45148 bytes).
