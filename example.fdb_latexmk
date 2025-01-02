@@ -1,11 +1,11 @@
 # Fdb version 4
-["xdvipdfmx"] 1735751377.85925 "example.xdv" "example.pdf" "example" 1735751378.15579 0
-  "example.xdv" 1735751377.78166 45148 7c81d4de8cac9633492ace7d79c6eab9 "xelatex"
+["xdvipdfmx"] 1735834102.56932 "example.xdv" "example.pdf" "example" 1735834102.94639 0
+  "example.xdv" 1735834102.47761 176356 ff743f0b3b6d0d8abbce295a754e3370 "xelatex"
   (generated)
   "example.pdf"
   (rewritten before read)
-["xelatex"] 1735751376.1086 "/Users/mwj/code/latexSrc/ExBook/example.tex" "example.xdv" "example" 1735751378.15379 0
-  "/Users/mwj/code/latexSrc/ExBook/example.tex" 1735751253.71431 436 c638fdb3a8a622bfdfce2e1afa9481a5 ""
+["xelatex"] 1735834100.44792 "/Users/mwj/code/latexSrc/ExBook/example.tex" "example.xdv" "example" 1735834102.94452 0
+  "/Users/mwj/code/latexSrc/ExBook/example.tex" 1735833695.05067 434 d3d3e64da0b07c059e6b902c09af1808 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/adobe/symbol/psyr.tfm" 1136768653 1408 5937f58aa508ea2cea4901c07d10f5fe ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/adobe/zapfding/pzdr.tfm" 1136768653 1528 f853c4d1b4e0550255e02831fdc8496f ""
@@ -230,14 +230,16 @@
   "/usr/local/texlive/2024/texmf-dist/web2c/texmf.cnf" 1719785820 42007 0b741a3c21a5ca32b40e3846e75b3548 ""
   "/usr/local/texlive/2024/texmf-var/web2c/xetex/xelatex.fmt" 1725217215 10869251 3bf044b0c45428c5d8c19e3dca5ea897 ""
   "/usr/local/texlive/2024/texmf.cnf" 1710266656 577 e590dabc9e28c5b61546e15f63eebcdf ""
-  "ExBook.cls" 1735751374.05359 45471 733c6fb04fd031bb27ca5170f7bdcc55 ""
-  "contents/content.aux" 1735751377.78009 1103 c75b1c1ece6e7a4b6f99fadd181fd91e "xelatex"
-  "contents/content.tex" 1735749928.40245 5366 e32aa7976bb5517bf1e088d1605cde6b ""
-  "example.aux" 1735751377.78041 521 cf38793af392163dd03e9de53414c4fb "xelatex"
-  "example.out" 1735751377.78141 200 63b5f2a40c23a6c8e125ef24ebe73fe8 "xelatex"
-  "example.tex" 1735751253.71431 436 c638fdb3a8a622bfdfce2e1afa9481a5 ""
-  "example.toc" 1735751377.78162 163 647b81a30e936451bdee4e126008e871 "xelatex"
+  "ExBook.cls" 1735834100.2352 43562 cccf8c61a10ebf760b5119ae001c269f ""
+  "contents/content.aux" 1735834102.47569 1490 d2fbe53d9d8254d9feaf69d681f37901 "xelatex"
+  "contents/content.tex" 1735833564.11463 6438 73d4fe48e368c986b41cbccaf5f40615 ""
+  "example.aux" 1735834102.47603 5150 94af5ace0d66ce1f5f1583413cc89318 "xelatex"
+  "example.out" 1735834102.4773 615 8dbc0563943334fbf8c4be2b6e27562d "xelatex"
+  "example.tex" 1735833695.05067 434 d3d3e64da0b07c059e6b902c09af1808 ""
+  "example.toc" 1735834102.47756 425 20880095cb61ae04e80e28d8a4005043 "xelatex"
   "img/cov01.jpg" 1735533905.85646 1228866 2846bc9997e0bb664e7af9b99421333c ""
+  "img/img01.png" 1735830321.91254 52893 ab985c6f87b8f9cba858eaef5cd11c1f ""
+  "img/water.png" 1735533905.8594 37957 35ac9398c9ce6305dd1b7af01da25962 ""
   (generated)
   "contents/content.aux"
   "example.aux"

@@ -424,7 +424,7 @@
 \setmathfont{Times New Roman}
 
 \definecolor{themeColor}{HTML}{015697} % 自定义颜色 蓝色
-% \definecolor{themeColor}{HTML}{01847c} % 自定义颜色 绿色 
+\definecolor{themeColor}{HTML}{01847c} % 自定义颜色 绿色 
 % \definecolor{themeColor}{HTML}{61589b} % 自定义颜色 紫色
 % \definecolor{themeColor}{HTML}{f98919} % 自定义颜色 橙色
 
@@ -457,6 +457,14 @@
     escapeinside={(*@}{@*)}, % 设置逃逸字符
 }
 
+\newcommand{\imgin}[2]{
+    \begin{minipage}[t]{1.0\textwidth}
+        \centering
+        \includegraphics[width=#1\textwidth]{#2}
+    \end{minipage}
+}
+
+
 \ifcase\myPageFormat
  %                         *****************
  %                         **   A4紧凑版   **
@@ -466,8 +474,6 @@
     \else
         \geometry{a4paper, left=18mm, right=18mm, top=25mm, bottom=25mm, headsep=5mm}   
     \fi
-    % 当变量为0时，选择页面格式为a
-    % \geometry{a4paper, twoside, left=18mm, right=18mm, top=25mm, bottom=25mm, headsep=5mm, bindingoffset = 1cm}
 
     % 自定义封面样式
     \renewcommand{\maketitle}{
@@ -532,20 +538,21 @@
 
     \newenvironment{bbox}
     {
-        % \begin{minipage}{\textwidth}
+
     }
     {
-        % \end{minipage}
-        % \begin{tikzpicture}[overlay,remember picture]
-        %     \node[anchor=east, opacity=0.01] at ([xshift=-1.2cm, yshift=4.8cm]current page.south east)  {\includegraphics[width=0.16\textwidth]{img/water.png}}; 
-        % \end{tikzpicture}
+
     }
     
 \or
  %                         *****************
  %                         **   A4标准版   **
  %                         *****************
-    \geometry{a4paper, left=18mm, right=18mm, top=25mm, bottom=25mm, headsep=3mm}
+    \if@printmode
+    \geometry{a4paper, twoside, left=18mm, right=18mm, top=25mm, bottom=25mm, headsep=5mm, bindingoffset = 1cm}
+    \else
+        \geometry{a4paper, left=18mm, right=18mm, top=25mm, bottom=25mm, headsep=5mm}   
+    \fi
 
     % 自定义封面样式
     \renewcommand{\maketitle}{
@@ -557,9 +564,9 @@
 
         \begin{tikzpicture}[remember picture, overlay]
             \fill[themeColor!6.2] ([yshift=2cm]current page.west) rectangle ++(\paperwidth,2cm);
-            \node[anchor=west, align=left, text width=\textwidth, inner sep=0] at ([yshift=3cm, xshift=1cm]current page.west) {\color{themeColor} \fontsize{24pt}{0}{\ExBook@value@PreTitle}};
-            \node[anchor=west, align=left, text width=\textwidth, inner sep=0] at ([yshift=0cm, xshift=1cm]current page.west) {\fontsize{42pt}{0}{\ExBook@value@Title}};
-            \node[anchor=west, align=left, text width=\textwidth, inner sep=0] at ([yshift=-1.8cm, xshift=1cm]current page.west) {\fontsize{36pt}{0}{\ExBook@value@TitleDescription}};
+            \node[anchor=west, align=left, text width=\textwidth, inner sep=0] at ([yshift=3cm, xshift=1.5cm]current page.west) {\color{themeColor} \fontsize{24pt}{0}{\ExBook@value@PreTitle}};
+            \node[anchor=west, align=left, text width=\textwidth, inner sep=0] at ([yshift=0cm, xshift=1.5cm]current page.west) {\fontsize{36pt}{0}{\ExBook@value@Title}};
+            \node[anchor=west, align=left, text width=\textwidth, inner sep=0] at ([yshift=-1.8cm, xshift=1.5cm]current page.west) {\fontsize{32pt}{0}{\ExBook@value@TitleDescription}};
             \fill[themeColor!6.2] (current page.south west) rectangle ++(\paperwidth,2cm);
             \node[anchor=south, align=center] at ([yshift=0.8cm]current page.south) {\color{themeColor}\fontsize{16pt}{0}{\ExBook@value@Creator}};
             \node[anchor=south, align=center] at ([yshift=0.2cm]current page.south) {\color{themeColor}\fontsize{12pt}{0}{\ExBook@value@UpdateTime}};
@@ -608,8 +615,7 @@
     \begin{minipage}{\textwidth}
     }
     {
-    % \begin{solution}{\the\mylength}
-    % \end{solution} 
+
     \begin{solution}{\the\mylength}
     \end{solution} 
     \end{minipage}
@@ -627,8 +633,6 @@
     \newcommand{\myCFormat}{1}
     \geometry{paperheight=150mm, paperwidth=200mm,left=12mm,right=12mm,top=10mm,bottom=15mm}
     
-
-
     % 自定义封面样式
     \renewcommand{\maketitle}{
     \begin{titlepage}
@@ -664,9 +668,6 @@
     \pagestyle{fancy}
     \fancyhf{} % 清空当前设置
 
-    % 设置页码位置
-    % \fancyfoot[R]{\color{themeColor} \ding{118} 第\thepage 页  / 共\pageref{LastPage}页 \ding{118}}
-    
     \renewcommand{\headrulewidth}{0pt} % 移除页眉底部的横线
     \renewcommand{\footrulewidth}{0pt} % 页面底部横线 \faWeixin{}
     \newcommand{\myrecttext}{\fontsize{14}{0} \textbf{\LheadC\ExBook@value@Chead \ExBook@value@Rhead}}
@@ -724,35 +725,32 @@
     \end{tikzpicture}
 
     \begin{tikzpicture}[overlay,remember picture]
-        % \draw[rounded corners=6pt, fill = themeColor!6.2, themeColor!6.2] ([xshift=-5.5cm, yshift=0.2cm]current page.south east) rectangle ++(5cm,0.8cm);
-        \node[anchor=east, text height=1.2cm, font=\small] at ([xshift=-8.5cm, yshift=1cm]current page.south east) {\color{themeColor}  第 \thepage 页  / 共 \pageref{LastPage} 页};
+        \node[anchor=east, text height=1.2cm, font=\small] at ([xshift=-8.5cm, yshift=1.5cm]current page.south east) {\color{themeColor}  第 \thepage 页  / 共 \pageref{LastPage} 页};
     \end{tikzpicture}
     }
     
     \newenvironment{bbox}
     {
-    % \clearpage 
+
     \begin{minipage}{\textwidth}
     }
     {
-    % \begin{solution}{\the\mylength}
-    % \end{solution} 
-    \begin{solution}{\the\mylength}
-    \end{solution} 
     \end{minipage}
-    % \newpage % 在环境结束时插入新页面
     \begin{tikzpicture}[overlay,remember picture]
-        % \node[anchor=east, text height=1.2cm] at ([xshift=12.5cm, yshift=1cm]current page.south west) {\color{themeColor} \heiti \ding{80} 此题重要程度（请根据自身情况涂黑\ding{72}）: \fontsize{18}{0} \ding{73} \ding{73} \ding{73} \ding{73} \ding{73}};
         \node[anchor=east, opacity=0.08] at ([xshift=-1.2cm, yshift=4.8cm]current page.south east)  {\includegraphics[width=0.16\textwidth]{img/water.png}}; 
     \end{tikzpicture}
-    % \fancyfoot[L]{\color{themeColor} \heiti \ding{80} 此题重要程度（请根据自身情况涂黑\ding{72}）: \fontsize{18}{0} \ding{73} \ding{73} \ding{73} \ding{73} \ding{73}}
     \newpage % 在环境结束时插入新页面
     }
 \or
  %                         *****************
  %                         **   A4宽松版   **
  %                         *****************
-    \geometry{a4paper, left=18mm, right=18mm, top=25mm, bottom=25mm, headsep=3mm}
+
+    \if@printmode
+        \geometry{a4paper, twoside, left=18mm, right=18mm, top=25mm, bottom=25mm, headsep=5mm, bindingoffset = 1cm}
+    \else
+        \geometry{a4paper, left=18mm, right=18mm, top=25mm, bottom=25mm, headsep=5mm}   
+    \fi
 
     % 自定义封面样式
     \renewcommand{\maketitle}{
@@ -764,9 +762,9 @@
 
         \begin{tikzpicture}[remember picture, overlay]
             \fill[themeColor!6.2] ([yshift=2cm]current page.west) rectangle ++(\paperwidth,2cm);
-            \node[anchor=west, align=left, text width=\textwidth, inner sep=0] at ([yshift=3cm, xshift=1cm]current page.west) {\color{themeColor} \fontsize{24pt}{0}{\ExBook@value@PreTitle}};
-            \node[anchor=west, align=left, text width=\textwidth, inner sep=0] at ([yshift=0cm, xshift=1cm]current page.west) {\fontsize{42pt}{0}{\ExBook@value@Title}};
-            \node[anchor=west, align=left, text width=\textwidth, inner sep=0] at ([yshift=-1.8cm, xshift=1cm]current page.west) {\fontsize{36pt}{0}{\ExBook@value@TitleDescription}};
+            \node[anchor=west, align=left, text width=\textwidth, inner sep=0] at ([yshift=3cm, xshift=1.5cm]current page.west) {\color{themeColor} \fontsize{24pt}{0}{\ExBook@value@PreTitle}};
+            \node[anchor=west, align=left, text width=\textwidth, inner sep=0] at ([yshift=0cm, xshift=1.5cm]current page.west) {\fontsize{36pt}{0}{\ExBook@value@Title}};
+            \node[anchor=west, align=left, text width=\textwidth, inner sep=0] at ([yshift=-1.8cm, xshift=1.5cm]current page.west) {\fontsize{32pt}{0}{\ExBook@value@TitleDescription}};
             \fill[themeColor!6.2] (current page.south west) rectangle ++(\paperwidth,2cm);
             \node[anchor=south, align=center] at ([yshift=0.8cm]current page.south) {\color{themeColor}\fontsize{16pt}{0}{\ExBook@value@Creator}};
             \node[anchor=south, align=center] at ([yshift=0.2cm]current page.south) {\color{themeColor}\fontsize{12pt}{0}{\ExBook@value@UpdateTime}};
@@ -815,8 +813,7 @@
     \begin{minipage}{\textwidth}
     }
     {
-    % \begin{solution}{\the\mylength}
-    % \end{solution} 
+
     \begin{solution}{\the\mylength}
     \end{solution} 
     \end{minipage}
@@ -832,7 +829,11 @@
  %                         **   A4单题版   **
  %                         *****************
     % 当变量为1时，选择页面格式为b
-    \geometry{a4paper, left=18mm, right=18mm, top=25mm, bottom=25mm, headsep=3mm}
+    \if@printmode
+        \geometry{a4paper, twoside, left=18mm, right=18mm, top=25mm, bottom=25mm, headsep=5mm, bindingoffset = 1cm}
+    \else
+        \geometry{a4paper, left=18mm, right=18mm, top=25mm, bottom=25mm, headsep=5mm}   
+    \fi
 
     % 自定义封面样式
     \renewcommand{\maketitle}{
@@ -844,9 +845,9 @@
 
         \begin{tikzpicture}[remember picture, overlay]
             \fill[themeColor!6.2] ([yshift=2cm]current page.west) rectangle ++(\paperwidth,2cm);
-            \node[anchor=west, align=left, text width=\textwidth, inner sep=0] at ([yshift=3cm, xshift=1cm]current page.west) {\color{themeColor} \fontsize{24pt}{0}{\ExBook@value@PreTitle}};
-            \node[anchor=west, align=left, text width=\textwidth, inner sep=0] at ([yshift=0cm, xshift=1cm]current page.west) {\fontsize{42pt}{0}{\ExBook@value@Title}};
-            \node[anchor=west, align=left, text width=\textwidth, inner sep=0] at ([yshift=-1.8cm, xshift=1cm]current page.west) {\fontsize{36pt}{0}{\ExBook@value@TitleDescription}};
+            \node[anchor=west, align=left, text width=\textwidth, inner sep=0] at ([yshift=3cm, xshift=1.5cm]current page.west) {\color{themeColor} \fontsize{24pt}{0}{\ExBook@value@PreTitle}};
+            \node[anchor=west, align=left, text width=\textwidth, inner sep=0] at ([yshift=0cm, xshift=1.5cm]current page.west) {\fontsize{36pt}{0}{\ExBook@value@Title}};
+            \node[anchor=west, align=left, text width=\textwidth, inner sep=0] at ([yshift=-1.8cm, xshift=1.5cm]current page.west) {\fontsize{32pt}{0}{\ExBook@value@TitleDescription}};
             \fill[themeColor!6.2] (current page.south west) rectangle ++(\paperwidth,2cm);
             \node[anchor=south, align=center] at ([yshift=0.8cm]current page.south) {\color{themeColor}\fontsize{16pt}{0}{\ExBook@value@Creator}};
             \node[anchor=south, align=center] at ([yshift=0.2cm]current page.south) {\color{themeColor}\fontsize{12pt}{0}{\ExBook@value@UpdateTime}};
@@ -891,12 +892,10 @@
 
     \newenvironment{bbox}
     {
-    % \clearpage 
-    % \begin{minipage}{\textwidth}
+
     }
     {
-    % \begin{solution}{\the\mylength}
-    % \end{solution} 
+
     \begin{solution}{\the\mylength}
     \end{solution} 
     % \end{minipage}
@@ -913,16 +912,12 @@
  %                         *****************
     \newcommand{\myCFormat}{1}
     \geometry{paperheight=250mm, paperwidth=200mm,left=12mm,right=12mm,top=10mm,bottom=15mm}
-    
-
 
     % 自定义封面样式
     \renewcommand{\maketitle}{
     \begin{titlepage}
         \begin{tikzpicture}[remember picture, overlay]
             \node[anchor=north, inner sep=0pt](image) at ([xshift=10cm, yshift=0cm]current page.north west) {\includegraphics[width=\paperwidth, height=\paperheight, keepaspectratio]{img/cov01.jpg}};
-            % 渐变效果
-            % \fill[left color=white!0, right color=white!0, shading angle=0] (image.south west) rectangle (image.north east);
         \end{tikzpicture}
 
         \begin{tikzpicture}[remember picture, overlay]
@@ -942,17 +937,14 @@
         \end{tikzpicture}
 
         \begin{tikzpicture}[remember picture, overlay]
-            \fill[themeColor!6.2, rounded corners=12pt] ([yshift=2.5cm, xshift=15.5cm]current page.south west) rectangle ++(3.5cm,1.5cm);
-            \node[anchor=south, align=center] at ([yshift=2.8cm, xshift=17.3cm]current page.south west) {\color{themeColor}\fontsize{18pt}{0}\textbf{\ExBook@value@TypeSix}};
+            \fill[themeColor!6.2, rounded corners=12pt] ([yshift=3.5cm, xshift=15.0cm]current page.south west) rectangle ++(3.5cm,1.5cm);
+            \node[anchor=south, align=center] at ([yshift=3.8cm, xshift=16.8cm]current page.south west) {\color{themeColor}\fontsize{16pt}{0}\textbf{\ExBook@value@TypeSix}};
         \end{tikzpicture}
     \end{titlepage}
     }
 
     \pagestyle{fancy}
     \fancyhf{} % 清空当前设置
-
-    % 设置页码位置
-    % \fancyfoot[R]{\color{themeColor} \ding{118} 第\thepage 页  / 共\pageref{LastPage}页 \ding{118}}
     
     \renewcommand{\headrulewidth}{0pt} % 移除页眉底部的横线
     \renewcommand{\footrulewidth}{0pt} % 页面底部横线 \faWeixin{}
@@ -1022,17 +1014,10 @@
     \begin{minipage}{\textwidth}
     }
     {
-    % \begin{solution}{\the\mylength}
-    % \end{solution} 
-    \begin{solution}{\the\mylength}
-    \end{solution} 
     \end{minipage}
-    % \newpage % 在环境结束时插入新页面
     \begin{tikzpicture}[overlay,remember picture]
-        % \node[anchor=east, text height=1.2cm] at ([xshift=12.5cm, yshift=1cm]current page.south west) {\color{themeColor} \heiti \ding{80} 此题重要程度（请根据自身情况涂黑\ding{72}）: \fontsize{18}{0} \ding{73} \ding{73} \ding{73} \ding{73} \ding{73}};
         \node[anchor=east, opacity=0.08] at ([xshift=-1.2cm, yshift=4.8cm]current page.south east)  {\includegraphics[width=0.16\textwidth]{img/water.png}}; 
     \end{tikzpicture}
-    % \fancyfoot[L]{\color{themeColor} \heiti \ding{80} 此题重要程度（请根据自身情况涂黑\ding{72}）: \fontsize{18}{0} \ding{73} \ding{73} \ding{73} \ding{73} \ding{73}}
     \newpage % 在环境结束时插入新页面
     }
 
@@ -1077,7 +1062,6 @@
 {0pt} % 左边距
 {2pt plus 2pt minus 2pt} % 上边距
 {2pt plus 2pt minus 2pt} % 下边距
-
 
 
 \hypersetup{
