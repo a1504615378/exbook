@@ -1,24 +1,19 @@
 % 使用 ExBook 文档类，并传递选项
-\documentclass[cs4size,fandol,padp]{ExBook} 
-
+\documentclass[cs4size,fandol,loose]{ExBook} 
 
 \begin{document}
 
-% \punctstyle{kaiming} % 设置中文标点的样式
-% \Chead{323423}
-% \Lhead{sdvgdfsgdf}
-% \UpdateTime{sdaafds}
-% \motto{}
+\include{config} % 示例文件
+\maketitle 
 
-\maketitle
+% 免责声明文件
+\include{contents/pre} % 示例文件
 
-% 前言
-% \include{contents/pre} % 示例文件
-\setcounter{page}{1} % 重置页码计数器为1
+\setcounter{page}{1}
 \tableofcontents
-
-
-\clearpage 
-\include{contents/content} % 示例文件
  
+\clearpage 
+% \include{contents/content_type_one} % 示例文件
+\include{contents/content_type_two} % 示例文件
+
 \end{document}

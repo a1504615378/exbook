@@ -1,0 +1,25 @@
+% 定义一个新命令来根据题目编号插入标题
+\newcommand{\insertTitle}[1]{
+    \ifnum#1=1
+        \section{第一章标题}
+    \fi
+    \ifnum#1=7
+        \section{第二章标题}
+    \fi
+    \ifnum#1=23
+        \section{第三章标题}
+    \fi
+    \ifnum#1=56
+        \section{第四章标题}
+    \fi
+    \ifnum#1=78
+        \section{第五章标题}
+    \fi
+}
+\foreach \n in {1,2,...,100} {
+    \insertTitle{\n}
+
+    \begin{bbox}
+        \imgin{0.98}{splitImg/\n.png}
+    \end{bbox}
+} 
