@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.9.2)  3 JAN 2025 23:37
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.9.2)  4 JAN 2025 17:26
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -925,11 +925,11 @@ File: pgflibraryshapes.multipart.code.tex 2023-01-15 v3.1.10 (3.1.10)
 File: tikzlibrarypositioning.code.tex 2023-01-15 v3.1.10 (3.1.10)
 )
 Package hyperref Info: Option `colorlinks' set `true' on input line 94.
-\c@Question=\count378
+\c@QuestionCounter=\count378
 \myvertspace=\skip82
-\c@subquestionsi=\count379
-\c@subquestionsii=\count380
-\enitdp@subquestions=\count381
+\c@subqitemsi=\count379
+\c@subqitemsii=\count380
+\enitdp@subqitems=\count381
 \choicelengtha=\skip83
 \choicelengthb=\skip84
 \choicelengthc=\skip85
@@ -982,7 +982,7 @@ File: lstlang1.sty 2024/05/25 1.10b listings language file
 File: lstmisc.sty 2024/05/25 1.10b (Carsten Heinz)
 )
 Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 1079.
-) (build/example.aux (build/config.aux) (build/contents/pre.aux) (build/contents/content_type_two.aux))
+) (build/example.aux (build/config.aux) (build/contents/pre.aux) (build/contents/content_type_one.aux))
 \openout1 = `example.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 4.
@@ -1014,21 +1014,21 @@ Package caption Info: End \AtBeginDocument code.
 *geometry* detected driver: xetex
 *geometry* verbose mode - [ preamble ] result:
 * driver: xetex
-* paper: custom
+* paper: a4paper
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: 
-* h-part:(L,W,R)=(34.1433pt, 500.76852pt, 34.1433pt)
-* v-part:(T,H,B)=(28.45274pt, 640.18703pt, 42.67912pt)
-* \paperwidth=569.05511pt
-* \paperheight=711.3189pt
-* \textwidth=500.76852pt
-* \textheight=640.18703pt
-* \oddsidemargin=-38.1267pt
-* \evensidemargin=-38.1267pt
-* \topmargin=-80.81725pt
+* h-part:(L,W,R)=(51.21495pt, 495.07797pt, 51.21495pt)
+* v-part:(T,H,B)=(71.13188pt, 702.78308pt, 71.13188pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=495.07797pt
+* \textheight=702.78308pt
+* \oddsidemargin=-21.05504pt
+* \evensidemargin=-21.05504pt
+* \topmargin=-27.36447pt
 * \headheight=12.0pt
-* \headsep=25.0pt
+* \headsep=14.22636pt
 * \topskip=10.0pt
 * \footskip=30.0pt
 * \marginparwidth=65.0pt
@@ -1200,25 +1200,6 @@ File: img/cov01.jpg Graphic file (type bmp)
 
 Package fontspec Info: 
 (fontspec)             Script 'CJK' not explicitly supported within font
-(fontspec)             'FandolKai-Regular'. Check the typeset output, and if
-(fontspec)             it is okay then ignore this warning. Otherwise a
-(fontspec)             different font should be chosen.
-
-
-Package fontspec Info: 
-(fontspec)             Font family 'FandolKai-Regular(0)' created for font
-(fontspec)             'FandolKai-Regular' with options
-(fontspec)             [Script={CJK},Extension={.otf}].
-(fontspec)              
-(fontspec)              This font family consists of the following NFSS
-(fontspec)             series/shapes:
-(fontspec)              
-(fontspec)             - 'normal' (m/n) with NFSS spec.:
-(fontspec)             <->"[FandolKai-Regular.otf]/OT:script=hani;language=dflt;"
-
-
-Package fontspec Info: 
-(fontspec)             Script 'CJK' not explicitly supported within font
 (fontspec)             'FandolHei-Regular'. Check the typeset output, and if
 (fontspec)             it is okay then ignore this warning. Otherwise a
 (fontspec)             different font should be chosen.
@@ -1236,6 +1217,25 @@ Package fontspec Info:
 (fontspec)             <->"[FandolHei-Regular.otf]/OT:script=hani;language=dflt;"
 (fontspec)             - 'bold' (b/n) with NFSS spec.:
 (fontspec)             <->"[FandolHei-Bold.otf]/OT:script=hani;language=dflt;"
+
+
+Package fontspec Info: 
+(fontspec)             Script 'CJK' not explicitly supported within font
+(fontspec)             'FandolKai-Regular'. Check the typeset output, and if
+(fontspec)             it is okay then ignore this warning. Otherwise a
+(fontspec)             different font should be chosen.
+
+
+Package fontspec Info: 
+(fontspec)             Font family 'FandolKai-Regular(0)' created for font
+(fontspec)             'FandolKai-Regular' with options
+(fontspec)             [Script={CJK},Extension={.otf}].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->"[FandolKai-Regular.otf]/OT:script=hani;language=dflt;"
 
 
 
@@ -1293,10 +1293,10 @@ File: img/qr01.jpg Graphic file (type bmp)
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 91.0602pt, for example:
-(fancyhdr)                \setlength{\headheight}{91.0602pt}.
+(fancyhdr)                Make it at least 14.45398pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.45398pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-79.0602pt}.
+(fancyhdr)                \addtolength{\topmargin}{-2.45398pt}.
 
 [1
 
@@ -1308,99 +1308,60 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 
 
-LaTeX Font Warning: Font shape `TU/FandolKai-Regular(0)/b/n' undefined
-(Font)              using `TU/FandolKai-Regular(0)/m/n' instead on input line 15.
-
-
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 91.0602pt, for example:
-(fancyhdr)                \setlength{\headheight}{91.0602pt}.
+(fancyhdr)                Make it at least 14.45398pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.45398pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-79.0602pt}.
+(fancyhdr)                \addtolength{\topmargin}{-2.45398pt}.
 
 [1
 
 
 
 ]
-\openout2 = `contents/content_type_two.aux'.
+\openout2 = `contents/content_type_one.aux'.
 
- (./contents/content_type_two.tex
-File: splitImg/1.png Graphic file (type bmp)
-<splitImg/1.png>
-
-Underfull \hbox (badness 10000) in paragraph at lines 25--25
-
- []
-
-
+ (./contents/content_type_one.tex
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 91.0602pt, for example:
-(fancyhdr)                \setlength{\headheight}{91.0602pt}.
+(fancyhdr)                Make it at least 14.45398pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.45398pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-79.0602pt}.
+(fancyhdr)                \addtolength{\topmargin}{-2.45398pt}.
 
 [2
 
 
 ]
-File: splitImg/2.png Graphic file (type bmp)
-<splitImg/2.png>
-
-Underfull \hbox (badness 10000) in paragraph at lines 25--25
-
- []
-
-
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 91.0602pt, for example:
-(fancyhdr)                \setlength{\headheight}{91.0602pt}.
+(fancyhdr)                Make it at least 14.45398pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.45398pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-79.0602pt}.
+(fancyhdr)                \addtolength{\topmargin}{-2.45398pt}.
 
 [3]
-File: splitImg/3.png Graphic file (type bmp)
-<splitImg/3.png>
-
-Underfull \hbox (badness 10000) in paragraph at lines 25--25
-
- []
-
-
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 91.0602pt, for example:
-(fancyhdr)                \setlength{\headheight}{91.0602pt}.
+(fancyhdr)                Make it at least 14.45398pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.45398pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-79.0602pt}.
+(fancyhdr)                \addtolength{\topmargin}{-2.45398pt}.
 
 [4]
-File: splitImg/4.png Graphic file (type bmp)
-<splitImg/4.png>
-
-Underfull \hbox (badness 10000) in paragraph at lines 25--25
-
- []
-
-
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 91.0602pt, for example:
-(fancyhdr)                \setlength{\headheight}{91.0602pt}.
+(fancyhdr)                Make it at least 14.45398pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.45398pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-79.0602pt}.
+(fancyhdr)                \addtolength{\topmargin}{-2.45398pt}.
 
 [5]
-File: splitImg/5.png Graphic file (type bmp)
-<splitImg/5.png>
-
-Underfull \hbox (badness 10000) in paragraph at lines 25--25
+Underfull \hbox (badness 10000) in paragraph at lines 31--32
 
  []
 
@@ -1408,16 +1369,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 25--25
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 91.0602pt, for example:
-(fancyhdr)                \setlength{\headheight}{91.0602pt}.
+(fancyhdr)                Make it at least 14.45398pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.45398pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-79.0602pt}.
+(fancyhdr)                \addtolength{\topmargin}{-2.45398pt}.
 
 [6]
-File: splitImg/6.png Graphic file (type bmp)
-<splitImg/6.png>
-
-Underfull \hbox (badness 10000) in paragraph at lines 25--25
+Underfull \hbox (badness 10000) in paragraph at lines 40--41
 
  []
 
@@ -1425,16 +1383,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 25--25
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 91.0602pt, for example:
-(fancyhdr)                \setlength{\headheight}{91.0602pt}.
+(fancyhdr)                Make it at least 14.45398pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.45398pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-79.0602pt}.
+(fancyhdr)                \addtolength{\topmargin}{-2.45398pt}.
 
 [7]
-File: splitImg/7.png Graphic file (type bmp)
-<splitImg/7.png>
-
-Underfull \hbox (badness 10000) in paragraph at lines 25--25
+Underfull \hbox (badness 10000) in paragraph at lines 55--56
 
  []
 
@@ -1442,16 +1397,16 @@ Underfull \hbox (badness 10000) in paragraph at lines 25--25
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 91.0602pt, for example:
-(fancyhdr)                \setlength{\headheight}{91.0602pt}.
+(fancyhdr)                Make it at least 14.45398pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.45398pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-79.0602pt}.
+(fancyhdr)                \addtolength{\topmargin}{-2.45398pt}.
 
 [8]
-File: splitImg/8.png Graphic file (type bmp)
-<splitImg/8.png>
+LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <12.045> not available
+(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 61.
 
-Underfull \hbox (badness 10000) in paragraph at lines 25--25
+Underfull \hbox (badness 10000) in paragraph at lines 67--68
 
  []
 
@@ -1459,33 +1414,25 @@ Underfull \hbox (badness 10000) in paragraph at lines 25--25
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 91.0602pt, for example:
-(fancyhdr)                \setlength{\headheight}{91.0602pt}.
+(fancyhdr)                Make it at least 14.45398pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.45398pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-79.0602pt}.
+(fancyhdr)                \addtolength{\topmargin}{-2.45398pt}.
 
 [9]
-File: splitImg/9.png Graphic file (type bmp)
-<splitImg/9.png>
-
-Underfull \hbox (badness 10000) in paragraph at lines 25--25
-
- []
-
-
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 91.0602pt, for example:
-(fancyhdr)                \setlength{\headheight}{91.0602pt}.
+(fancyhdr)                Make it at least 14.45398pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.45398pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-79.0602pt}.
+(fancyhdr)                \addtolength{\topmargin}{-2.45398pt}.
 
 [10]
-File: splitImg/10.png Graphic file (type bmp)
-<splitImg/10.png>
+File: fig/img01.png Graphic file (type bmp)
+<fig/img01.png>
 
-Underfull \hbox (badness 10000) in paragraph at lines 25--25
+Underfull \hbox (badness 10000) in paragraph at lines 89--90
 
  []
 
@@ -1493,1562 +1440,46 @@ Underfull \hbox (badness 10000) in paragraph at lines 25--25
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 91.0602pt, for example:
-(fancyhdr)                \setlength{\headheight}{91.0602pt}.
+(fancyhdr)                Make it at least 14.45398pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.45398pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-79.0602pt}.
+(fancyhdr)                \addtolength{\topmargin}{-2.45398pt}.
 
 [11]
-File: splitImg/11.png Graphic file (type bmp)
-<splitImg/11.png>
-
-Underfull \hbox (badness 10000) in paragraph at lines 25--25
-
- []
-
-
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 91.0602pt, for example:
-(fancyhdr)                \setlength{\headheight}{91.0602pt}.
+(fancyhdr)                Make it at least 14.45398pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.45398pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-79.0602pt}.
+(fancyhdr)                \addtolength{\topmargin}{-2.45398pt}.
 
 [12]
-File: splitImg/12.png Graphic file (type bmp)
-<splitImg/12.png>
 
-Underfull \hbox (badness 10000) in paragraph at lines 25--25
 
- []
-
-
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 91.0602pt, for example:
-(fancyhdr)                \setlength{\headheight}{91.0602pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-79.0602pt}.
-
-[13]
-File: splitImg/13.png Graphic file (type bmp)
-<splitImg/13.png>
-
-Underfull \hbox (badness 10000) in paragraph at lines 25--25
-
- []
-
-
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 91.0602pt, for example:
-(fancyhdr)                \setlength{\headheight}{91.0602pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-79.0602pt}.
-
-[14]
-File: splitImg/14.png Graphic file (type bmp)
-<splitImg/14.png>
-
-Underfull \hbox (badness 10000) in paragraph at lines 25--25
-
- []
-
-
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 91.0602pt, for example:
-(fancyhdr)                \setlength{\headheight}{91.0602pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-79.0602pt}.
-
-[15]
-File: splitImg/15.png Graphic file (type bmp)
-<splitImg/15.png>
-
-Underfull \hbox (badness 10000) in paragraph at lines 25--25
-
- []
-
-
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 91.0602pt, for example:
-(fancyhdr)                \setlength{\headheight}{91.0602pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-79.0602pt}.
-
-[16]
-File: splitImg/16.png Graphic file (type bmp)
-<splitImg/16.png>
-
-Underfull \hbox (badness 10000) in paragraph at lines 25--25
-
- []
-
-
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 91.0602pt, for example:
-(fancyhdr)                \setlength{\headheight}{91.0602pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-79.0602pt}.
-
-[17]
-File: splitImg/17.png Graphic file (type bmp)
-<splitImg/17.png>
-
-Underfull \hbox (badness 10000) in paragraph at lines 25--25
-
- []
-
-
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 91.0602pt, for example:
-(fancyhdr)                \setlength{\headheight}{91.0602pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-79.0602pt}.
-
-[18]
-File: splitImg/18.png Graphic file (type bmp)
-<splitImg/18.png>
-
-Underfull \hbox (badness 10000) in paragraph at lines 25--25
-
- []
-
-
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 91.0602pt, for example:
-(fancyhdr)                \setlength{\headheight}{91.0602pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-79.0602pt}.
-
-[19]
-File: splitImg/19.png Graphic file (type bmp)
-<splitImg/19.png>
-
-Underfull \hbox (badness 10000) in paragraph at lines 25--25
-
- []
-
-
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 91.0602pt, for example:
-(fancyhdr)                \setlength{\headheight}{91.0602pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-79.0602pt}.
-
-[20]
-File: splitImg/20.png Graphic file (type bmp)
-<splitImg/20.png>
-
-Underfull \hbox (badness 10000) in paragraph at lines 25--25
-
- []
-
-
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 91.0602pt, for example:
-(fancyhdr)                \setlength{\headheight}{91.0602pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-79.0602pt}.
-
-[21]
-File: splitImg/21.png Graphic file (type bmp)
-<splitImg/21.png>
-
-Underfull \hbox (badness 10000) in paragraph at lines 25--25
-
- []
-
-
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 91.0602pt, for example:
-(fancyhdr)                \setlength{\headheight}{91.0602pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-79.0602pt}.
-
-[22]
-File: splitImg/22.png Graphic file (type bmp)
-<splitImg/22.png>
-
-Underfull \hbox (badness 10000) in paragraph at lines 25--25
-
- []
-
-
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 91.0602pt, for example:
-(fancyhdr)                \setlength{\headheight}{91.0602pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-79.0602pt}.
-
-[23]
-File: splitImg/23.png Graphic file (type bmp)
-<splitImg/23.png>
-
-Underfull \hbox (badness 10000) in paragraph at lines 25--25
-
- []
-
-
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 91.0602pt, for example:
-(fancyhdr)                \setlength{\headheight}{91.0602pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-79.0602pt}.
-
-[24]
-File: splitImg/24.png Graphic file (type bmp)
-<splitImg/24.png>
-
-Underfull \hbox (badness 10000) in paragraph at lines 25--25
-
- []
-
-
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 91.0602pt, for example:
-(fancyhdr)                \setlength{\headheight}{91.0602pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-79.0602pt}.
-
-[25]
-File: splitImg/25.png Graphic file (type bmp)
-<splitImg/25.png>
-
-Underfull \hbox (badness 10000) in paragraph at lines 25--25
-
- []
-
-
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 91.0602pt, for example:
-(fancyhdr)                \setlength{\headheight}{91.0602pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-79.0602pt}.
-
-[26]
-File: splitImg/26.png Graphic file (type bmp)
-<splitImg/26.png>
-
-Underfull \hbox (badness 10000) in paragraph at lines 25--25
-
- []
-
-
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 91.0602pt, for example:
-(fancyhdr)                \setlength{\headheight}{91.0602pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-79.0602pt}.
-
-[27]
-File: splitImg/27.png Graphic file (type bmp)
-<splitImg/27.png>
-
-Underfull \hbox (badness 10000) in paragraph at lines 25--25
-
- []
-
-
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 91.0602pt, for example:
-(fancyhdr)                \setlength{\headheight}{91.0602pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-79.0602pt}.
-
-[28]
-File: splitImg/28.png Graphic file (type bmp)
-<splitImg/28.png>
-
-Underfull \hbox (badness 10000) in paragraph at lines 25--25
-
- []
-
-
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 91.0602pt, for example:
-(fancyhdr)                \setlength{\headheight}{91.0602pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-79.0602pt}.
-
-[29]
-File: splitImg/29.png Graphic file (type bmp)
-<splitImg/29.png>
-
-Underfull \hbox (badness 10000) in paragraph at lines 25--25
-
- []
-
-
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 91.0602pt, for example:
-(fancyhdr)                \setlength{\headheight}{91.0602pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-79.0602pt}.
-
-[30]
-File: splitImg/30.png Graphic file (type bmp)
-<splitImg/30.png>
-
-Underfull \hbox (badness 10000) in paragraph at lines 25--25
-
- []
-
-
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 91.0602pt, for example:
-(fancyhdr)                \setlength{\headheight}{91.0602pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-79.0602pt}.
-
-[31]
-File: splitImg/31.png Graphic file (type bmp)
-<splitImg/31.png>
-
-Underfull \hbox (badness 10000) in paragraph at lines 25--25
-
- []
-
-
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 91.0602pt, for example:
-(fancyhdr)                \setlength{\headheight}{91.0602pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-79.0602pt}.
-
-[32]
-File: splitImg/32.png Graphic file (type bmp)
-<splitImg/32.png>
-
-Underfull \hbox (badness 10000) in paragraph at lines 25--25
-
- []
-
-
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 91.0602pt, for example:
-(fancyhdr)                \setlength{\headheight}{91.0602pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-79.0602pt}.
-
-[33]
-File: splitImg/33.png Graphic file (type bmp)
-<splitImg/33.png>
-
-Underfull \hbox (badness 10000) in paragraph at lines 25--25
-
- []
-
-
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 91.0602pt, for example:
-(fancyhdr)                \setlength{\headheight}{91.0602pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-79.0602pt}.
-
-[34]
-File: splitImg/34.png Graphic file (type bmp)
-<splitImg/34.png>
-
-Underfull \hbox (badness 10000) in paragraph at lines 25--25
-
- []
-
-
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 91.0602pt, for example:
-(fancyhdr)                \setlength{\headheight}{91.0602pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-79.0602pt}.
-
-[35]
-File: splitImg/35.png Graphic file (type bmp)
-<splitImg/35.png>
-
-Underfull \hbox (badness 10000) in paragraph at lines 25--25
-
- []
-
-
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 91.0602pt, for example:
-(fancyhdr)                \setlength{\headheight}{91.0602pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-79.0602pt}.
-
-[36]
-File: splitImg/36.png Graphic file (type bmp)
-<splitImg/36.png>
-
-Underfull \hbox (badness 10000) in paragraph at lines 25--25
-
- []
-
-
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 91.0602pt, for example:
-(fancyhdr)                \setlength{\headheight}{91.0602pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-79.0602pt}.
-
-[37]
-File: splitImg/37.png Graphic file (type bmp)
-<splitImg/37.png>
-
-Underfull \hbox (badness 10000) in paragraph at lines 25--25
-
- []
-
-
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 91.0602pt, for example:
-(fancyhdr)                \setlength{\headheight}{91.0602pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-79.0602pt}.
-
-[38]
-File: splitImg/38.png Graphic file (type bmp)
-<splitImg/38.png>
-
-Underfull \hbox (badness 10000) in paragraph at lines 25--25
-
- []
-
-
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 91.0602pt, for example:
-(fancyhdr)                \setlength{\headheight}{91.0602pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-79.0602pt}.
-
-[39]
-File: splitImg/39.png Graphic file (type bmp)
-<splitImg/39.png>
-
-Underfull \hbox (badness 10000) in paragraph at lines 25--25
-
- []
-
-
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 91.0602pt, for example:
-(fancyhdr)                \setlength{\headheight}{91.0602pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-79.0602pt}.
-
-[40]
-File: splitImg/40.png Graphic file (type bmp)
-<splitImg/40.png>
-
-Underfull \hbox (badness 10000) in paragraph at lines 25--25
-
- []
-
-
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 91.0602pt, for example:
-(fancyhdr)                \setlength{\headheight}{91.0602pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-79.0602pt}.
-
-[41]
-File: splitImg/41.png Graphic file (type bmp)
-<splitImg/41.png>
-
-Underfull \hbox (badness 10000) in paragraph at lines 25--25
-
- []
-
-
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 91.0602pt, for example:
-(fancyhdr)                \setlength{\headheight}{91.0602pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-79.0602pt}.
-
-[42]
-File: splitImg/42.png Graphic file (type bmp)
-<splitImg/42.png>
-
-Underfull \hbox (badness 10000) in paragraph at lines 25--25
-
- []
-
-
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 91.0602pt, for example:
-(fancyhdr)                \setlength{\headheight}{91.0602pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-79.0602pt}.
-
-[43]
-File: splitImg/43.png Graphic file (type bmp)
-<splitImg/43.png>
-
-Underfull \hbox (badness 10000) in paragraph at lines 25--25
-
- []
-
-
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 91.0602pt, for example:
-(fancyhdr)                \setlength{\headheight}{91.0602pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-79.0602pt}.
-
-[44]
-File: splitImg/44.png Graphic file (type bmp)
-<splitImg/44.png>
-
-Underfull \hbox (badness 10000) in paragraph at lines 25--25
-
- []
-
-
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 91.0602pt, for example:
-(fancyhdr)                \setlength{\headheight}{91.0602pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-79.0602pt}.
-
-[45]
-File: splitImg/45.png Graphic file (type bmp)
-<splitImg/45.png>
-
-Underfull \hbox (badness 10000) in paragraph at lines 25--25
-
- []
-
-
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 91.0602pt, for example:
-(fancyhdr)                \setlength{\headheight}{91.0602pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-79.0602pt}.
-
-[46]
-File: splitImg/46.png Graphic file (type bmp)
-<splitImg/46.png>
-
-Underfull \hbox (badness 10000) in paragraph at lines 25--25
-
- []
-
-
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 91.0602pt, for example:
-(fancyhdr)                \setlength{\headheight}{91.0602pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-79.0602pt}.
-
-[47]
-File: splitImg/47.png Graphic file (type bmp)
-<splitImg/47.png>
-
-Underfull \hbox (badness 10000) in paragraph at lines 25--25
-
- []
-
-
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 91.0602pt, for example:
-(fancyhdr)                \setlength{\headheight}{91.0602pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-79.0602pt}.
-
-[48]
-File: splitImg/48.png Graphic file (type bmp)
-<splitImg/48.png>
-
-Underfull \hbox (badness 10000) in paragraph at lines 25--25
-
- []
-
-
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 91.0602pt, for example:
-(fancyhdr)                \setlength{\headheight}{91.0602pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-79.0602pt}.
-
-[49]
-File: splitImg/49.png Graphic file (type bmp)
-<splitImg/49.png>
-
-Underfull \hbox (badness 10000) in paragraph at lines 25--25
-
- []
-
-
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 91.0602pt, for example:
-(fancyhdr)                \setlength{\headheight}{91.0602pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-79.0602pt}.
-
-[50]
-File: splitImg/50.png Graphic file (type bmp)
-<splitImg/50.png>
-
-Underfull \hbox (badness 10000) in paragraph at lines 25--25
-
- []
-
-
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 91.0602pt, for example:
-(fancyhdr)                \setlength{\headheight}{91.0602pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-79.0602pt}.
-
-[51]
-File: splitImg/51.png Graphic file (type bmp)
-<splitImg/51.png>
-
-Underfull \hbox (badness 10000) in paragraph at lines 25--25
-
- []
-
-
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 91.0602pt, for example:
-(fancyhdr)                \setlength{\headheight}{91.0602pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-79.0602pt}.
-
-[52]
-File: splitImg/52.png Graphic file (type bmp)
-<splitImg/52.png>
-
-Underfull \hbox (badness 10000) in paragraph at lines 25--25
-
- []
-
-
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 91.0602pt, for example:
-(fancyhdr)                \setlength{\headheight}{91.0602pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-79.0602pt}.
-
-[53]
-File: splitImg/53.png Graphic file (type bmp)
-<splitImg/53.png>
-
-Underfull \hbox (badness 10000) in paragraph at lines 25--25
-
- []
-
-
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 91.0602pt, for example:
-(fancyhdr)                \setlength{\headheight}{91.0602pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-79.0602pt}.
-
-[54]
-File: splitImg/54.png Graphic file (type bmp)
-<splitImg/54.png>
-
-Underfull \hbox (badness 10000) in paragraph at lines 25--25
-
- []
-
-
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 91.0602pt, for example:
-(fancyhdr)                \setlength{\headheight}{91.0602pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-79.0602pt}.
-
-[55]
-File: splitImg/55.png Graphic file (type bmp)
-<splitImg/55.png>
-
-Underfull \hbox (badness 10000) in paragraph at lines 25--25
-
- []
-
-
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 91.0602pt, for example:
-(fancyhdr)                \setlength{\headheight}{91.0602pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-79.0602pt}.
-
-[56]
-File: splitImg/56.png Graphic file (type bmp)
-<splitImg/56.png>
-
-Underfull \hbox (badness 10000) in paragraph at lines 25--25
-
- []
-
-
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 91.0602pt, for example:
-(fancyhdr)                \setlength{\headheight}{91.0602pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-79.0602pt}.
-
-[57]
-File: splitImg/57.png Graphic file (type bmp)
-<splitImg/57.png>
-
-Underfull \hbox (badness 10000) in paragraph at lines 25--25
-
- []
-
-
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 91.0602pt, for example:
-(fancyhdr)                \setlength{\headheight}{91.0602pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-79.0602pt}.
-
-[58]
-File: splitImg/58.png Graphic file (type bmp)
-<splitImg/58.png>
-
-Underfull \hbox (badness 10000) in paragraph at lines 25--25
-
- []
-
-
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 91.0602pt, for example:
-(fancyhdr)                \setlength{\headheight}{91.0602pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-79.0602pt}.
-
-[59]
-File: splitImg/59.png Graphic file (type bmp)
-<splitImg/59.png>
-
-Underfull \hbox (badness 10000) in paragraph at lines 25--25
-
- []
-
-
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 91.0602pt, for example:
-(fancyhdr)                \setlength{\headheight}{91.0602pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-79.0602pt}.
-
-[60]
-File: splitImg/60.png Graphic file (type bmp)
-<splitImg/60.png>
-
-Underfull \hbox (badness 10000) in paragraph at lines 25--25
-
- []
-
-
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 91.0602pt, for example:
-(fancyhdr)                \setlength{\headheight}{91.0602pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-79.0602pt}.
-
-[61]
-File: splitImg/61.png Graphic file (type bmp)
-<splitImg/61.png>
-
-Underfull \hbox (badness 10000) in paragraph at lines 25--25
-
- []
-
-
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 91.0602pt, for example:
-(fancyhdr)                \setlength{\headheight}{91.0602pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-79.0602pt}.
-
-[62]
-File: splitImg/62.png Graphic file (type bmp)
-<splitImg/62.png>
-
-Underfull \hbox (badness 10000) in paragraph at lines 25--25
-
- []
-
-
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 91.0602pt, for example:
-(fancyhdr)                \setlength{\headheight}{91.0602pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-79.0602pt}.
-
-[63]
-File: splitImg/63.png Graphic file (type bmp)
-<splitImg/63.png>
-
-Underfull \hbox (badness 10000) in paragraph at lines 25--25
-
- []
-
-
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 91.0602pt, for example:
-(fancyhdr)                \setlength{\headheight}{91.0602pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-79.0602pt}.
-
-[64]
-File: splitImg/64.png Graphic file (type bmp)
-<splitImg/64.png>
-
-Underfull \hbox (badness 10000) in paragraph at lines 25--25
-
- []
-
-
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 91.0602pt, for example:
-(fancyhdr)                \setlength{\headheight}{91.0602pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-79.0602pt}.
-
-[65]
-File: splitImg/65.png Graphic file (type bmp)
-<splitImg/65.png>
-
-Underfull \hbox (badness 10000) in paragraph at lines 25--25
-
- []
-
-
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 91.0602pt, for example:
-(fancyhdr)                \setlength{\headheight}{91.0602pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-79.0602pt}.
-
-[66]
-File: splitImg/66.png Graphic file (type bmp)
-<splitImg/66.png>
-
-Underfull \hbox (badness 10000) in paragraph at lines 25--25
-
- []
-
-
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 91.0602pt, for example:
-(fancyhdr)                \setlength{\headheight}{91.0602pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-79.0602pt}.
-
-[67]
-File: splitImg/67.png Graphic file (type bmp)
-<splitImg/67.png>
-
-Underfull \hbox (badness 10000) in paragraph at lines 25--25
-
- []
-
-
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 91.0602pt, for example:
-(fancyhdr)                \setlength{\headheight}{91.0602pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-79.0602pt}.
-
-[68]
-File: splitImg/68.png Graphic file (type bmp)
-<splitImg/68.png>
-
-Underfull \hbox (badness 10000) in paragraph at lines 25--25
-
- []
-
-
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 91.0602pt, for example:
-(fancyhdr)                \setlength{\headheight}{91.0602pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-79.0602pt}.
-
-[69]
-File: splitImg/69.png Graphic file (type bmp)
-<splitImg/69.png>
-
-Underfull \hbox (badness 10000) in paragraph at lines 25--25
-
- []
-
-
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 91.0602pt, for example:
-(fancyhdr)                \setlength{\headheight}{91.0602pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-79.0602pt}.
-
-[70]
-File: splitImg/70.png Graphic file (type bmp)
-<splitImg/70.png>
-
-Underfull \hbox (badness 10000) in paragraph at lines 25--25
-
- []
-
-
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 91.0602pt, for example:
-(fancyhdr)                \setlength{\headheight}{91.0602pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-79.0602pt}.
-
-[71]
-File: splitImg/71.png Graphic file (type bmp)
-<splitImg/71.png>
-
-Underfull \hbox (badness 10000) in paragraph at lines 25--25
-
- []
-
-
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 91.0602pt, for example:
-(fancyhdr)                \setlength{\headheight}{91.0602pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-79.0602pt}.
-
-[72]
-File: splitImg/72.png Graphic file (type bmp)
-<splitImg/72.png>
-
-Underfull \hbox (badness 10000) in paragraph at lines 25--25
-
- []
-
-
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 91.0602pt, for example:
-(fancyhdr)                \setlength{\headheight}{91.0602pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-79.0602pt}.
-
-[73]
-File: splitImg/73.png Graphic file (type bmp)
-<splitImg/73.png>
-
-Underfull \hbox (badness 10000) in paragraph at lines 25--25
-
- []
-
-
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 91.0602pt, for example:
-(fancyhdr)                \setlength{\headheight}{91.0602pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-79.0602pt}.
-
-[74]
-File: splitImg/74.png Graphic file (type bmp)
-<splitImg/74.png>
-
-Underfull \hbox (badness 10000) in paragraph at lines 25--25
-
- []
-
-
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 91.0602pt, for example:
-(fancyhdr)                \setlength{\headheight}{91.0602pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-79.0602pt}.
-
-[75]
-File: splitImg/75.png Graphic file (type bmp)
-<splitImg/75.png>
-
-Underfull \hbox (badness 10000) in paragraph at lines 25--25
-
- []
-
-
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 91.0602pt, for example:
-(fancyhdr)                \setlength{\headheight}{91.0602pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-79.0602pt}.
-
-[76]
-File: splitImg/76.png Graphic file (type bmp)
-<splitImg/76.png>
-
-Underfull \hbox (badness 10000) in paragraph at lines 25--25
-
- []
-
-
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 91.0602pt, for example:
-(fancyhdr)                \setlength{\headheight}{91.0602pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-79.0602pt}.
-
-[77]
-File: splitImg/77.png Graphic file (type bmp)
-<splitImg/77.png>
-
-Underfull \hbox (badness 10000) in paragraph at lines 25--25
-
- []
-
-
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 91.0602pt, for example:
-(fancyhdr)                \setlength{\headheight}{91.0602pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-79.0602pt}.
-
-[78]
-File: splitImg/78.png Graphic file (type bmp)
-<splitImg/78.png>
-
-Underfull \hbox (badness 10000) in paragraph at lines 25--25
-
- []
-
-
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 91.0602pt, for example:
-(fancyhdr)                \setlength{\headheight}{91.0602pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-79.0602pt}.
-
-[79]
-File: splitImg/79.png Graphic file (type bmp)
-<splitImg/79.png>
-
-Underfull \hbox (badness 10000) in paragraph at lines 25--25
-
- []
-
-
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 91.0602pt, for example:
-(fancyhdr)                \setlength{\headheight}{91.0602pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-79.0602pt}.
-
-[80]
-File: splitImg/80.png Graphic file (type bmp)
-<splitImg/80.png>
-
-Underfull \hbox (badness 10000) in paragraph at lines 25--25
-
- []
-
-
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 91.0602pt, for example:
-(fancyhdr)                \setlength{\headheight}{91.0602pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-79.0602pt}.
-
-[81]
-File: splitImg/81.png Graphic file (type bmp)
-<splitImg/81.png>
-
-Underfull \hbox (badness 10000) in paragraph at lines 25--25
-
- []
-
-
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 91.0602pt, for example:
-(fancyhdr)                \setlength{\headheight}{91.0602pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-79.0602pt}.
-
-[82]
-File: splitImg/82.png Graphic file (type bmp)
-<splitImg/82.png>
-
-Underfull \hbox (badness 10000) in paragraph at lines 25--25
-
- []
-
-
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 91.0602pt, for example:
-(fancyhdr)                \setlength{\headheight}{91.0602pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-79.0602pt}.
-
-[83]
-File: splitImg/83.png Graphic file (type bmp)
-<splitImg/83.png>
-
-Underfull \hbox (badness 10000) in paragraph at lines 25--25
-
- []
-
-
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 91.0602pt, for example:
-(fancyhdr)                \setlength{\headheight}{91.0602pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-79.0602pt}.
-
-[84]
-File: splitImg/84.png Graphic file (type bmp)
-<splitImg/84.png>
-
-Underfull \hbox (badness 10000) in paragraph at lines 25--25
-
- []
-
-
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 91.0602pt, for example:
-(fancyhdr)                \setlength{\headheight}{91.0602pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-79.0602pt}.
-
-[85]
-File: splitImg/85.png Graphic file (type bmp)
-<splitImg/85.png>
-
-Underfull \hbox (badness 10000) in paragraph at lines 25--25
-
- []
-
-
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 91.0602pt, for example:
-(fancyhdr)                \setlength{\headheight}{91.0602pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-79.0602pt}.
-
-[86]
-File: splitImg/86.png Graphic file (type bmp)
-<splitImg/86.png>
-
-Underfull \hbox (badness 10000) in paragraph at lines 25--25
-
- []
-
-
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 91.0602pt, for example:
-(fancyhdr)                \setlength{\headheight}{91.0602pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-79.0602pt}.
-
-[87]
-File: splitImg/87.png Graphic file (type bmp)
-<splitImg/87.png>
-
-Underfull \hbox (badness 10000) in paragraph at lines 25--25
-
- []
-
-
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 91.0602pt, for example:
-(fancyhdr)                \setlength{\headheight}{91.0602pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-79.0602pt}.
-
-[88]
-File: splitImg/88.png Graphic file (type bmp)
-<splitImg/88.png>
-
-Underfull \hbox (badness 10000) in paragraph at lines 25--25
-
- []
-
-
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 91.0602pt, for example:
-(fancyhdr)                \setlength{\headheight}{91.0602pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-79.0602pt}.
-
-[89]
-File: splitImg/89.png Graphic file (type bmp)
-<splitImg/89.png>
-
-Underfull \hbox (badness 10000) in paragraph at lines 25--25
-
- []
-
-
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 91.0602pt, for example:
-(fancyhdr)                \setlength{\headheight}{91.0602pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-79.0602pt}.
-
-[90]
-File: splitImg/90.png Graphic file (type bmp)
-<splitImg/90.png>
-
-Underfull \hbox (badness 10000) in paragraph at lines 25--25
-
- []
-
-
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 91.0602pt, for example:
-(fancyhdr)                \setlength{\headheight}{91.0602pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-79.0602pt}.
-
-[91]
-File: splitImg/91.png Graphic file (type bmp)
-<splitImg/91.png>
-
-Underfull \hbox (badness 10000) in paragraph at lines 25--25
-
- []
-
-
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 91.0602pt, for example:
-(fancyhdr)                \setlength{\headheight}{91.0602pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-79.0602pt}.
-
-[92]
-File: splitImg/92.png Graphic file (type bmp)
-<splitImg/92.png>
-
-Underfull \hbox (badness 10000) in paragraph at lines 25--25
-
- []
-
-
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 91.0602pt, for example:
-(fancyhdr)                \setlength{\headheight}{91.0602pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-79.0602pt}.
-
-[93]
-File: splitImg/93.png Graphic file (type bmp)
-<splitImg/93.png>
-
-Underfull \hbox (badness 10000) in paragraph at lines 25--25
-
- []
-
-
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 91.0602pt, for example:
-(fancyhdr)                \setlength{\headheight}{91.0602pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-79.0602pt}.
-
-[94]
-File: splitImg/94.png Graphic file (type bmp)
-<splitImg/94.png>
-
-Underfull \hbox (badness 10000) in paragraph at lines 25--25
-
- []
-
-
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 91.0602pt, for example:
-(fancyhdr)                \setlength{\headheight}{91.0602pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-79.0602pt}.
-
-[95]
-File: splitImg/95.png Graphic file (type bmp)
-<splitImg/95.png>
-
-Underfull \hbox (badness 10000) in paragraph at lines 25--25
-
- []
-
-
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 91.0602pt, for example:
-(fancyhdr)                \setlength{\headheight}{91.0602pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-79.0602pt}.
-
-[96]
-File: splitImg/96.png Graphic file (type bmp)
-<splitImg/96.png>
-
-Underfull \hbox (badness 10000) in paragraph at lines 25--25
-
- []
-
-
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 91.0602pt, for example:
-(fancyhdr)                \setlength{\headheight}{91.0602pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-79.0602pt}.
-
-[97]
-File: splitImg/97.png Graphic file (type bmp)
-<splitImg/97.png>
-
-Underfull \hbox (badness 10000) in paragraph at lines 25--25
-
- []
-
-
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 91.0602pt, for example:
-(fancyhdr)                \setlength{\headheight}{91.0602pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-79.0602pt}.
-
-[98]
-File: splitImg/98.png Graphic file (type bmp)
-<splitImg/98.png>
-
-Underfull \hbox (badness 10000) in paragraph at lines 25--25
-
- []
-
-
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 91.0602pt, for example:
-(fancyhdr)                \setlength{\headheight}{91.0602pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-79.0602pt}.
-
-[99]
-File: splitImg/99.png Graphic file (type bmp)
-<splitImg/99.png>
-
-Underfull \hbox (badness 10000) in paragraph at lines 25--25
-
- []
-
-
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 91.0602pt, for example:
-(fancyhdr)                \setlength{\headheight}{91.0602pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-79.0602pt}.
-
-[100]
-File: splitImg/100.png Graphic file (type bmp)
-<splitImg/100.png>
-
-Underfull \hbox (badness 10000) in paragraph at lines 25--25
-
- []
-
-
-
-
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 91.0602pt, for example:
-(fancyhdr)                \setlength{\headheight}{91.0602pt}.
+(fancyhdr)                Make it at least 14.45398pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.45398pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-79.0602pt}.
+(fancyhdr)                \addtolength{\topmargin}{-2.45398pt}.
 
-[101]) 
+[13]) 
 enddocument/afterlastpage: lastpage setting LastPage.
-(build/example.aux (build/config.aux) (build/contents/pre.aux) (build/contents/content_type_two.aux))
+(build/example.aux (build/config.aux) (build/contents/pre.aux) (build/contents/content_type_one.aux))
  ***********
 LaTeX2e <2024-06-01> patch level 2
 L3 programming layer <2022/08/05>
  ***********
-
-
-LaTeX Font Warning: Some font shapes were not available, defaults substituted.
-
 Package rerunfilecheck Info: File `example.out' has not changed.
-(rerunfilecheck)             Checksum: 14DB1DDF124B7A2C04316172401F67CE;480.
+(rerunfilecheck)             Checksum: 197368CA9822361DE5D2D6C1A05CD5AC;615.
  ) 
 Here is how much of TeX's memory you used:
- 41106 strings out of 474235
- 844641 string characters out of 5742254
- 1932609 words of memory out of 5000000
- 62975 multiletter control sequences out of 15000+600000
+ 38916 strings out of 474235
+ 799863 string characters out of 5742254
+ 1958609 words of memory out of 5000000
+ 60883 multiletter control sequences out of 15000+600000
  567066 words of font info for 128 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 108i,16n,126p,460b,1021s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 108i,12n,126p,460b,1145s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on build/example.xdv (103 pages, 770424 bytes).
+Output written on build/example.xdv (15 pages, 104128 bytes).

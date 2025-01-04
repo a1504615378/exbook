@@ -93,7 +93,7 @@
 
 \hypersetup {colorlinks=true,linkcolor=black}
 
-\newcounter{Question}
+\newcounter{QuestionCounter}
 
 \newif\if@resetcounter
 \@resetcounterfalse
@@ -101,14 +101,14 @@
 
 
 % 定义题目环境
-\newenvironment{questions}[1][]{
+\newenvironment{qitems}[1][]{
 	\@tfor \@opt :=#1\do
 		 {\if\@opt r\global\@resetcountertrue\fi}
   	\if@resetcounter
-  		\setcounter{Question}{0}
+  		\setcounter{QuestionCounter}{0}
 	 \fi
 	\if@list
-		\list{\arabic{Question}.}{\setlength{\leftmargin}{0pt}}
+		\list{\arabic{QuestionCounter}.}{\setlength{\leftmargin}{0pt}}
 	\else
 		\par \begingroup \par
 	\fi
@@ -122,23 +122,23 @@
 }
 
 % 定义题目命令
-\newcommand{\question}{
-	\stepcounter{Question}
+\newcommand{\qitem}{
+	\stepcounter{QuestionCounter}
 	\if@list
 		\item 
 	\else
 		\vspace{2mm}
-		\arabic{Question}.
+		\arabic{QuestionCounter}.
 	\fi
 }
 
 % 定义小问环境
-\newlist{subquestions}{enumerate}{2}
-\setlist[subquestions,1]{label=(\arabic*)}
-\setlist[subquestions,2]{label=(\roman*)}
+\newlist{subqitems}{enumerate}{2}
+\setlist[subqitems,1]{label=(\arabic*)}
+\setlist[subqitems,2]{label=(\roman*)}
 
 % 定义新增小问命令
-\newcommand{\subquestion}{\item} 
+\newcommand{\subqitem}{\item} 
 
 \newenvironment{solution}[1]{
 	\setlength{\myvertspace}{#1}
