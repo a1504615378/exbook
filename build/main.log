@@ -1,10 +1,10 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.9.2)  4 JAN 2025 17:26
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.9.2)  7 JAN 2025 00:26
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**/Users/mwj/code/latexSrc/ExBook/example.tex
-(/Users/mwj/code/latexSrc/ExBook/example.tex
+**/Users/mwj/code/latexSrc/ExBook/main.tex
+(/Users/mwj/code/latexSrc/ExBook/main.tex
 LaTeX2e <2024-06-01> patch level 2
 L3 programming layer <2024-08-16>
 (./ExBook.cls
@@ -971,19 +971,19 @@ Package fontspec Info:
 (fontspec)             Roman/BI/OT:script=latn;language=dflt;"
 
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
-(Font)                  OT1/cmr/m/n --> TU/TimesNewRoman(1)/m/n on input line 373.
+(Font)                  OT1/cmr/m/n --> TU/TimesNewRoman(1)/m/n on input line 375.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> TU/TimesNewRoman(1)/m/it on input line 373.
+(Font)                  OT1/cmr/m/it --> TU/TimesNewRoman(1)/m/it on input line 375.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> TU/TimesNewRoman(1)/b/n on input line 373.
+(Font)                  OT1/cmr/bx/n --> TU/TimesNewRoman(1)/b/n on input line 375.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2024/05/25 1.10b listings language file
 ) (/usr/local/texlive/2024/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2024/05/25 1.10b (Carsten Heinz)
 )
-Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 1079.
-) (build/example.aux (build/config.aux) (build/contents/pre.aux) (build/contents/content_type_one.aux))
-\openout1 = `example.aux'.
+Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 1081.
+) (build/main.aux (build/config.aux) (build/contents/pre.aux) (build/contents/content_type_one.aux))
+\openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 4.
 LaTeX Font Info:    ... okay on input line 4.
@@ -1188,9 +1188,9 @@ LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
 (Font)                  OMX/cmex/m/n --> TU/latinmodern-math.otf(3)/b/n on input line 4.
 \c@lstlisting=\count382
 Package hyperref Info: Link coloring ON on input line 4.
-(build/example.out) (build/example.out)
+(build/main.out) (build/main.out)
 \@outlinefile=\write4
-\openout4 = `example.out'.
+\openout4 = `main.out'.
 
 \openout2 = `config.aux'.
 
@@ -1301,9 +1301,9 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [1
 
 
-]) (build/example.toc)
+]) (build/main.toc)
 \tf@toc=\write5
-\openout5 = `example.toc'.
+\openout5 = `main.toc'.
 
 
 
@@ -1322,59 +1322,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 \openout2 = `contents/content_type_one.aux'.
 
  (./contents/content_type_one.tex
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.45398pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.45398pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.45398pt}.
-
-[2
-
-
-]
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.45398pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.45398pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.45398pt}.
-
-[3]
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.45398pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.45398pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.45398pt}.
-
-[4]
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.45398pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.45398pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.45398pt}.
-
-[5]
 Underfull \hbox (badness 10000) in paragraph at lines 31--32
 
  []
 
 
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.45398pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.45398pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.45398pt}.
-
-[6]
 Underfull \hbox (badness 10000) in paragraph at lines 40--41
 
  []
@@ -1388,21 +1340,14 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.45398pt}.
 
-[7]
+[2
+
+
+]
 Underfull \hbox (badness 10000) in paragraph at lines 55--56
 
  []
 
-
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.45398pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.45398pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.45398pt}.
-
-[8]
 LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <12.045> not available
 (Font)              Font shape `TU/lmtt/b/n' tried instead on input line 61.
 
@@ -1419,16 +1364,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.45398pt}.
 
-[9]
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.45398pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.45398pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.45398pt}.
-
-[10]
+[3]
 File: fig/img01.png Graphic file (type bmp)
 <fig/img01.png>
 
@@ -1445,7 +1381,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.45398pt}.
 
-[11]
+[4])
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1454,32 +1390,23 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.45398pt}.
 
-[12]
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.45398pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.45398pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.45398pt}.
-
-[13]) 
+[5] 
 enddocument/afterlastpage: lastpage setting LastPage.
-(build/example.aux (build/config.aux) (build/contents/pre.aux) (build/contents/content_type_one.aux))
+(build/main.aux (build/config.aux) (build/contents/pre.aux) (build/contents/content_type_one.aux))
  ***********
 LaTeX2e <2024-06-01> patch level 2
 L3 programming layer <2022/08/05>
  ***********
-Package rerunfilecheck Info: File `example.out' has not changed.
+Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 197368CA9822361DE5D2D6C1A05CD5AC;615.
  ) 
 Here is how much of TeX's memory you used:
- 38916 strings out of 474235
- 799863 string characters out of 5742254
- 1958609 words of memory out of 5000000
- 60883 multiletter control sequences out of 15000+600000
+ 38918 strings out of 474235
+ 799820 string characters out of 5742254
+ 1964609 words of memory out of 5000000
+ 60885 multiletter control sequences out of 15000+600000
  567066 words of font info for 128 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 108i,12n,126p,460b,1145s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 108i,13n,126p,457b,1203s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on build/example.xdv (15 pages, 104128 bytes).
+Output written on build/main.xdv (7 pages, 89256 bytes).

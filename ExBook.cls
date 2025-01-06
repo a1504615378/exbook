@@ -342,6 +342,7 @@
 \def\ExBook@value@LheadC{公众号·研小布·}
 \def\ExBook@value@TextWater{\textcolor{black!38}{\selectfont【微信公众号·研小布】}}
 \def\ExBook@value@waterImg{img/water.png}
+\def\ExBook@value@coverImg{img/cov01.jpg}
 
 \newcommand\PreTitle[1]{\def\ExBook@value@PreTitle{\textbf{#1}}}
 \newcommand\Title[1]{\def\ExBook@value@Title{\heiti #1}}
@@ -362,6 +363,7 @@
 \newcommand\TextWater[1]{\def\ExBook@value@TextWater{\textcolor{black!38}{\selectfont #1}}}
 \newcommand{\textwater}{\ExBook@value@TextWater}
 \newcommand\WaterImg[1]{\def\ExBook@value@waterImg{#1}}
+\newcommand\CoverImg[1]{\def\ExBook@value@coverImg{#1}}
 
 
 \newcommand{\qanswerloc}[1]{\textcolor{themeColor}{\selectfont \ding{226} 此部分答案见原书P#1}}
@@ -484,7 +486,7 @@
     \begin{titlepage}
         
         \begin{tikzpicture}[remember picture, overlay]
-            \node[anchor=north, inner sep=0pt] at (current page.north) {\includegraphics[width=\paperwidth, height=\paperheight, keepaspectratio]{img/cov01.jpg}};
+            \node[anchor=north, inner sep=0pt] at (current page.north) {\includegraphics[width=\paperwidth, height=\paperheight, keepaspectratio]{\ExBook@value@coverImg}};
         \end{tikzpicture}
 
         \begin{tikzpicture}[remember picture, overlay]
@@ -566,7 +568,7 @@
     \begin{titlepage}
         
         \begin{tikzpicture}[remember picture, overlay]
-            \node[anchor=north, inner sep=0pt] at (current page.north) {\includegraphics[width=\paperwidth, height=\paperheight, keepaspectratio]{img/cov01.jpg}};
+            \node[anchor=north, inner sep=0pt] at (current page.north) {\includegraphics[width=\paperwidth, height=\paperheight, keepaspectratio]{\ExBook@value@coverImg}};
         \end{tikzpicture}
 
         \begin{tikzpicture}[remember picture, overlay]
@@ -647,7 +649,7 @@
     \renewcommand{\maketitle}{
     \begin{titlepage}
         \begin{tikzpicture}[remember picture, overlay]
-            \node[anchor=north, inner sep=0pt](image) at ([xshift=10cm, yshift=5cm]current page.north west) {\includegraphics[width=\paperwidth, height=\paperheight, keepaspectratio]{img/cov01.jpg}};
+            \node[anchor=north, inner sep=0pt](image) at ([xshift=10cm, yshift=5cm]current page.north west) {\includegraphics[width=\paperwidth, height=\paperheight, keepaspectratio]{\ExBook@value@coverImg}};
             % 渐变效果
             % \fill[left color=white!0, right color=white!0, shading angle=0] (image.south west) rectangle (image.north east);
         \end{tikzpicture}
@@ -771,7 +773,7 @@
     \begin{titlepage}
         
         \begin{tikzpicture}[remember picture, overlay]
-            \node[anchor=north, inner sep=0pt] at (current page.north) {\includegraphics[width=\paperwidth, height=\paperheight, keepaspectratio]{img/cov01.jpg}};
+            \node[anchor=north, inner sep=0pt] at (current page.north) {\includegraphics[width=\paperwidth, height=\paperheight, keepaspectratio]{\ExBook@value@coverImg}};
         \end{tikzpicture}
 
         \begin{tikzpicture}[remember picture, overlay]
@@ -851,7 +853,7 @@
     \begin{titlepage}
         
         \begin{tikzpicture}[remember picture, overlay]
-            \node[anchor=north, inner sep=0pt] at (current page.north) {\includegraphics[width=\paperwidth, height=\paperheight, keepaspectratio]{img/cov01.jpg}};
+            \node[anchor=north, inner sep=0pt] at (current page.north) {\includegraphics[width=\paperwidth, height=\paperheight, keepaspectratio]{\ExBook@value@coverImg}};
         \end{tikzpicture}
 
         \begin{tikzpicture}[remember picture, overlay]
@@ -924,7 +926,7 @@
     \renewcommand{\maketitle}{
     \begin{titlepage}
         \begin{tikzpicture}[remember picture, overlay]
-            \node[anchor=north, inner sep=0pt](image) at ([xshift=10cm, yshift=0cm]current page.north west) {\includegraphics[width=\paperwidth, height=\paperheight, keepaspectratio]{img/cov01.jpg}};
+            \node[anchor=north, inner sep=0pt](image) at ([xshift=10cm, yshift=0cm]current page.north west) {\includegraphics[width=\paperwidth, height=\paperheight, keepaspectratio]{\ExBook@value@coverImg}};
         \end{tikzpicture}
 
         \begin{tikzpicture}[remember picture, overlay]
@@ -1077,6 +1079,9 @@
 \hypersetup{
   bookmarksnumbered=true
 } % PDF阅读器显示侧边目录
+
+% \newcommand{\TextType}{TextType}
+% \newcommand{\ImgType}{ImgType}
 
 \AtBeginDocument{
 	\pagenumbering{arabic}  % 使用阿拉伯数字页码
