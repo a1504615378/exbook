@@ -1,6 +1,14 @@
 ![](./README.IMAGE/logo-header.png)
 <div align="center">
+<img src="https://img.shields.io/github/languages/code-size/ExBook/ExBook" alt="code-size" />
+    <img src="https://img.shields.io/badge/Author-ExBook-orange" alt="Author" />
+    <img src="https://img.shields.io/github/languages/top/ExBook/ExBook?color=yellow" alt="languages-top" />
+    <img src="https://img.shields.io/github/last-commit/ExBook/ExBook" alt="last-commit" />
+    <img src="https://img.shields.io/github/languages/count/ExBook/ExBook" alt="languages-count" 
+</div>
+<div align="center">
     <a href="https://exbook.github.io/">官方网站</a>
+    
 </div>
 
 # 简介
