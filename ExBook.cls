@@ -405,7 +405,7 @@
     \definecolor{themeColor}{HTML}{61589b} % 自定义颜色 紫色
     \else
     \ifx#1\orange
-    \definecolor{themeColor}{HTML}{f98919} % 自定义颜色 橙色
+    \definecolor{themeColor}{HTML}{EA4C0E} % 自定义颜色 橙色
     \else
     \ifx#1\infj
     \definecolor{themeColor}{HTML}{3b4676} % 自定义颜色 infj

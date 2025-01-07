@@ -1,11 +1,11 @@
 # Fdb version 4
-["xdvipdfmx"] 1736180819.55641 "build/main.xdv" "build/main.pdf" "build/main" 1736180819.88303 0
-  "build/main.xdv" 1736180819.4734 89256 d68f0f1b2f20c9e39c641f443a3779ad "xelatex"
+["xdvipdfmx"] 1736233863.69128 "build/main.xdv" "build/main.pdf" "build/main" 1736233864.02611 0
+  "build/main.xdv" 1736233863.60402 178960 6c861e45c88901981b0425f22660b4f2 "xelatex"
   (generated)
   "build/main.pdf"
   (rewritten before read)
-["xelatex"] 1736180817.71812 "/Users/mwj/code/latexSrc/ExBook/main.tex" "build/main.xdv" "main" 1736180819.88107 0
-  "/Users/mwj/code/latexSrc/ExBook/main.tex" 1736175817.36524 389 6ec851a8a82dba8fb98e87036a28f3d6 ""
+["xelatex"] 1736233861.67535 "/Users/mwj/code/latexSrc/ExBook/main.tex" "build/main.xdv" "main" 1736233864.02405 0
+  "/Users/mwj/code/latexSrc/ExBook/main.tex" 1736192717.2971 385 883999aee75032f88a6192d6896dbdc9 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/adobe/symbol/psyr.tfm" 1136768653 1408 5937f58aa508ea2cea4901c07d10f5fe ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/adobe/zapfding/pzdr.tfm" 1136768653 1528 f853c4d1b4e0550255e02831fdc8496f ""
@@ -230,20 +230,20 @@
   "/usr/local/texlive/2024/texmf-dist/web2c/texmf.cnf" 1719785820 42007 0b741a3c21a5ca32b40e3846e75b3548 ""
   "/usr/local/texlive/2024/texmf-var/web2c/xetex/xelatex.fmt" 1725217215 10869251 3bf044b0c45428c5d8c19e3dca5ea897 ""
   "/usr/local/texlive/2024/texmf.cnf" 1710266656 577 e590dabc9e28c5b61546e15f63eebcdf ""
-  "ExBook.cls" 1736179335.50522 43757 be896d7ef7938fb66277477f8aefafaa ""
-  "build/config.aux" 1736180819.34339 866 e8e9628cc49e1e9420b04fd27b08b559 "xelatex"
-  "build/contents/content_type_one.aux" 1736180819.47108 1497 7bdedef65341986e629ea58ff4a45457 "xelatex"
-  "build/contents/pre.aux" 1736180819.41761 872 44d934724b1c7182c704ef7ee743dcd1 "xelatex"
-  "build/main.aux" 1736180819.47138 597 2d14a09849500e65d07f14fcfef8e2af "xelatex"
-  "build/main.out" 1736180819.47316 615 197368ca9822361de5d2d6c1a05cd5ac "xelatex"
-  "build/main.toc" 1736180819.47335 423 7b2ae9554a8ca4c577cc30b90b1747ae "xelatex"
-  "config.tex" 1736180817.50387 1351 8ac0b26e32c32c7c19f5772592b263d8 ""
+  "ExBook.cls" 1736233853.53355 43757 f4327499867276a6d3b9598b935e5401 ""
+  "build/config.aux" 1736233863.23765 866 e8e9628cc49e1e9420b04fd27b08b559 "xelatex"
+  "build/contents/content_type_one.aux" 1736233863.60131 1500 548d2d9637ee833b7147fc1eb1695760 "xelatex"
+  "build/contents/pre.aux" 1736233863.3142 872 44d934724b1c7182c704ef7ee743dcd1 "xelatex"
+  "build/main.aux" 1736233863.60163 5010 c2ea9b1ecdb2f93585f7de3d6e282622 "xelatex"
+  "build/main.out" 1736233863.60376 615 197368ca9822361de5d2d6c1a05cd5ac "xelatex"
+  "build/main.toc" 1736233863.60397 425 eac514effaacdb105f3027cbb3749f14 "xelatex"
+  "config.tex" 1736233861.4759 1354 c6dc41911d1134285b7b693d0e5a6b1d ""
   "contents/content_type_one.tex" 1735982705.08927 4765 a1332b589f3623607e0c9271c6fd2d76 ""
   "contents/pre.tex" 1735914299.04356 929 f9e3fd1685d92c768bd167e78966b87f ""
   "fig/img01.png" 1735830321.91254 52893 ab985c6f87b8f9cba858eaef5cd11c1f ""
   "img/cov01.jpg" 1735533905.85646 1228866 2846bc9997e0bb664e7af9b99421333c ""
   "img/qr01.jpg" 1735533905.85878 171323 fe3f24b6d0c3c953877f351181bd255b ""
-  "main.tex" 1736175817.36524 389 6ec851a8a82dba8fb98e87036a28f3d6 ""
+  "main.tex" 1736192717.2971 385 883999aee75032f88a6192d6896dbdc9 ""
   (generated)
   "build/config.aux"
   "build/contents/content_type_one.aux"
