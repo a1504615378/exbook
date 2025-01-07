@@ -15,6 +15,8 @@
     <a href="https://exbook.github.io/">官方网站</a>
 </div>
 
+<!-- toc -->
+
 # 简介
 **ExBook** 是一个专门制作做题本/刷题本的 LaTex 文档类，只录入一次题目，就可以快速生成6种版式的PDF文档（如下图）。
 
