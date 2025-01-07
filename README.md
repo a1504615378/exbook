@@ -190,10 +190,10 @@ ExBook 提供4种经典颜色和8种个性颜色。
 * `main.tex`
 ```latex
 % 使用 ExBook 文档类，并传递选项
-\documentclass[cs4size,fandol,standard]{ExBook} 
+\documentclass[cs4size,fandol,standard,online]{ExBook} 
 
 \begin{document}
-
+ 
 \include{config} % 示例文件
 \maketitle 
 
