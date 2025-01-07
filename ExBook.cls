@@ -28,6 +28,9 @@
 \newif\if@printmode  \@printmodefalse
 \DeclareOption{printmode}{\@printmodetrue}
 
+\newif\if@online  \@onlinefalse
+\DeclareOption{online}{\@onlinetrue}
+
 \newif\if@water  \@waterfalse
 \DeclareOption{water}{\@watertrue}
 
@@ -72,7 +75,7 @@
 \RequirePackage{tikz} % 绘图
 \RequirePackage{titletoc} % 目录
 \RequirePackage{titlesec} % 标题
-\RequirePackage{hyperref} 
+\RequirePackage{hyperref}
 \RequirePackage{afterpage} 
 \RequirePackage{zhnumber} 
 \RequirePackage{fontspec} 
@@ -91,7 +94,7 @@
 
 \punctstyle{quanjiao} % 全角（主要是为了让中文逗号占满一个字符的宽度）
 
-\hypersetup {colorlinks=true,linkcolor=black}
+\hypersetup {colorlinks=true,linkcolor=black, urlcolor=themeColor, citecolor=red}
 
 \newcounter{QuestionCounter}
 
@@ -346,6 +349,7 @@
 \def\ExBook@value@TextWater{\textcolor{black!38}{\selectfont【微信公众号·研小布】}}
 \def\ExBook@value@waterImg{img/water.png}
 \def\ExBook@value@coverImg{img/cov01.jpg}
+\def\ExBook@value@onlineCheckUrl{https://github.com/ExBook/ExBook}
 
 \newcommand\PreTitle[1]{\def\ExBook@value@PreTitle{\textbf{#1}}}
 \newcommand\Title[1]{\def\ExBook@value@Title{\heiti #1}}
@@ -367,6 +371,7 @@
 \newcommand{\textwater}{\ExBook@value@TextWater}
 \newcommand\WaterImg[1]{\def\ExBook@value@waterImg{#1}}
 \newcommand\CoverImg[1]{\def\ExBook@value@coverImg{#1}}
+\newcommand\OnlineCheckUrl[1]{\def\ExBook@value@onlineCheckUrl{#1}}
 
 
 \newcommand{\qanswerloc}[1]{\textcolor{themeColor}{\selectfont \ding{226} 此部分答案见原书P#1}}
@@ -510,6 +515,16 @@
             \fill[themeColor!6.2, rounded corners=16pt] ([yshift=4cm, xshift=14cm]current page.south west) rectangle ++(5cm,2cm);
             \node[anchor=south, align=center] at ([yshift=4.5cm, xshift=16.5cm]current page.south west) {\color{themeColor}\fontsize{22pt}{0}\ExBook@value@TypeOne};
         \end{tikzpicture}
+
+        \if@online
+        
+        \begin{tikzpicture}[remember picture, overlay]
+            \node[anchor=south, align=center] at ([yshift=5.5cm, xshift=4.5cm]current page.south west) {\color{themeColor}\fontsize{14pt}{0}\textbf{\kaishu 遇到录入错误，可查看：}};
+            \fill[themeColor!6.2, rounded corners=6pt] ([yshift=4.5cm, xshift=1.50cm]current page.south west) rectangle ++(7cm,1cm);
+            \node[anchor=south, align=center] at ([yshift=4.5cm, xshift=5.2cm]current page.south west) {\color{themeColor}\fontsize{16pt}{0}\textbf{\href{\ExBook@value@onlineCheckUrl}{在线勘误文档（\underline{点击跳转}）}}};
+        \end{tikzpicture}
+
+        \fi
         
     \end{titlepage}
     \if@printmode
@@ -592,6 +607,17 @@
             \fill[themeColor!6.2, rounded corners=16pt] ([yshift=4cm, xshift=14cm]current page.south west) rectangle ++(5cm,2cm);
             \node[anchor=south, align=center] at ([yshift=4.5cm, xshift=16.5cm]current page.south west) {\color{themeColor}\fontsize{24pt}{0}\ExBook@value@TypeTwo};
         \end{tikzpicture}
+
+
+        \if@online
+        
+        \begin{tikzpicture}[remember picture, overlay]
+            \node[anchor=south, align=center] at ([yshift=5.5cm, xshift=4.5cm]current page.south west) {\color{themeColor}\fontsize{14pt}{0}\textbf{\kaishu 遇到录入错误，可查看：}};
+            \fill[themeColor!6.2, rounded corners=6pt] ([yshift=4.5cm, xshift=1.50cm]current page.south west) rectangle ++(7cm,1cm);
+            \node[anchor=south, align=center] at ([yshift=4.5cm, xshift=5.2cm]current page.south west) {\color{themeColor}\fontsize{16pt}{0}\textbf{\href{\ExBook@value@onlineCheckUrl}{在线勘误文档（\underline{点击跳转}）}}};
+        \end{tikzpicture}
+
+        \fi
        
     \end{titlepage}
     \if@printmode
@@ -677,6 +703,16 @@
             \fill[themeColor!6.2, rounded corners=12pt] ([yshift=2.5cm, xshift=15.5cm]current page.south west) rectangle ++(3.5cm,1.5cm);
             \node[anchor=south, align=center] at ([yshift=2.8cm, xshift=17.3cm]current page.south west) {\color{themeColor}\fontsize{16pt}{0}\textbf{\ExBook@value@TypeThree}};
         \end{tikzpicture}
+
+        \if@online
+        
+        \begin{tikzpicture}[remember picture, overlay]
+            \node[anchor=south, align=center] at ([yshift=1.0cm, xshift=3.25cm]current page.south west) {\color{themeColor}\fontsize{10pt}{0}\textbf{\kaishu 遇到录入错误，可查看：}};
+            \node[anchor=south, align=center] at ([yshift=0.35cm, xshift=3.4cm]current page.south west) {\color{themeColor}\fontsize{10pt}{0}\textbf{\href{\ExBook@value@onlineCheckUrl}{在线勘误文档（\underline{点击跳转}）}}};
+        \end{tikzpicture}
+
+        \fi
+        
     \end{titlepage}
     }
 
@@ -795,8 +831,18 @@
 
         \begin{tikzpicture}[remember picture, overlay]
             \fill[themeColor!6.2, rounded corners=16pt] ([yshift=4cm, xshift=14cm]current page.south west) rectangle ++(5cm,2cm);
-            \node[anchor=south, align=center] at ([yshift=4.5cm, xshift=16.5cm]current page.south west) {\color{themeColor}\fontsize{24pt}{0}\ExBook@value@TypeFour};
+            \node[anchor=south, align=center] at ([yshift=4.5cm, xshift=16.5cm]current page.south west) {\color{themeColor}\fontsize{24pt}{0}\ExBook@value@TypeFour}; 
         \end{tikzpicture}
+
+        \if@online
+        
+        \begin{tikzpicture}[remember picture, overlay]
+            \node[anchor=south, align=center] at ([yshift=5.5cm, xshift=4.5cm]current page.south west) {\color{themeColor}\fontsize{14pt}{0}\textbf{\kaishu 遇到录入错误，可查看：}};
+            \fill[themeColor!6.2, rounded corners=6pt] ([yshift=4.5cm, xshift=1.50cm]current page.south west) rectangle ++(7cm,1cm);
+            \node[anchor=south, align=center] at ([yshift=4.5cm, xshift=5.2cm]current page.south west) {\color{themeColor}\fontsize{16pt}{0}\textbf{\href{\ExBook@value@onlineCheckUrl}{在线勘误文档（\underline{点击跳转}）}}};
+        \end{tikzpicture}
+
+        \fi
        
     \end{titlepage}
     }
@@ -875,8 +921,18 @@
 
         \begin{tikzpicture}[remember picture, overlay]
             \fill[themeColor!6.2, rounded corners=16pt] ([yshift=4cm, xshift=14cm]current page.south west) rectangle ++(5cm,2cm);
-            \node[anchor=south, align=center] at ([yshift=4.5cm, xshift=16.5cm]current page.south west) {\color{themeColor}\fontsize{24pt}{0}\ExBook@value@TypeTwo};
+            \node[anchor=south, align=center] at ([yshift=4.5cm, xshift=16.5cm]current page.south west) {\color{themeColor}\fontsize{24pt}{0}\ExBook@value@TypeFive};
         \end{tikzpicture}
+
+        \if@online
+        
+        \begin{tikzpicture}[remember picture, overlay]
+            \node[anchor=south, align=center] at ([yshift=5.5cm, xshift=4.5cm]current page.south west) {\color{themeColor}\fontsize{14pt}{0}\textbf{\kaishu 遇到录入错误，可查看：}};
+            \fill[themeColor!6.2, rounded corners=6pt] ([yshift=4.5cm, xshift=1.50cm]current page.south west) rectangle ++(7cm,1cm);
+            \node[anchor=south, align=center] at ([yshift=4.5cm, xshift=5.2cm]current page.south west) {\color{themeColor}\fontsize{16pt}{0}\textbf{\href{\ExBook@value@onlineCheckUrl}{在线勘误文档（\underline{点击跳转}）}}};
+        \end{tikzpicture}
+
+        \fi
        
     \end{titlepage}
     }
@@ -952,6 +1008,16 @@
             \fill[themeColor!6.2, rounded corners=12pt] ([yshift=3.5cm, xshift=15.0cm]current page.south west) rectangle ++(3.5cm,1.5cm);
             \node[anchor=south, align=center] at ([yshift=3.8cm, xshift=16.8cm]current page.south west) {\color{themeColor}\fontsize{16pt}{0}\textbf{\ExBook@value@TypeSix}};
         \end{tikzpicture}
+
+        \if@online
+        
+        \begin{tikzpicture}[remember picture, overlay]
+            \node[anchor=south, align=center] at ([yshift=5.5cm, xshift=3.8cm]current page.south west) {\color{themeColor}\fontsize{14pt}{0}\textbf{\kaishu 遇到录入错误，可查看：}};
+            \fill[themeColor!6.2, rounded corners=6pt] ([yshift=4.5cm, xshift=0.80cm]current page.south west) rectangle ++(7cm,1cm);
+            \node[anchor=south, align=center] at ([yshift=4.5cm, xshift=4.5cm]current page.south west) {\color{themeColor}\fontsize{16pt}{0}\textbf{\href{\ExBook@value@onlineCheckUrl}{在线勘误文档（\underline{点击跳转}）}}};
+        \end{tikzpicture}
+
+        \fi
     \end{titlepage}
     }
 

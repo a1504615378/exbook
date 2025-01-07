@@ -64,6 +64,7 @@
 **其他选项：**
 * `printmode`：只在A4版下有效，可生成适合双面打印的文档
 * `water`：是否显示全局页面水印（水印图片可在配置文件中自定义，水印将显示在页面右下角）
+* `online`：在封面显示在线文档链接
 
 ## 封面设置
 打开 `config.tex`，以下配置项可自定义封面内容：
@@ -82,6 +83,7 @@
 \motto{你这个年龄是怎么睡得着觉的} % 封面座右铭
 \Creator{研小布} % 制作人
 \UpdateTime{\today} % 更新时间
+\OnlineCheckUrl{https://github.com/ExBook/ExBook} % 在线勘误文档地址
 ```
 说明如下：
 ![](./README.IMAGE/3.png)
