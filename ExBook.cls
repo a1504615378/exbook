@@ -147,6 +147,9 @@
 
 }
 
+
+% 选择题选项自动排版参考了 BHCexam.cls 的实现
+
 \newlength{\choicelengtha}
 \newlength{\choicelengthb}
 \newlength{\choicelengthc}

@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.9.2)  7 JAN 2025 15:11
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.9.2)  7 JAN 2025 19:00
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -971,17 +971,17 @@ Package fontspec Info:
 (fontspec)             Roman/BI/OT:script=latn;language=dflt;"
 
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
-(Font)                  OT1/cmr/m/n --> TU/TimesNewRoman(1)/m/n on input line 375.
+(Font)                  OT1/cmr/m/n --> TU/TimesNewRoman(1)/m/n on input line 378.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> TU/TimesNewRoman(1)/m/it on input line 375.
+(Font)                  OT1/cmr/m/it --> TU/TimesNewRoman(1)/m/it on input line 378.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> TU/TimesNewRoman(1)/b/n on input line 375.
+(Font)                  OT1/cmr/bx/n --> TU/TimesNewRoman(1)/b/n on input line 378.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2024/05/25 1.10b listings language file
 ) (/usr/local/texlive/2024/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2024/05/25 1.10b (Carsten Heinz)
 )
-Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 1081.
+Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 1084.
 ) (build/main.aux (build/config.aux) (build/contents/pre.aux) (build/contents/content_type_one.aux))
 \openout1 = `main.aux'.
 
@@ -1014,21 +1014,21 @@ Package caption Info: End \AtBeginDocument code.
 *geometry* detected driver: xetex
 *geometry* verbose mode - [ preamble ] result:
 * driver: xetex
-* paper: custom
+* paper: a4paper
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: 
-* h-part:(L,W,R)=(34.1433pt, 500.76852pt, 34.1433pt)
-* v-part:(T,H,B)=(28.45274pt, 355.65947pt, 42.67912pt)
-* \paperwidth=569.05511pt
-* \paperheight=426.79134pt
-* \textwidth=500.76852pt
-* \textheight=355.65947pt
-* \oddsidemargin=-38.1267pt
-* \evensidemargin=-38.1267pt
-* \topmargin=-80.81725pt
+* h-part:(L,W,R)=(51.21495pt, 495.07797pt, 51.21495pt)
+* v-part:(T,H,B)=(71.13188pt, 702.78308pt, 71.13188pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=495.07797pt
+* \textheight=702.78308pt
+* \oddsidemargin=-21.05504pt
+* \evensidemargin=-21.05504pt
+* \topmargin=-27.36447pt
 * \headheight=12.0pt
-* \headsep=25.0pt
+* \headsep=14.22636pt
 * \topskip=10.0pt
 * \footskip=30.0pt
 * \marginparwidth=65.0pt
@@ -1200,25 +1200,6 @@ File: img/cov01.jpg Graphic file (type bmp)
 
 Package fontspec Info: 
 (fontspec)             Script 'CJK' not explicitly supported within font
-(fontspec)             'FandolKai-Regular'. Check the typeset output, and if
-(fontspec)             it is okay then ignore this warning. Otherwise a
-(fontspec)             different font should be chosen.
-
-
-Package fontspec Info: 
-(fontspec)             Font family 'FandolKai-Regular(0)' created for font
-(fontspec)             'FandolKai-Regular' with options
-(fontspec)             [Script={CJK},Extension={.otf}].
-(fontspec)              
-(fontspec)              This font family consists of the following NFSS
-(fontspec)             series/shapes:
-(fontspec)              
-(fontspec)             - 'normal' (m/n) with NFSS spec.:
-(fontspec)             <->"[FandolKai-Regular.otf]/OT:script=hani;language=dflt;"
-
-
-Package fontspec Info: 
-(fontspec)             Script 'CJK' not explicitly supported within font
 (fontspec)             'FandolHei-Regular'. Check the typeset output, and if
 (fontspec)             it is okay then ignore this warning. Otherwise a
 (fontspec)             different font should be chosen.
@@ -1236,6 +1217,25 @@ Package fontspec Info:
 (fontspec)             <->"[FandolHei-Regular.otf]/OT:script=hani;language=dflt;"
 (fontspec)             - 'bold' (b/n) with NFSS spec.:
 (fontspec)             <->"[FandolHei-Bold.otf]/OT:script=hani;language=dflt;"
+
+
+Package fontspec Info: 
+(fontspec)             Script 'CJK' not explicitly supported within font
+(fontspec)             'FandolKai-Regular'. Check the typeset output, and if
+(fontspec)             it is okay then ignore this warning. Otherwise a
+(fontspec)             different font should be chosen.
+
+
+Package fontspec Info: 
+(fontspec)             Font family 'FandolKai-Regular(0)' created for font
+(fontspec)             'FandolKai-Regular' with options
+(fontspec)             [Script={CJK},Extension={.otf}].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->"[FandolKai-Regular.otf]/OT:script=hani;language=dflt;"
 
 
 
@@ -1293,10 +1293,10 @@ File: img/qr01.jpg Graphic file (type bmp)
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 91.0602pt, for example:
-(fancyhdr)                \setlength{\headheight}{91.0602pt}.
+(fancyhdr)                Make it at least 14.45398pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.45398pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-79.0602pt}.
+(fancyhdr)                \addtolength{\topmargin}{-2.45398pt}.
 
 [1
 
@@ -1308,15 +1308,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 
 
-LaTeX Font Warning: Font shape `TU/FandolKai-Regular(0)/b/n' undefined
-(Font)              using `TU/FandolKai-Regular(0)/m/n' instead on input line 15.
-
-
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 91.0602pt, for example:
-(fancyhdr)                \setlength{\headheight}{91.0602pt}.
+(fancyhdr)                Make it at least 14.45398pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.45398pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-79.0602pt}.
+(fancyhdr)                \addtolength{\topmargin}{-2.45398pt}.
 
 [1
 
@@ -1326,59 +1322,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 \openout2 = `contents/content_type_one.aux'.
 
  (./contents/content_type_one.tex
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 91.0602pt, for example:
-(fancyhdr)                \setlength{\headheight}{91.0602pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-79.0602pt}.
-
-[2
-
-
-]
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 91.0602pt, for example:
-(fancyhdr)                \setlength{\headheight}{91.0602pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-79.0602pt}.
-
-[3]
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 91.0602pt, for example:
-(fancyhdr)                \setlength{\headheight}{91.0602pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-79.0602pt}.
-
-[4]
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 91.0602pt, for example:
-(fancyhdr)                \setlength{\headheight}{91.0602pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-79.0602pt}.
-
-[5]
 Underfull \hbox (badness 10000) in paragraph at lines 31--32
 
  []
 
 
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 91.0602pt, for example:
-(fancyhdr)                \setlength{\headheight}{91.0602pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-79.0602pt}.
-
-[6]
 Underfull \hbox (badness 10000) in paragraph at lines 40--41
 
  []
@@ -1387,26 +1335,19 @@ Underfull \hbox (badness 10000) in paragraph at lines 40--41
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 91.0602pt, for example:
-(fancyhdr)                \setlength{\headheight}{91.0602pt}.
+(fancyhdr)                Make it at least 14.45398pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.45398pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-79.0602pt}.
+(fancyhdr)                \addtolength{\topmargin}{-2.45398pt}.
 
-[7]
+[2
+
+
+]
 Underfull \hbox (badness 10000) in paragraph at lines 55--56
 
  []
 
-
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 91.0602pt, for example:
-(fancyhdr)                \setlength{\headheight}{91.0602pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-79.0602pt}.
-
-[8]
 LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <12.045> not available
 (Font)              Font shape `TU/lmtt/b/n' tried instead on input line 61.
 
@@ -1418,21 +1359,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 67--68
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 91.0602pt, for example:
-(fancyhdr)                \setlength{\headheight}{91.0602pt}.
+(fancyhdr)                Make it at least 14.45398pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.45398pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-79.0602pt}.
+(fancyhdr)                \addtolength{\topmargin}{-2.45398pt}.
 
-[9]
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 91.0602pt, for example:
-(fancyhdr)                \setlength{\headheight}{91.0602pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-79.0602pt}.
-
-[10]
+[3]
 File: fig/img01.png Graphic file (type bmp)
 <fig/img01.png>
 
@@ -1444,50 +1376,37 @@ Underfull \hbox (badness 10000) in paragraph at lines 89--90
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 91.0602pt, for example:
-(fancyhdr)                \setlength{\headheight}{91.0602pt}.
+(fancyhdr)                Make it at least 14.45398pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.45398pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-79.0602pt}.
+(fancyhdr)                \addtolength{\topmargin}{-2.45398pt}.
 
-[11]
+[4])
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 91.0602pt, for example:
-(fancyhdr)                \setlength{\headheight}{91.0602pt}.
+(fancyhdr)                Make it at least 14.45398pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.45398pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-79.0602pt}.
+(fancyhdr)                \addtolength{\topmargin}{-2.45398pt}.
 
-[12]
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 91.0602pt, for example:
-(fancyhdr)                \setlength{\headheight}{91.0602pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-79.0602pt}.
-
-[13]) 
+[5] 
 enddocument/afterlastpage: lastpage setting LastPage.
 (build/main.aux (build/config.aux) (build/contents/pre.aux) (build/contents/content_type_one.aux))
  ***********
 LaTeX2e <2024-06-01> patch level 2
 L3 programming layer <2022/08/05>
  ***********
-
-
-LaTeX Font Warning: Some font shapes were not available, defaults substituted.
-
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 197368CA9822361DE5D2D6C1A05CD5AC;615.
  ) 
 Here is how much of TeX's memory you used:
- 39148 strings out of 474235
- 804885 string characters out of 5742254
- 1962609 words of memory out of 5000000
- 61111 multiletter control sequences out of 15000+600000
- 567098 words of font info for 132 fonts, out of 8000000 for 9000
+ 38918 strings out of 474235
+ 799820 string characters out of 5742254
+ 1964609 words of memory out of 5000000
+ 60885 multiletter control sequences out of 15000+600000
+ 567066 words of font info for 128 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 108i,16n,126p,457b,1203s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 108i,13n,126p,457b,1203s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on build/main.xdv (15 pages, 178960 bytes).
+Output written on build/main.xdv (7 pages, 89256 bytes).
