@@ -34,6 +34,9 @@
 \newif\if@water  \@waterfalse
 \DeclareOption{water}{\@watertrue}
 
+\newif\if@notocnum  \@notocnumfalse
+\DeclareOption{notocnum}{\@notocnumtrue}
+
 
 % 1. 定义默认页面格式
 \def\@pageformat{standard} % 默认格式为 "standard"
@@ -100,13 +103,22 @@
 
 \newif\if@resetcounter
 \@resetcounterfalse
+
+
 \newlength{\myvertspace}
 
 
 % 定义题目环境
-\newenvironment{qitems}[1][]{
+\newenvironment{qitems}[2][]{
+    \newif\if@boxmode
+    \@boxmodefalse
+    \newif\if@choicemode
+    \@choicemodefalse
 	\@tfor \@opt :=#1\do
-		 {\if\@opt r\global\@resetcountertrue\fi}
+		 {\if\@opt r\global\@resetcountertrue\fi
+		  \if\@opt b\global\@boxmodetrue\fi
+		  \if\@opt c\global\@choicemodetrue\fi
+         }
   	\if@resetcounter
   		\setcounter{QuestionCounter}{0}
 	 \fi
@@ -122,16 +134,22 @@
 		\par \endgroup \par
 	\fi
 
+    \@boxmodefalse
+    \@choicemodefalse
 }
 
 % 定义题目命令
-\newcommand{\qitem}{
+\newcommand{\qitem}[1][\arabic{QuestionCounter}]{
 	\stepcounter{QuestionCounter}
 	\if@list
 		\item 
 	\else
 		\vspace{2mm}
-		\arabic{QuestionCounter}.
+        \if@boxmode
+            （#1）
+        \else
+            \arabic{QuestionCounter}.
+        \fi
 	\fi
 }
 
@@ -162,7 +180,42 @@
 
 % 三个选项
 \newcommand{\threechoices}[3]{
+    \if@choicemode
 	\par
+	\settowidth{\choicelengtha}{(A)~#1~~~}
+	\settowidth{\choicelengthb}{(B)~#2~~~}
+	\settowidth{\choicelengthc}{(C)~#3~~~}
+
+	\ifthenelse{\lengthtest{\choicelengtha>\choicelengthb}}{\setlength{\maxlength}{\choicelengtha}}{\setlength{\maxlength}{\choicelengthb}}
+	\ifthenelse{\lengthtest{\choicelengthc>\maxlength}}{\setlength{\maxlength}{\choicelengthc}}{}
+	\ifthenelse{\lengthtest{\maxlength>0.4\linewidth}}
+	{
+		\begin{tabularx}{\linewidth}{X}
+			\setlength\tabcolsep{0pt}
+			(A)~#1~~~\\
+			(B)~#2~~~\\
+			(C)~#3~~~\\
+		\end{tabularx}
+	}%
+	{
+		\ifthenelse{\lengthtest{\maxlength>0.2\linewidth}}
+		{
+			\begin{tabularx}{\linewidth}{XX}
+				\setlength\tabcolsep{0pt}
+				(A)~#1~~~ & (B)~#2~~~\\
+				(C)~#3~~~ & \\
+			\end{tabularx}
+		}%
+		{
+			\begin{tabularx}{\linewidth}{XXXX}
+				\setlength\tabcolsep{0pt}
+				(A)~#1~~~  & (B)~#2~~~ & (C)~#3~~~ &\\ 
+			\end{tabularx}
+		}
+	}
+	\unskip \unskip 
+    \else
+    \par
 	\settowidth{\choicelengtha}{A.~#1~~~}
 	\settowidth{\choicelengthb}{B.~#2~~~}
 	\settowidth{\choicelengthc}{C.~#3~~~}
@@ -195,11 +248,50 @@
 		}
 	}
 	\unskip \unskip 
+    \fi
 }
 
 % 四个选项
 \newcommand{\fourchoices}[4]{
+    \if@choicemode
 	\par
+	\settowidth{\choicelengtha}{(A)~#1~~~}
+	\settowidth{\choicelengthb}{(B)~#2~~~}
+	\settowidth{\choicelengthc}{(C)~#3~~~}
+	\settowidth{\choicelengthd}{(D)~#4~~~}
+	\ifthenelse{\lengthtest{\choicelengtha>\choicelengthb}}{\setlength{\maxlength}{\choicelengtha}}{\setlength{\maxlength}{\choicelengthb}}
+	\ifthenelse{\lengthtest{\choicelengthc>\maxlength}}{\setlength{\maxlength}{\choicelengthc}}{}
+	\ifthenelse{\lengthtest{\choicelengthd>\maxlength}}{\setlength{\maxlength}{\choicelengthd}}{}
+	\ifthenelse{\lengthtest{\maxlength>0.4\linewidth}}
+	{
+		\begin{tabularx}{\linewidth}{X}
+			\setlength\tabcolsep{0pt}
+			(A)~#1~~~\\
+			(B)~#2~~~\\
+			(C)~#3~~~\\
+			(D)~#4~~~\\
+		\end{tabularx}
+	}%
+	{
+		\ifthenelse{\lengthtest{\maxlength>0.2\linewidth}}
+		{
+			\begin{tabularx}{\linewidth}{XX}
+				\setlength\tabcolsep{0pt}
+				(A)~#1~~~ & (B)~#2~~~\\
+				(C)~#3~~~ & (D)~#4~~~\\
+			\end{tabularx}
+		}%
+		{
+			\begin{tabularx}{\linewidth}{XXXX}
+				\setlength\tabcolsep{0pt}
+				(A)~#1~~~  & (B)~#2~~~ & (C)~#3~~~ & (D)~#4~~~\\ 
+				% A.~#1~~~  & B.~#2~~~ & C.~#3~~~ & D.~#4~~~\\ 
+			\end{tabularx}
+		}%
+	}
+	\unskip \unskip 
+    \else
+    \par
 	\settowidth{\choicelengtha}{A.~#1~~~}
 	\settowidth{\choicelengthb}{B.~#2~~~}
 	\settowidth{\choicelengthc}{C.~#3~~~}
@@ -235,11 +327,53 @@
 		}%
 	}
 	\unskip \unskip 
+    \fi
 }
 
 % 五个选项
 \newcommand{\fivechoices}[5]{
+    \if@choicemode
 	\par
+	\settowidth{\choicelengtha}{(A)~#1~~~}
+	\settowidth{\choicelengthb}{(B)~#2~~~}
+	\settowidth{\choicelengthc}{(C)~#3~~~}
+	\settowidth{\choicelengthd}{(D)~#4~~~}
+	\settowidth{\choicelengthe}{(E)~#5~~~}
+	\ifthenelse{\lengthtest{\choicelengtha>\choicelengthb}}{\setlength{\maxlength}{\choicelengtha}}{\setlength{\maxlength}{\choicelengthb}}
+	\ifthenelse{\lengthtest{\choicelengthc>\maxlength}}{\setlength{\maxlength}{\choicelengthc}}{}
+	\ifthenelse{\lengthtest{\choicelengthd>\maxlength}}{\setlength{\maxlength}{\choicelengthd}}{}
+	\ifthenelse{\lengthtest{\choicelengthe>\maxlength}}{\setlength{\maxlength}{\choicelengthe}}{}
+	\ifthenelse{\lengthtest{\maxlength>0.4\linewidth}}{
+		\begin{tabularx}{\linewidth}{X}
+			\setlength\tabcolsep{0pt}
+			(A)~#1~~~\\
+			(B)~#2~~~\\
+			(C)~#3~~~\\
+			(D)~#4~~~\\
+			(E)~#5~~~\\
+		\end{tabularx}
+	}%
+	{
+		\ifthenelse{\lengthtest{\maxlength>0.2\linewidth}}
+		{
+			\begin{tabularx}{\linewidth}{XX}
+				\setlength\tabcolsep{0pt}
+				(A)~#1~~~ & (B)~#2~~~\\
+				(C)~#3~~~ & (D)~#4~~~\\
+				(E)~#5~~~ &         \\
+			\end{tabularx}
+		}%
+		{
+			\begin{tabularx}{\linewidth}{XXXX}
+				\setlength\tabcolsep{0pt}
+				(A)~#1~~~  & (B)~#2~~~ & (C)~#3~~~ & (D)~#4~~~ \\
+				(E)~#5~~~  &          &          &          \\
+			\end{tabularx}
+		}
+	}%
+	\unskip \unskip 
+    \else
+    \par
 	\settowidth{\choicelengtha}{A.~#1~~~}
 	\settowidth{\choicelengthb}{B.~#2~~~}
 	\settowidth{\choicelengthc}{C.~#3~~~}
@@ -277,18 +411,62 @@
 			\end{tabularx}
 		}
 	}%
-	\unskip \unskip 
+	\unskip \unskip (
+)   \fi
 }
 
 % 六个选项
 \newcommand{\sixchoices}[6]{
+    \if@choicemode
 	\par
+	\settowidth{\choicelengtha}{(A)~#1~~~}
+	\settowidth{\choicelengthb}{(B)~#2~~~}
+	\settowidth{\choicelengthc}{(C)~#3~~~}
+	\settowidth{\choicelengthd}{(D)~#4~~~}
+	\settowidth{\choicelengthe}{(E)~#5~~~}
+	\ifthenelse{\lengthtest{\choicelengtha>\choicelengthb}}{\setlength{\maxlength}{\choicelengtha}}{\setlength{\maxlength}{\choice(l)ngthb}}
+	\ifthenelse{\lengthtest{\choicelengthc>\maxlength}}{\setlength{\maxlength}{\choicelengthc}}{}
+	\ifthenelse{\lengthtest{\choicelengthd>\maxlength}}{\setlength{\maxlength}{\choicelengthd}}{}	\ifthenelse{\lengthtest{\choicelengthe>\maxlength}}{\setlength{\maxlength}{\choicelengthe}}{}
+	
+	\ifthenelse{\lengthtest{\maxlength>0.4\linewidth}}
+	{
+		\begin{tabularx}{\linewidth}{X}
+			\setlength\tabcolsep{0pt}
+			(A)~#1~~~\\
+			(B)~#2~~~\\
+			(C)~#3~~~\\
+			(D)~#4~~~\\
+			(E)~#5~~~\\
+			(F)~#6~~~\\
+		\end{tabularx}
+	}%
+	{
+		\ifthenelse{\lengthtest{\maxlength>0.2\linewidth}}
+		{
+			\begin{tabularx}{\linewidth}{XX}
+				\setlength\tabcolsep{0pt}
+				(A)~#1~~~ & (B)~#2~~~\\
+				(C)~#3~~~ & (D)~#4~~~\\
+				(E)~#5~~~ & (F)~#6~~~\\
+			\end{tabularx}
+		}%
+		{
+			\begin{tabularx}{\linewidth}{XXXX}
+				\setlength\tabcolsep{0pt}
+				(A)~#1~~~  & (B)~#2~~~ & (C)~#3~~~ & (D)~#4~~~ \\
+				(E)~#2~~~  & (F)~#6~~~ &          &          \\
+			\end{tabularx}
+		}%
+	}
+	\unskip \unskip
+    \else
+    \par
 	\settowidth{\choicelengtha}{A.~#1~~~}
 	\settowidth{\choicelengthb}{B.~#2~~~}
 	\settowidth{\choicelengthc}{C.~#3~~~}
 	\settowidth{\choicelengthd}{D.~#4~~~}
 	\settowidth{\choicelengthe}{E.~#5~~~}
-	\ifthenelse{\lengthtest{\choicelengtha>\choicelengthb}}{\setlength{\maxlength}{\choicelengtha}}{\setlength{\maxlength}{\choicelengthb}}
+	\ifthenelse{\lengthtest{\choicelengtha>\choicelengthb}}{\setlength{\maxlength}{\choicelengtha}}{\setlength{\maxlength}{\choice(l)ngthb}}
 	\ifthenelse{\lengthtest{\choicelengthc>\maxlength}}{\setlength{\maxlength}{\choicelengthc}}{}
 	\ifthenelse{\lengthtest{\choicelengthd>\maxlength}}{\setlength{\maxlength}{\choicelengthd}}{}	\ifthenelse{\lengthtest{\choicelengthe>\maxlength}}{\setlength{\maxlength}{\choicelengthe}}{}
 	
@@ -322,7 +500,8 @@
 			\end{tabularx}
 		}%
 	}
-	\unskip \unskip 
+	\unskip \unskip(
+)   \fi 
 }
 
 
@@ -334,7 +513,7 @@
 \def\ExBook@value@TitleDescription{\textbf{此处填写副标题}}
 \def\ExBook@value@TypeOne{\textbf{A4紧凑版}}
 \def\ExBook@value@TypeTwo{\textbf{A4标准版}}
-\def\ExBook@value@TypeThree{\textbf{横版Pad版}}
+\def\ExBoo(k)value@TypeThree{\textbf{横版Pad版}}
 \def\ExBook@value@TypeFour{\textbf{A4宽松版}}
 \def\ExBook@value@TypeFive{\textbf{A4单题版}}
 \def\ExBook@value@TypeSix{\textbf{竖版Pad版}}
@@ -378,6 +557,16 @@
 \newcommand{\blankbox}{（\hspace{1.5em}）} % 中文空括号
 \newcommand{\eblankbox}{(\hspace{1.5em})} % 英文空括号
 \newcommand{\blankline}{\underline{\hspace{3em}}} % 空白下划线
+\newcommand{\noreftitle}[1]{\par \textbf{#1} \par} % 无索引标题
+\newcommand{\onlinecheckurl}{\ExBook@value@onlineCheckUrl} % 空白下划线
+
+% 定义一个只隐藏当前页的页眉和页脚的命令
+\newcommand{\hideheaderfooter}{
+  \fancypagestyle{emptyheaderfooter}{
+    \fancyhf{}  % 清空页眉和页脚
+  }
+  \thispagestyle{emptyheaderfooter}
+}
 
 \setmainfont{Times New Roman} % 设置全局英文字体为 Times New Roman
 
@@ -952,8 +1141,13 @@
     \fancyfoot[C]{\color{themeColor}第 \thepage 页  / 共 \pageref{LastPage} 页 }
     \fancyfoot[L]{\color{themeColor}\kaishu  \leftmark}
     \fancyfoot[R]{\color{themeColor}\kaishu  \rightmark}
+    \if@notocnum
+        \renewcommand{\sectionmark}[1]{\markboth{#1}{}}
+        \renewcommand{\subsectionmark}[1]{\markright{#1}{}}
+    \else
     \renewcommand{\sectionmark}[1]{\markboth{\thesection.#1}{}}
     \renewcommand{\subsectionmark}[1]{\markright{\thesubsection.#1}{}}
+    \fi
 
     % 设置分隔线
     \renewcommand{\headrulewidth}{0.4pt}
@@ -1104,45 +1298,111 @@
 
 \fi
 
-% 自定义 \section 标题样式
-\titleformat{\section}[block]
-{\newpage \centering\heiti\normalsize}{第\thesection 章}{1em}{} % 居中、字体和大小，每一个section都重启一页
 
-% 自定义 \section 标题在目录中的样式
-\titlecontents{section}[0em]
-{\bfseries}
-{第\thecontentslabel\ 章\hspace{1em}}
-{}
-{\titlerule*[0.4pc]{.}\contentspage}
 
-\titlecontents{subsection}[2em]
-{}
-{\thecontentslabel \hspace{1em}}
-{}
-{\titlerule*[0.4pc]{.}\contentspage}
+\if@notocnum
+    % 不显示目录编号
+    \titlecontents{section}[0em]
+    {\heiti}
+    {}
+    {}
+    {\titlerule*[0.4pc]{.}\contentspage}
 
-\titlecontents{subsubsection}[4em]
-{}
-{\thecontentslabel \hspace{1em}}
-{}
-{\titlerule*[0.4pc]{.}\contentspage}
+    \titlecontents{subsection}[2em]
+    {}
+    {}
+    {}
+    {\titlerule*[0.4pc]{.}\contentspage}
 
-\titlespacing{\section}
-{0pt} % 左边距
-{2pt plus 2pt minus 2pt} % 上边距
-{4pt plus 2pt minus 2pt} % 下边距
+    \titlecontents{subsubsection}[4em]
+    {}
+    {}
+    {}
+    {\titlerule*[0.4pc]{.}\contentspage}
 
-\titlespacing{\subsection}
-{0pt} % 左边距
-{2pt plus 2pt minus 2pt} % 上边距
-{2pt plus 2pt minus 2pt} % 下边距
+    \titlespacing{\section}
+    {0pt} % 左边距
+    {2pt plus 2pt minus 2pt} % 上边距
+    {4pt plus 2pt minus 2pt} % 下边距
 
-% 自定义 \subsection 标题样式
-\titleformat{\subsection}
-{\normalfont\normalsize\bfseries} % 字体和大小
-{\thesubsection} % 标题编号
-{0.6em} % 与标题编号的间距
-{} % 标题之后的间距
+    \titlespacing{\subsection}
+    {0pt} % 左边距
+    {2pt plus 2pt minus 2pt} % 上边距
+    {2pt plus 2pt minus 2pt} % 下边距
+
+    \titlespacing{\subsubsection}
+    {0pt} % 左边距
+    {2pt plus 2pt minus 2pt} % 上边距
+    {2pt plus 2pt minus 2pt} % 下边距
+
+    % 自定义 \section 标题样式
+    \titleformat{\section}[block]
+    {\newpage \centering\heiti\fontsize{13pt}{0}}
+    {}
+    {0em}
+    {} % 居中、字体和大小，每一个section都重启一页
+
+    % 自定义 \subsection 标题样式
+    \titleformat{\subsection}
+    {\normalfont\normalsize\bfseries} % 字体和大小
+    {} % 标题编号
+    {0em} % 与标题编号的间距
+    {} % 标题之后的间距
+
+    % 自定义 \subsubsection 标题样式
+    \titleformat{\subsubsection}
+    {\normalfont\normalsize\bfseries} % 字体和大小
+    {} % 标题编号
+    {0em} % 与标题编号的间距
+    {} % 标题之后的间距
+
+\else
+    % 自定义 \section 标题在目录中的样式
+    \titlecontents{section}[0em]
+    {\heiti}
+    {第\thecontentslabel\ 章\hspace{1em}}
+    {}
+    {\titlerule*[0.4pc]{.}\contentspage}
+
+    \titlecontents{subsection}[2em]
+    {}
+    {\thecontentslabel \hspace{1em}}
+    {}
+    {\titlerule*[0.4pc]{.}\contentspage}
+
+    \titlecontents{subsubsection}[4em]
+    {}
+    {\thecontentslabel \hspace{1em}}
+    {}
+    {\titlerule*[0.4pc]{.}\contentspage}
+
+    \titlespacing{\section}
+    {0pt} % 左边距
+    {2pt plus 2pt minus 2pt} % 上边距
+    {4pt plus 2pt minus 2pt} % 下边距
+
+    \titlespacing{\subsection}
+    {0pt} % 左边距
+    {2pt plus 2pt minus 2pt} % 上边距
+    {2pt plus 2pt minus 2pt} % 下边距
+
+    % 自定义 \section 标题样式
+    \titleformat{\section}[block]
+    {\newpage \centering\heiti\normalsize}
+    {第\thesection 章}
+    {1em}
+    {} % 居中、字体和大小，每一个section都重启一页
+
+    % 自定义 \subsection 标题样式
+    \titleformat{\subsection}
+    {\normalfont\normalsize\bfseries} % 字体和大小
+    {\thesubsection} % 标题编号
+    {0.6em} % 与标题编号的间距
+    {} % 标题之后的间距
+\fi
+
+
+
 
 
 \hypersetup{
