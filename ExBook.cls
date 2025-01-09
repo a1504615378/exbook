@@ -531,7 +531,7 @@
 \def\ExBook@value@onlineCheckUrl{https://github.com/ExBook/ExBook}
 
 \newcommand\PreTitle[1]{\def\ExBook@value@PreTitle{\textbf{#1}}}
-\newcommand\Title[1]{\def\ExBook@value@Title{\heiti #1}}
+\newcommand\Title[1]{\def\ExBook@value@Title{\heiti \textbf{#1}}} 
 \newcommand\TitleDescription[1]{\def\ExBook@value@TitleDescription{\textbf{#1}}}
 \newcommand\TypeOne[1]{\def\ExBook@value@TypeOne{\textbf{#1}}}
 \newcommand\TypeTwo[1]{\def\ExBook@value@TypeTwo{\textbf{#1}}}
