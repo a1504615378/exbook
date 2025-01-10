@@ -50,6 +50,8 @@
 \DeclareOption{single}{\def\@pageformat{single}\def\myPageFormat{4}}  
 \DeclareOption{padp}{\def\@pageformat{padp}\def\myPageFormat{5}}  
 
+% 深色模式
+
 
 
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{article}}
