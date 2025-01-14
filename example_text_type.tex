@@ -1,9 +1,30 @@
-\section{自定义章节标题一}
-\subsection{第一章第1节}\qanswerloc{10}
-\begin{qitems}[rbc]
+% 使用 ExBook 文档类，并传递选项
+\documentclass[cs4size,fandol,standard,online]{ExBook} 
 
+
+\begin{document}
+
+
+% 加载封面  
+\include{config}
+
+% 加载封面
+\maketitle 
+
+% 加载声明
+\include{contents/pre} 
+
+\setcounter{page}{1}
+\tableofcontents 
+    
+\clearpage 
+
+\section{文字录入型做题本第一章}
+\subsection{文字录入型做题本第一章第1节}\qanswerloc{10}
+
+\begin{qitems}[optprefix=(, optsuffix=)]
     \begin{bbox}
-        \qitem   设$f(x)$满足$2f(x)+f(1-x)=x^2$，则$f(x)=\blankline.$
+        \qitem 设$f(x)$满足$2f(x)+f(1-x)=x^2 abc$，则$ \displaystyle\sum \limits_{n}^{0}f(x)=\blankline.$
     \end{bbox}
 
     \begin{bbox}
@@ -40,10 +61,10 @@
     \end{bbox}
 \end{qitems}
 
-\subsection{第一章第2节}
+\subsection{文字录入型做题本第一章第2节}
 \qanswerloc{15}
 
-\begin{qitems}[r]
+\begin{qitems}
 
     \begin{bbox}
         \qitem   下列关于时间复杂度的函数中，时间复杂度最小的是\blankbox 。
@@ -60,7 +81,7 @@
     int func(int n){
         int i=0, sum=0;
         while(sum<n) sum += ++i;
-        return i;
+        return i; 
     }
         \end{lstlisting}
         \fourchoices{$O(\log n)$}{$O(n^{\frac{1}{2}})$}{$O(n)$}{$O(n\log n)$}
@@ -68,10 +89,10 @@
 
 \end{qitems}
 
-\section{自定义章节标题二}
-\subsection{第二章第1节}
+\section{文字录入型做题本第二章}
+\subsection{文字录入型做题本第二章第1节}
 \qanswerloc{20}
-\begin{qitems}[tr]
+\begin{qitems}[]
     
     \begin{bbox}
         \qitem  已知曲线$L:y=\ln\sqrt{x}(2\leqslant x\leqslant4)$，在$L$ 上的任意点$P(x,y)$作切线，记切线与曲线$L$在 $2\leqslant x\leqslant4$
@@ -85,7 +106,7 @@
 
     \begin{bbox}
         \qitem 以 $yOz$ 面上的平面曲线段$y=f(z)(z\geqslant0)$ 绕$z$轴旋转一周所成旋转曲面与xOy 面围成一个无上盖容器(见图)，现以 3 cm$^3/$s 的速率把水注人容器内，水面的面积以$\pi$ c$m^2$/ s 的速率增大.已知容器底面积为 16$\pi$ c$m^2$,求曲线$y=f(z)$的方程.
-        \imgin{0.2}{fig/img01.png}
+        \imgin[0.4]{}{fig/fig01.png}
 
         % \includegraphics[width=0.2\textwidth]{img/img01.png}
     \end{bbox}
@@ -127,3 +148,5 @@
         \end{subqitems}
     \end{bbox}
 \end{qitems}
+
+\end{document}

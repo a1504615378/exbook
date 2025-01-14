@@ -12,7 +12,6 @@
  % windows 使用windows字体
  % fandol 使用fandol字体，随texlive默认安装
  % mac 使用mac字体
- % list 以列表项目格式显示试题
 
 \newcommand\@fontset{windows}
 \DeclareOption{adobe}{\renewcommand\@fontset{adobe}}
@@ -20,10 +19,6 @@
 \DeclareOption{mac}{\renewcommand\@fontset{mac}}
 \DeclareOption{windows}{\renewcommand\@fontset{windows}}
 \DeclareOption{fandol}{\renewcommand\@fontset{fandol}}
-
-
-\newif\if@list  \@listfalse
-\DeclareOption{list}{\@listtrue}
 
 \newif\if@printmode  \@printmodefalse
 \DeclareOption{printmode}{\@printmodetrue}
@@ -51,9 +46,6 @@
 \DeclareOption{padp}{\def\@pageformat{padp}\def\myPageFormat{5}}  
 
 % 深色模式
-
-
-
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{article}}
 \ProcessOptions\relax
 \LoadClass{article}
@@ -71,7 +63,10 @@
 \RequirePackage{geometry,fancyhdr} % 纸张、边距、页眉、页脚
 \RequirePackage{etoolbox} 
 \RequirePackage{amsmath,amsmath,amssymb} % ams数学相关
-\RequirePackage{unicode-math}
+\RequirePackage{fourier}
+% \RequirePackage{mathpazo}
+% \RequirePackage{mathptmx}
+% \RequirePackage{unicode-math}
 \RequirePackage{pifont} % 带圈数字\ding
 \RequirePackage{bbding} % 图案
 \RequirePackage{romannum} % 罗马数字
@@ -94,6 +89,10 @@
 \RequirePackage{fontawesome5} 
 \RequirePackage{graphicx} 
 \RequirePackage{pgffor}    % 用于循环
+% 加载 pgfkeys 宏包
+% \RequirePackage{pgfkeys}
+\RequirePackage{xkeyval}
+\usepackage{pgfmath} % 导入随机数生成包
 \usetikzlibrary{fadings}
 \usetikzlibrary{shapes, positioning}
 
@@ -103,56 +102,64 @@
 
 \newcounter{QuestionCounter}
 
+% 定义字母开关
 \newif\if@resetcounter
-\@resetcounterfalse
+\newif\if@showcounter
+% \newif\if@usearabic
+% \newif\if@useotherformat
 
+\@resetcountertrue % 默认重置计数器
+\@showcountertrue   % 默认显示编号
+% \@usearabictrue    % 默认使用阿拉伯数字编号
+% \@useotherformatfalse % 默认不使用其他格式
 
-\newlength{\myvertspace}
-
+\define@key{qitems}{unreset}[true]{\@resetcounterfalse} % 如果设置为 true，重置计数器
+\define@key{qitems}{unshow}[true]{\@showcounterfalse} % 如果设置为 true，重置计数器
+% 定义可选的 prefix 和 suffix 参数
+\define@key{qitems}{prefix}[]{\def\@prefix{#1}} % 默认 prefix 为空
+\define@key{qitems}{suffix}[.]{\def\@suffix{#1}} % 默认 suffix 为 "."
+\define@key{qitems}{optprefix}[]{\def\@optprefix{#1}} % 默认 prefix 为空
+\define@key{qitems}{optsuffix}[]{\def\@optsuffix{#1}} % 默认 suffix 为 "."
 
 % 定义题目环境
-\newenvironment{qitems}[2][]{
-    \newif\if@boxmode
-    \@boxmodefalse
-    \newif\if@choicemode
-    \@choicemodefalse
-	\@tfor \@opt :=#1\do
-		 {\if\@opt r\global\@resetcountertrue\fi
-		  \if\@opt b\global\@boxmodetrue\fi
-		  \if\@opt c\global\@choicemodetrue\fi
-         }
-  	\if@resetcounter
-  		\setcounter{QuestionCounter}{0}
-	 \fi
-	\if@list
-		\list{\arabic{QuestionCounter}.}{\setlength{\leftmargin}{0pt}}
-	\else
-		\par \begingroup \par
-	\fi
-}{
-	\if@list
-		\endlist
-	\else
-		\par \endgroup \par
-	\fi
+\newenvironment{qitems}[1][]{
+    \begingroup
+    \setkeys{qitems}{#1} % 解析传入的键值对
+    % 根据选项设置计数器行为
+    \if@resetcounter
+        \setcounter{QuestionCounter}{0} % 如果设置了reset，则重置计数器
+    \fi
 
-    \@boxmodefalse
-    \@choicemodefalse
+    % 初始化前缀和后缀（如果没有传递参数，则使用默认值）
+    \ifx\@prefix\undefined
+        \def\@prefix{} % 默认前缀为空
+    \fi
+    \ifx\@suffix\undefined
+        \def\@suffix{.} % 默认后缀为 "."
+    \fi
+
+    \ifx\@optprefix\undefined
+        \def\@optprefix{} % 默认前缀为空
+    \fi
+    \ifx\@optsuffix\undefined
+        \def\@optsuffix{.} % 默认后缀为 "."
+    \fi
+
+	\par \begingroup \par
+}{
+	\par \endgroup \par
+    \endgroup
 }
 
-% 定义题目命令
-\newcommand{\qitem}[1][\arabic{QuestionCounter}]{
+% 定义题目命令 
+\newcommand{\qitem}[1][]{
 	\stepcounter{QuestionCounter}
-	\if@list
-		\item 
-	\else
-		\vspace{2mm}
-        \if@boxmode
-            （#1）
-        \else
-            \arabic{QuestionCounter}.
-        \fi
-	\fi
+    \vspace{2mm} 
+    \if@showcounter
+        #1\@prefix\arabic{QuestionCounter}\@suffix
+    \else
+        #1\@prefix\@suffix 
+    \fi
 }
 
 % 定义小问环境
@@ -162,13 +169,6 @@
 
 % 定义新增小问命令
 \newcommand{\subqitem}{\item} 
-
-\newenvironment{solution}[1]{
-	\setlength{\myvertspace}{#1}
-	\vspace*{\myvertspace}
-}{
-
-}
 
 
 % 选择题选项自动排版参考了 BHCexam.cls 的实现
@@ -182,45 +182,10 @@
 
 % 三个选项
 \newcommand{\threechoices}[3]{
-    \if@choicemode
-	\par
-	\settowidth{\choicelengtha}{(A)~#1~~~}
-	\settowidth{\choicelengthb}{(B)~#2~~~}
-	\settowidth{\choicelengthc}{(C)~#3~~~}
-
-	\ifthenelse{\lengthtest{\choicelengtha>\choicelengthb}}{\setlength{\maxlength}{\choicelengtha}}{\setlength{\maxlength}{\choicelengthb}}
-	\ifthenelse{\lengthtest{\choicelengthc>\maxlength}}{\setlength{\maxlength}{\choicelengthc}}{}
-	\ifthenelse{\lengthtest{\maxlength>0.4\linewidth}}
-	{
-		\begin{tabularx}{\linewidth}{X}
-			\setlength\tabcolsep{0pt}
-			(A)~#1~~~\\
-			(B)~#2~~~\\
-			(C)~#3~~~\\
-		\end{tabularx}
-	}%
-	{
-		\ifthenelse{\lengthtest{\maxlength>0.2\linewidth}}
-		{
-			\begin{tabularx}{\linewidth}{XX}
-				\setlength\tabcolsep{0pt}
-				(A)~#1~~~ & (B)~#2~~~\\
-				(C)~#3~~~ & \\
-			\end{tabularx}
-		}%
-		{
-			\begin{tabularx}{\linewidth}{XXXX}
-				\setlength\tabcolsep{0pt}
-				(A)~#1~~~  & (B)~#2~~~ & (C)~#3~~~ &\\ 
-			\end{tabularx}
-		}
-	}
-	\unskip \unskip 
-    \else
     \par
-	\settowidth{\choicelengtha}{A.~#1~~~}
-	\settowidth{\choicelengthb}{B.~#2~~~}
-	\settowidth{\choicelengthc}{C.~#3~~~}
+	\settowidth{\choicelengtha}{\@optprefix A\@optsuffix~#1~~~}
+	\settowidth{\choicelengthb}{\@optprefix B\@optsuffix~#2~~~}
+	\settowidth{\choicelengthc}{\@optprefix C\@optsuffix~#3~~~}
 
 	\ifthenelse{\lengthtest{\choicelengtha>\choicelengthb}}{\setlength{\maxlength}{\choicelengtha}}{\setlength{\maxlength}{\choicelengthb}}
 	\ifthenelse{\lengthtest{\choicelengthc>\maxlength}}{\setlength{\maxlength}{\choicelengthc}}{}
@@ -228,9 +193,9 @@
 	{
 		\begin{tabularx}{\linewidth}{X}
 			\setlength\tabcolsep{0pt}
-			A.~#1~~~\\
-			B.~#2~~~\\
-			C.~#3~~~\\
+			\@optprefix A\@optsuffix~#1~~~\\
+			\@optprefix B\@optsuffix~#2~~~\\
+			\@optprefix C\@optsuffix~#3~~~\\
 		\end{tabularx}
 	}%
 	{
@@ -238,66 +203,28 @@
 		{
 			\begin{tabularx}{\linewidth}{XX}
 				\setlength\tabcolsep{0pt}
-				A.~#1~~~ & B.~#2~~~\\
-				C.~#3~~~ & \\
+				\@optprefix A\@optsuffix~#1~~~ & \@optprefix B\@optsuffix~#2~~~\\
+				\@optprefix C\@optsuffix~#3~~~ & \\
 			\end{tabularx}
 		}%
 		{
 			\begin{tabularx}{\linewidth}{XXXX}
 				\setlength\tabcolsep{0pt}
-				A.~#1~~~  & B.~#2~~~ & C.~#3~~~ &\\ 
+				\@optprefix A\@optsuffix~#1~~~  & \@optprefix B\@optsuffix~#2~~~ & \@optprefix C\@optsuffix~#3~~~ &\\ 
 			\end{tabularx}
 		}
 	}
 	\unskip \unskip 
-    \fi
+    % \fi
 }
 
 % 四个选项
 \newcommand{\fourchoices}[4]{
-    \if@choicemode
-	\par
-	\settowidth{\choicelengtha}{(A)~#1~~~}
-	\settowidth{\choicelengthb}{(B)~#2~~~}
-	\settowidth{\choicelengthc}{(C)~#3~~~}
-	\settowidth{\choicelengthd}{(D)~#4~~~}
-	\ifthenelse{\lengthtest{\choicelengtha>\choicelengthb}}{\setlength{\maxlength}{\choicelengtha}}{\setlength{\maxlength}{\choicelengthb}}
-	\ifthenelse{\lengthtest{\choicelengthc>\maxlength}}{\setlength{\maxlength}{\choicelengthc}}{}
-	\ifthenelse{\lengthtest{\choicelengthd>\maxlength}}{\setlength{\maxlength}{\choicelengthd}}{}
-	\ifthenelse{\lengthtest{\maxlength>0.4\linewidth}}
-	{
-		\begin{tabularx}{\linewidth}{X}
-			\setlength\tabcolsep{0pt}
-			(A)~#1~~~\\
-			(B)~#2~~~\\
-			(C)~#3~~~\\
-			(D)~#4~~~\\
-		\end{tabularx}
-	}%
-	{
-		\ifthenelse{\lengthtest{\maxlength>0.2\linewidth}}
-		{
-			\begin{tabularx}{\linewidth}{XX}
-				\setlength\tabcolsep{0pt}
-				(A)~#1~~~ & (B)~#2~~~\\
-				(C)~#3~~~ & (D)~#4~~~\\
-			\end{tabularx}
-		}%
-		{
-			\begin{tabularx}{\linewidth}{XXXX}
-				\setlength\tabcolsep{0pt}
-				(A)~#1~~~  & (B)~#2~~~ & (C)~#3~~~ & (D)~#4~~~\\ 
-				% A.~#1~~~  & B.~#2~~~ & C.~#3~~~ & D.~#4~~~\\ 
-			\end{tabularx}
-		}%
-	}
-	\unskip \unskip 
-    \else
     \par
-	\settowidth{\choicelengtha}{A.~#1~~~}
-	\settowidth{\choicelengthb}{B.~#2~~~}
-	\settowidth{\choicelengthc}{C.~#3~~~}
-	\settowidth{\choicelengthd}{D.~#4~~~}
+	\settowidth{\choicelengtha}{\@optprefix A\@optsuffix~#1~~~}
+	\settowidth{\choicelengthb}{\@optprefix B\@optsuffix~#2~~~}
+	\settowidth{\choicelengthc}{\@optprefix C\@optsuffix~#3~~~}
+	\settowidth{\choicelengthd}{\@optprefix D\@optsuffix~#4~~~}
 	\ifthenelse{\lengthtest{\choicelengtha>\choicelengthb}}{\setlength{\maxlength}{\choicelengtha}}{\setlength{\maxlength}{\choicelengthb}}
 	\ifthenelse{\lengthtest{\choicelengthc>\maxlength}}{\setlength{\maxlength}{\choicelengthc}}{}
 	\ifthenelse{\lengthtest{\choicelengthd>\maxlength}}{\setlength{\maxlength}{\choicelengthd}}{}
@@ -305,10 +232,10 @@
 	{
 		\begin{tabularx}{\linewidth}{X}
 			\setlength\tabcolsep{0pt}
-			A.~#1~~~\\
-			B.~#2~~~\\
-			C.~#3~~~\\
-			D.~#4~~~\\
+			\@optprefix A\@optsuffix~#1~~~\\
+			\@optprefix B\@optsuffix~#2~~~\\
+			\@optprefix C\@optsuffix~#3~~~\\
+			\@optprefix D\@optsuffix~#4~~~\\
 		\end{tabularx}
 	}%
 	{
@@ -316,71 +243,30 @@
 		{
 			\begin{tabularx}{\linewidth}{XX}
 				\setlength\tabcolsep{0pt}
-				A.~#1~~~ & B.~#2~~~\\
-				C.~#3~~~ & D.~#4~~~\\
+				\@optprefix A\@optsuffix~#1~~~ & \@optprefix B\@optsuffix~#2~~~\\
+				\@optprefix C\@optsuffix~#3~~~ & \@optprefix D\@optsuffix~#4~~~\\
 			\end{tabularx}
 		}%
 		{
 			\begin{tabularx}{\linewidth}{XXXX}
 				\setlength\tabcolsep{0pt}
-				A.~#1~~~  & B.~#2~~~ & C.~#3~~~ & D.~#4~~~\\ 
+				\@optprefix A\@optsuffix~#1~~~  & \@optprefix B\@optsuffix~#2~~~ & \@optprefix C\@optsuffix~#3~~~ & \@optprefix D\@optsuffix~#4~~~\\ 
 				% A.~#1~~~  & B.~#2~~~ & C.~#3~~~ & D.~#4~~~\\ 
 			\end{tabularx}
 		}%
 	}
 	\unskip \unskip 
-    \fi
+    % \fi
 }
 
 % 五个选项
 \newcommand{\fivechoices}[5]{
-    \if@choicemode
-	\par
-	\settowidth{\choicelengtha}{(A)~#1~~~}
-	\settowidth{\choicelengthb}{(B)~#2~~~}
-	\settowidth{\choicelengthc}{(C)~#3~~~}
-	\settowidth{\choicelengthd}{(D)~#4~~~}
-	\settowidth{\choicelengthe}{(E)~#5~~~}
-	\ifthenelse{\lengthtest{\choicelengtha>\choicelengthb}}{\setlength{\maxlength}{\choicelengtha}}{\setlength{\maxlength}{\choicelengthb}}
-	\ifthenelse{\lengthtest{\choicelengthc>\maxlength}}{\setlength{\maxlength}{\choicelengthc}}{}
-	\ifthenelse{\lengthtest{\choicelengthd>\maxlength}}{\setlength{\maxlength}{\choicelengthd}}{}
-	\ifthenelse{\lengthtest{\choicelengthe>\maxlength}}{\setlength{\maxlength}{\choicelengthe}}{}
-	\ifthenelse{\lengthtest{\maxlength>0.4\linewidth}}{
-		\begin{tabularx}{\linewidth}{X}
-			\setlength\tabcolsep{0pt}
-			(A)~#1~~~\\
-			(B)~#2~~~\\
-			(C)~#3~~~\\
-			(D)~#4~~~\\
-			(E)~#5~~~\\
-		\end{tabularx}
-	}%
-	{
-		\ifthenelse{\lengthtest{\maxlength>0.2\linewidth}}
-		{
-			\begin{tabularx}{\linewidth}{XX}
-				\setlength\tabcolsep{0pt}
-				(A)~#1~~~ & (B)~#2~~~\\
-				(C)~#3~~~ & (D)~#4~~~\\
-				(E)~#5~~~ &         \\
-			\end{tabularx}
-		}%
-		{
-			\begin{tabularx}{\linewidth}{XXXX}
-				\setlength\tabcolsep{0pt}
-				(A)~#1~~~  & (B)~#2~~~ & (C)~#3~~~ & (D)~#4~~~ \\
-				(E)~#5~~~  &          &          &          \\
-			\end{tabularx}
-		}
-	}%
-	\unskip \unskip 
-    \else
     \par
-	\settowidth{\choicelengtha}{A.~#1~~~}
-	\settowidth{\choicelengthb}{B.~#2~~~}
-	\settowidth{\choicelengthc}{C.~#3~~~}
-	\settowidth{\choicelengthd}{D.~#4~~~}
-	\settowidth{\choicelengthe}{E.~#5~~~}
+	\settowidth{\choicelengtha}{\@optprefix A\@optsuffix~#1~~~}
+	\settowidth{\choicelengthb}{\@optprefix B\@optsuffix~#2~~~}
+	\settowidth{\choicelengthc}{\@optprefix C\@optsuffix~#3~~~}
+	\settowidth{\choicelengthd}{\@optprefix D\@optsuffix~#4~~~}
+	\settowidth{\choicelengthe}{\@optprefix E\@optsuffix~#5~~~}
 	\ifthenelse{\lengthtest{\choicelengtha>\choicelengthb}}{\setlength{\maxlength}{\choicelengtha}}{\setlength{\maxlength}{\choicelengthb}}
 	\ifthenelse{\lengthtest{\choicelengthc>\maxlength}}{\setlength{\maxlength}{\choicelengthc}}{}
 	\ifthenelse{\lengthtest{\choicelengthd>\maxlength}}{\setlength{\maxlength}{\choicelengthd}}{}
@@ -388,11 +274,11 @@
 	\ifthenelse{\lengthtest{\maxlength>0.4\linewidth}}{
 		\begin{tabularx}{\linewidth}{X}
 			\setlength\tabcolsep{0pt}
-			A.~#1~~~\\
-			B.~#2~~~\\
-			C.~#3~~~\\
-			D.~#4~~~\\
-			E.~#5~~~\\
+			\@optprefix A\@optsuffix~#1~~~\\
+			\@optprefix B\@optsuffix~#2~~~\\
+			\@optprefix C\@optsuffix~#3~~~\\
+			\@optprefix D\@optsuffix~#4~~~\\
+			\@optprefix E\@optsuffix~#5~~~\\
 		\end{tabularx}
 	}%
 	{
@@ -400,74 +286,32 @@
 		{
 			\begin{tabularx}{\linewidth}{XX}
 				\setlength\tabcolsep{0pt}
-				A.~#1~~~ & B.~#2~~~\\
-				C.~#3~~~ & D.~#4~~~\\
-				E.~#5~~~ &         \\
+				\@optprefix A\@optsuffix~#1~~~ & \@optprefix B\@optsuffix~#2~~~\\
+				\@optprefix C\@optsuffix~#3~~~ & \@optprefix D\@optsuffix~#4~~~\\
+				\@optprefix E\@optsuffix~#5~~~ &         \\
 			\end{tabularx}
 		}%
 		{
 			\begin{tabularx}{\linewidth}{XXXX}
 				\setlength\tabcolsep{0pt}
-				A.~#1~~~  & B.~#2~~~ & C.~#3~~~ & D.~#4~~~ \\
-				E.~#5~~~  &          &          &          \\
+				\@optprefix A\@optsuffix~#1~~~  & \@optprefix B\@optsuffix~#2~~~ & \@optprefix C\@optsuffix~#3~~~ & \@optprefix D\@optsuffix~#4~~~ \\
+				\@optprefix E\@optsuffix~#5~~~  &          &          &          \\
 			\end{tabularx}
 		}
 	}%
 	\unskip \unskip (
-)   \fi
+)   
+% \fi
 }
 
 % 六个选项
 \newcommand{\sixchoices}[6]{
-    \if@choicemode
-	\par
-	\settowidth{\choicelengtha}{(A)~#1~~~}
-	\settowidth{\choicelengthb}{(B)~#2~~~}
-	\settowidth{\choicelengthc}{(C)~#3~~~}
-	\settowidth{\choicelengthd}{(D)~#4~~~}
-	\settowidth{\choicelengthe}{(E)~#5~~~}
-	\ifthenelse{\lengthtest{\choicelengtha>\choicelengthb}}{\setlength{\maxlength}{\choicelengtha}}{\setlength{\maxlength}{\choice(l)ngthb}}
-	\ifthenelse{\lengthtest{\choicelengthc>\maxlength}}{\setlength{\maxlength}{\choicelengthc}}{}
-	\ifthenelse{\lengthtest{\choicelengthd>\maxlength}}{\setlength{\maxlength}{\choicelengthd}}{}	\ifthenelse{\lengthtest{\choicelengthe>\maxlength}}{\setlength{\maxlength}{\choicelengthe}}{}
-	
-	\ifthenelse{\lengthtest{\maxlength>0.4\linewidth}}
-	{
-		\begin{tabularx}{\linewidth}{X}
-			\setlength\tabcolsep{0pt}
-			(A)~#1~~~\\
-			(B)~#2~~~\\
-			(C)~#3~~~\\
-			(D)~#4~~~\\
-			(E)~#5~~~\\
-			(F)~#6~~~\\
-		\end{tabularx}
-	}%
-	{
-		\ifthenelse{\lengthtest{\maxlength>0.2\linewidth}}
-		{
-			\begin{tabularx}{\linewidth}{XX}
-				\setlength\tabcolsep{0pt}
-				(A)~#1~~~ & (B)~#2~~~\\
-				(C)~#3~~~ & (D)~#4~~~\\
-				(E)~#5~~~ & (F)~#6~~~\\
-			\end{tabularx}
-		}%
-		{
-			\begin{tabularx}{\linewidth}{XXXX}
-				\setlength\tabcolsep{0pt}
-				(A)~#1~~~  & (B)~#2~~~ & (C)~#3~~~ & (D)~#4~~~ \\
-				(E)~#2~~~  & (F)~#6~~~ &          &          \\
-			\end{tabularx}
-		}%
-	}
-	\unskip \unskip
-    \else
     \par
-	\settowidth{\choicelengtha}{A.~#1~~~}
-	\settowidth{\choicelengthb}{B.~#2~~~}
-	\settowidth{\choicelengthc}{C.~#3~~~}
-	\settowidth{\choicelengthd}{D.~#4~~~}
-	\settowidth{\choicelengthe}{E.~#5~~~}
+	\settowidth{\choicelengtha}{\@optprefix A\@optsuffix~#1~~~}
+	\settowidth{\choicelengthb}{\@optprefix B\@optsuffix~#2~~~}
+	\settowidth{\choicelengthc}{\@optprefix C\@optsuffix~#3~~~}
+	\settowidth{\choicelengthd}{\@optprefix D\@optsuffix~#4~~~}
+	\settowidth{\choicelengthe}{\@optprefix E\@optsuffix~#5~~~}
 	\ifthenelse{\lengthtest{\choicelengtha>\choicelengthb}}{\setlength{\maxlength}{\choicelengtha}}{\setlength{\maxlength}{\choice(l)ngthb}}
 	\ifthenelse{\lengthtest{\choicelengthc>\maxlength}}{\setlength{\maxlength}{\choicelengthc}}{}
 	\ifthenelse{\lengthtest{\choicelengthd>\maxlength}}{\setlength{\maxlength}{\choicelengthd}}{}	\ifthenelse{\lengthtest{\choicelengthe>\maxlength}}{\setlength{\maxlength}{\choicelengthe}}{}
@@ -476,12 +320,12 @@
 	{
 		\begin{tabularx}{\linewidth}{X}
 			\setlength\tabcolsep{0pt}
-			A.~#1~~~\\
-			B.~#2~~~\\
-			C.~#3~~~\\
-			D.~#4~~~\\
-			E.~#5~~~\\
-			F.~#6~~~\\
+			\@optprefix A\@optsuffix~#1~~~\\
+			\@optprefix B\@optsuffix~#2~~~\\
+			\@optprefix C\@optsuffix~#3~~~\\
+			\@optprefix D\@optsuffix~#4~~~\\
+			\@optprefix E\@optsuffix~#5~~~\\
+			\@optprefix F\@optsuffix~#6~~~\\
 		\end{tabularx}
 	}%
 	{
@@ -489,21 +333,22 @@
 		{
 			\begin{tabularx}{\linewidth}{XX}
 				\setlength\tabcolsep{0pt}
-				A.~#1~~~ & B.~#2~~~\\
-				C.~#3~~~ & D.~#4~~~\\
-				E.~#5~~~ & F.~#6~~~\\
+				\@optprefix A\@optsuffix~#1~~~ & \@optprefix B\@optsuffix~#2~~~\\
+				\@optprefix C\@optsuffix~#3~~~ & \@optprefix D\@optsuffix~#4~~~\\
+				\@optprefix E\@optsuffix~#5~~~ & \@optprefix F\@optsuffix~#6~~~\\
 			\end{tabularx}
 		}%
 		{
 			\begin{tabularx}{\linewidth}{XXXX}
 				\setlength\tabcolsep{0pt}
-				A.~#1~~~  & B.~#2~~~ & C.~#3~~~ & D.~#4~~~ \\
-				E.~#2~~~  & F.~#6~~~ &          &          \\
+				\@optprefix A\@optsuffix~#1~~~  & \@optprefix B\@optsuffix~#2~~~ & \@optprefix C\@optsuffix~#3~~~ & \@optprefix D\@optsuffix~#4~~~ \\
+				\@optprefix E\@optsuffix~#2~~~  & \@optprefix F\@optsuffix~#6~~~ &          &          \\
 			\end{tabularx}
 		}%
 	}
 	\unskip \unskip(
-)   \fi 
+)  
+%  \fi 
 }
 
 
@@ -549,7 +394,7 @@
 \newcommand\Rhead[1]{\def\ExBook@value@Rhead{\textbf{#1}}}
 \newcommand\LheadC[1]{\def\ExBook@value@LheadC{\textbf{#1}}}
 \newcommand\TextWater[1]{\def\ExBook@value@TextWater{\textcolor{black!38}{\selectfont #1}}}
-\newcommand{\textwater}{\ExBook@value@TextWater}
+\newcommand{\textwater}{\def\ExBook@value@TextWater}
 \newcommand\WaterImg[1]{\def\ExBook@value@waterImg{#1}}
 \newcommand\CoverImg[1]{\def\ExBook@value@coverImg{#1}}
 \newcommand\OnlineCheckUrl[1]{\def\ExBook@value@onlineCheckUrl{#1}}
@@ -661,14 +506,43 @@
     escapeinside={(*@}{@*)}, % 设置逃逸字符
 }
 
-\newcommand{\imgin}[2]{
+% 插入图片命令，参数1为缩放比例，参数2为对齐方式，参数3为图片路径，
+\newcommand{\imgin}[3][0.38]{ % 默认缩放比例为 1.0
     \par
     \begin{minipage}[t]{1.0\textwidth}
-        \centering
-        \includegraphics[width=#1\textwidth]{#2}
+        \ifx&#2& % 判断是否有对齐参数
+            \centering
+        \else
+            \ifx#2l % 左对齐
+                \raggedright
+            \else
+                \ifx#2r % 右对齐
+                    \raggedleft
+                \else % 默认居中
+                    \centering
+                \fi
+            \fi
+        \fi
+        \includegraphics[scale=#1]{#3}
     \end{minipage}
 }
 
+
+\newcommand{\insertimg}[5]{
+    \foreach \n in {#1,...,#2} {
+        \begin{bbox}
+            \imgin[#3]{#4}{#5/\n.png}
+        \end{bbox}
+    }
+}
+
+% 定义一个命令，按照一定概率显示句子
+\newcommand{\randomtextwater}[2][1]{
+    \pgfmathsetmacro{\randnum}{int(rnd*100)} % 生成一个 0 到 1 之间的随机数
+    \ifnum \randnum<#1 
+        #2 % 显示句子
+    \fi 
+}
 
 \ifcase\myPageFormat
  %                         *****************
@@ -1301,7 +1175,6 @@
 \fi
 
 
-
 \if@notocnum
     % 不显示目录编号
     \titlecontents{section}[0em]
@@ -1402,17 +1275,6 @@
     {0.6em} % 与标题编号的间距
     {} % 标题之后的间距
 \fi
-
-
-
-
-
-\hypersetup{
-  bookmarksnumbered=true
-} % PDF阅读器显示侧边目录
-
-% \newcommand{\TextType}{TextType}
-% \newcommand{\ImgType}{ImgType}
 
 \AtBeginDocument{
 	\pagenumbering{arabic}  % 使用阿拉伯数字页码
