@@ -33,7 +33,7 @@
 
 
 # 简介
-**ExBook** 是一个专门制作做题本/刷题本的 LaTex 文档类，只录入一次题目，就可以快速生成6种版式的PDF文档（如下图）。
+**ExBook** 是一个专门制作考研做题本/刷题本的 LaTex 文档类，只录入一次题目，就可以快速生成6种版式的PDF文档（如下图）。
 
 <!-- 
 <img src="./README.IMAGE/1.png" width="70%">
@@ -55,8 +55,10 @@
 9. 支持代码高亮。
 
 # 如何使用
-1. 配置本地 Latex 环境（或直接使用Overleaf）
-2. 拷贝此项目到本地（或 overleaf）
+1. 在 overleaf 上在线使用 ExBook
+2. 在本地使用 ExBook
+
+具体教程见：[官方网站](https://exbook.github.io/)
 
 注意：使用此项目需要一点 Latex 基础！
 
