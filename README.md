@@ -6,6 +6,7 @@
 <div align="center">
 <img src="https://img.shields.io/github/languages/code-size/ExBook/ExBook" alt="code-size" />
     <img src="https://img.shields.io/badge/Author-ExBook-orange" alt="Author" />
+    </br>
     <img src="https://img.shields.io/github/languages/top/ExBook/ExBook?color=yellow" alt="languages-top" />
     <img src="https://img.shields.io/github/last-commit/ExBook/ExBook" alt="last-commit" />
     <img src="https://img.shields.io/github/languages/count/ExBook/ExBook" alt="languages-count" />
@@ -16,6 +17,20 @@
 </div>
 
 <!-- toc -->
+- [简介](#简介)
+- [如何使用](#如何使用)
+- [文档类参考](#文档类参考)
+  - [文档类选项](#文档类选项)
+  - [封面设置](#封面设置)
+  - [页眉页脚设置](#页眉页脚设置)
+  - [主题颜色设置](#主题颜色设置)
+  - [题目录入环境及命令](#题目录入环境及命令)
+  - [页面水印设置](#页面水印设置)
+- [完整例子](#完整例子)
+  - [文字录入型刷题本](#文字录入型刷题本)
+  - [截图型刷题本](#截图型刷题本)
+- [其他](#其他)
+
 
 # 简介
 **ExBook** 是一个专门制作做题本/刷题本的 LaTex 文档类，只录入一次题目，就可以快速生成6种版式的PDF文档（如下图）。
@@ -35,27 +50,15 @@
 4. 极简自定义封面、页眉、页脚等，极简插入图片，无需关注复杂的 LaTex 代码；
 5. 提供12种美观易用的颜色主题，包含4种经典主题以及8种个性主题；
 6. 支持自定义添加水印，包含**行内文字水印**以及**全局页面水印**；
-7. 支持代码高亮。
+7. Pad版（横版Pad版、竖版Pad版）下支持深色模式；
+8. 支持成组自定义题目编号和标签样式，并支持组内单个题目编号的重定义；
+9. 支持代码高亮。
 
 # 如何使用
 1. 配置本地 Latex 环境（或直接使用Overleaf）
 2. 拷贝此项目到本地（或 overleaf）
 
 注意：使用此项目需要一点 Latex 基础！
-
-# 项目结构说明
-* `ExBoook.cls`：ExBook 文档类，不用管，也不要随便修改；
-* `config.tex`：配置文件，在此文件中详细设置页眉、页脚、封面、主题颜色等；
-* `main.tex`：文档内容源文件；
-* `contents`文件夹：
-    * `content_type_one.tex`：制作文字录入型刷题本所要录入的内容（对应 `main.tex` 重的 `\include{contents/content_type_one}`）；
-    * `content_type_two.tex`：制作截图型刷题本所要录入的内容（对应 `main.tex` 重的 `\include{contents/content_type_two}`；
-    * `pre.tex`：“声明”部分；
-* `img` 文件夹：存放项目图片（封面、水印等）
-* `fig` 文件夹：存放文字录入型刷题本的题目插图
-* `splitImg` 文件夹：存放截图型刷题本的所有题目图片
-
-注：`main.tex` 中，制作文字录入型刷题本时，只需要保留`\include{contents/content_type_one}`；制作截图型刷题本时，只需要保留`\include{contents/content_type_two}`。
 
 # 文档类参考
 
@@ -79,12 +82,15 @@
 * `printmode`：只在A4版下有效，可生成适合双面打印的文档
 * `water`：是否显示全局页面水印（水印图片可在配置文件中自定义，水印将显示在页面右下角）
 * `online`：在封面显示在线文档链接
+* `darkmode`：深色模式（只在Pad版下生效，其他版式下不要用）
+* `notocnum`：不显示章节数字编号
+* `showmark`：显示页脚标签（A4版式下显示在左右页脚、Pad版式下显示在页面右上方小字位置）
 
 ## 封面设置
 打开 `config.tex`，以下配置项可自定义封面内容：
 ```latex
 % 封面设置
-\CoverImg{img/cov01.jpg} % 封面图片
+\CoverImg{img/cover.jpg} % 封面图片
 \PreTitle{ExBook · 刷题本模板} % 前置标题
 \Title{此处填写主标题} % 主标题
 \TitleDescription{此处填写副标题} % 副标题
@@ -106,16 +112,15 @@
 打开 `config.tex`，以下配置项可自定义页眉页脚：
 ```latex
 % 页眉页脚设置
-\Lhead{微信公众号·研小布} % 左页眉 
-\Chead{2025考研} % 中页眉、平板模式（padl或padp）下页眉中间的文字
-\Rhead{408WD数据结构选择题刷题本} % 右页眉、平板模式（padl或padp）下页眉右侧的文字
+\Lhead{左侧页眉文本} % 左页眉 
+\Chead{中间页眉文本} % 中页眉、平板模式（padl或padp）下页眉中间的文字
+\Rhead{右侧页眉文本} % 右页眉、平板模式（padl或padp）下页眉右侧的文字
 \LheadC{公众号·研小布·} % 平板模式（padl或padp）下页眉左侧的文字
 ```
 
 ## 主题颜色设置
 打开 `config.tex`，以下配置项可自定义颜色主题（默认为`\blue`）：
 ```latex
-% 页眉页脚设置
 \setThemeColor{\blue}
 ```
 
@@ -136,11 +141,18 @@ ExBook 提供4种经典颜色和8种个性颜色。
 
 1. 题组环境
    ```latex
-   \begin{qitems}[r]
+   \begin{qitems}
 
    \end{qitems}
    ```
-   环境选项：`r`（从 1 开始计数）
+   
+   环境选项：
+   * `unshow`：环境内不显示题目编号
+   * `unreset`：环境内不重置题目编号（默认重置）
+   * `prefix`：自定义题目编号前缀，比如`prefix=（`
+   * `suffix`：自定义题目编号后缀，比如`suffix=）`
+   * `optprefix`：自定义环境内选择题选项编号前缀，比如`optprefix=(`
+   * `optsuffix`：自定义环境内选择题选项编号后缀，比如`optsuffix=(`
 2. 题目环境
    ```latex
    \begin{bbox}
@@ -151,6 +163,9 @@ ExBook 提供4种经典颜色和8种个性颜色。
     ```latex
    \qitem 题目内容
    ```
+   
+   命令选项：
+   * `\qitem["text"]`，`"text"`会出现在题目编号前缀的前面
 4. 小问环境
    ```latex
     \begin{subqitems}
@@ -160,14 +175,14 @@ ExBook 提供4种经典颜色和8种个性颜色。
    ```
 5. 选择题选项命令
    ```latex
-    \threechoices{选项内容}{选项内容}{选项内容}         % 四个选项
-    \fourchoices{选项内容}{选项内容}{选项内容}{选项内容}        % 五个选项
-    \fivechoices{选项内容}{选项内容}{选项内容}{选项内容}{选项内容}      % 六个选项
-    \sixchoices{选项内容}{选项内容}{选项内容}{选项内容}{选项内容}{选项内容}{选项内容}   % 七个选项
+    \threechoices{选项内容}{选项内容}{选项内容}         % 三个选项
+    \fourchoices{选项内容}{选项内容}{选项内容}{选项内容}        % 四个选项
+    \fivechoices{选项内容}{选项内容}{选项内容}{选项内容}{选项内容}      % 五个选项
+    \sixchoices{选项内容}{选项内容}{选项内容}{选项内容}{选项内容}{选项内容}{选项内容}   % 六个选项
    ```
 6. 代码高亮环境
    ```latex
-   \begin{lstlisting}[escapeinside={(*@}{@*)}]
+   \begin{lstlisting}
     此处输入代码
    \end{lstlisting}
    ```
@@ -187,7 +202,7 @@ ExBook 提供4种经典颜色和8种个性颜色。
     ```
    * 插入题目图片命令
     ```latex
-    \imgin{0.2}{fig/img01.png} % 第一个参数为缩放比例，第二个参数为图片路径
+    \imgin[0.2]{l}{fig/img01.png} % 第一个参数为缩放比例，第二个参数为图片位置（不填默认居中，l靠左，r靠右）第二个参数为图片路径
     ```
    * 答案页指示命令
     ```latex
@@ -197,43 +212,44 @@ ExBook 提供4种经典颜色和8种个性颜色。
 ## 页面水印设置
 打开 `config.tex`，以下配置项可自定义全局页面水印：
 ```latex
+\TextWater{【微信公众号·研小布】} % 行内文字水印 
 \WaterImg{img/water.png} % 图片水印 出现在页面的右下角
 ```
 
-## 完整例子：
-* `main.tex`
+# 完整例子
+
+## 文字录入型刷题本
+`example_text_type.tex`
 ```latex
 % 使用 ExBook 文档类，并传递选项
-\documentclass[cs4size,fandol,standard,online]{ExBook} 
-
-\begin{document}
+\documentclass[standard]{ExBook} 
  
-\include{config} % 示例文件
-\maketitle 
+\begin{document}
 
-% 免责声明文件
-\include{contents/pre} % 示例文件
+% 加载配置  
+\include{config}
+
+% 加载封面
+\maketitle 
+ 
+% 加载声明
+\include{contents/pre} 
+
+% 加载广告
+\include{contents/print}
 
 \setcounter{page}{1}
-\tableofcontents
- 
+\tableofcontents 
+    
 \clearpage 
 
-\include{contents/content_type_one} % 示例文件
-% \include{contents/content_type_two} % 示例文件
+\section{文字录入型做题本第一章}
+\subsection{文字录入型做题本第一章第1节}\qanswerloc{10}
 
-\end{document}
-```
-
-* `content_type_one.tex`
-```latex
-\section{自定义章节标题一}
-\subsection{第一章第1节}\qanswerloc{10}
-
-\begin{qitems}[r]
+\begin{qitems}
 
     \begin{bbox}
-        \qitem   设$f(x)$满足$2f(x)+f(1-x)=x^2$，则$f(x)=\blankline.$
+        \qitem 设$f(x)$满足$2f(x)+f(1-x)=x^2 abc$，则$ \displaystyle\sum \limits_{n}^{0}f(x)=\blankline.$
     \end{bbox}
 
     \begin{bbox}
@@ -256,7 +272,6 @@ ExBook 提供4种经典颜色和8种个性颜色。
 
     \begin{bbox}
         \qitem  可以用\blankbox 定义一个完整的数据结构。\textwater
-
         \fourchoices{数据元素}{数据对象}{数据关系}{抽象数据类型}     
     \end{bbox}
 
@@ -270,10 +285,10 @@ ExBook 提供4种经典颜色和8种个性颜色。
     \end{bbox}
 \end{qitems}
 
-\subsection{第一章第2节}
+\subsection{文字录入型做题本第一章第2节}
 \qanswerloc{15}
 
-\begin{qitems}[tr]
+\begin{qitems}
 
     \begin{bbox}
         \qitem   下列关于时间复杂度的函数中，时间复杂度最小的是\blankbox 。
@@ -290,7 +305,7 @@ ExBook 提供4种经典颜色和8种个性颜色。
     int func(int n){
         int i=0, sum=0;
         while(sum<n) sum += ++i;
-        return i;
+        return i; 
     }
         \end{lstlisting}
         \fourchoices{$O(\log n)$}{$O(n^{\frac{1}{2}})$}{$O(n)$}{$O(n\log n)$}
@@ -298,10 +313,11 @@ ExBook 提供4种经典颜色和8种个性颜色。
 
 \end{qitems}
 
-\section{自定义章节标题二}
-\subsection{第二章第1节}
+\section{文字录入型做题本第二章（长标题测试长标题测试）}
+\subsection{文字录入型做题本第二章第1节（长标题测试长标题测试）}
 \qanswerloc{20}
-\begin{qitems}[tr]
+
+\begin{qitems}
     
     \begin{bbox}
         \qitem  已知曲线$L:y=\ln\sqrt{x}(2\leqslant x\leqslant4)$，在$L$ 上的任意点$P(x,y)$作切线，记切线与曲线$L$在 $2\leqslant x\leqslant4$
@@ -310,14 +326,11 @@ ExBook 提供4种经典颜色和8种个性颜色。
             \subqitem 求一点$P_0$，使上述面积$S$关于$x$的变化率为零；
             \subqitem 当点$P(x,y)$在曲线上移动至$(\mathrm{e},\dfrac{1}{2})$时，横坐标关于时间的变化率为1，求此时面积关于时间的变化率$\dfrac{\mathrm{d}S}{\mathrm{d}t}.$
         \end{subqitems}
-
     \end{bbox}
 
     \begin{bbox}
         \qitem 以 $yOz$ 面上的平面曲线段$y=f(z)(z\geqslant0)$ 绕$z$轴旋转一周所成旋转曲面与xOy 面围成一个无上盖容器(见图)，现以 3 cm$^3/$s 的速率把水注人容器内，水面的面积以$\pi$ c$m^2$/ s 的速率增大.已知容器底面积为 16$\pi$ c$m^2$,求曲线$y=f(z)$的方程.
-        \imgin{0.2}{fig/img01.png}
-
-        % \includegraphics[width=0.2\textwidth]{img/img01.png}
+        \imgin[0.4]{}{fig/fig01.png}
     \end{bbox}
 
     \begin{bbox}
@@ -356,7 +369,70 @@ ExBook 提供4种经典颜色和8种个性颜色。
             \subqitem 说明你所设计算法的时间复杂度和空间复杂度
         \end{subqitems}
     \end{bbox}
+
 \end{qitems}
+
+\end{document}
 ```
 
-显示效果见文档 [./build/main.pdf](./build/main.pdf)
+## 截图型刷题本
+`example_image_type.tex`
+```latex
+% 使用 ExBook 文档类，并传递选项
+\documentclass[padl]{ExBook} 
+
+\begin{document} 
+
+% 加载配置
+\include{config}
+
+% 加载封面
+\maketitle 
+
+% 加载声明
+\include{contents/pre} 
+
+% 加载广告
+\include{contents/print}
+
+\setcounter{page}{1}
+\tableofcontents 
+    
+\clearpage 
+
+\section{截图型刷题本第一章}
+\subsection{截图型刷题本第一章第1节}
+\qanswerloc{10}
+
+\begin{qitems}
+    \insertimg{1}{3}{0.30}{l}{split-images/}
+\end{qitems} 
+
+\subsection{截图型刷题本第一章第2节}
+\qanswerloc{20}
+
+\begin{qitems}
+    \insertimg{4}{6}{0.30}{l}{split-images/}
+\end{qitems}
+ 
+\section{截图型刷题本第二章}
+\subsection{截图型刷题本第二章第1节}
+\qanswerloc{30}
+
+\begin{qitems}
+    \insertimg{7}{8}{0.30}{l}{split-images/}
+\end{qitems}
+
+\subsection{截图型刷题本第二章第2节}
+\qanswerloc{40}
+
+\begin{qitems}
+    \insertimg{9}{10}{0.30}{l}{split-images/}
+\end{qitems}
+
+\end{document}
+```
+
+# 其他
+示例封面图片来自 [https://wallhaven.cc/](https://wallhaven.cc/)，如有侵权，请联系删除！
+

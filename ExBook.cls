@@ -506,7 +506,7 @@
             \node[anchor=north, inner sep=0pt](image) at ([xshift=10cm, yshift=5cm]current page.north west) {\includegraphics[width=\paperwidth, height=\paperheight, keepaspectratio]{\ExBook@value@coverImg}};
 
             \fill[themeColor!61.8, opacity=0.382] ([yshift=0cm]current page.west) rectangle ++(\paperwidth,2cm);
-            \node[anchor=west, align=left, text width=\textwidth, inner sep=0] at ([yshift=1cm, xshift=1cm]current page.west) {\color{white!61.8} \fontsize{24pt}{0}{\textbf{\ExBook@value@Chead · 刷题本系列}}};
+            \node[anchor=west, align=left, text width=\textwidth, inner sep=0] at ([yshift=1cm, xshift=1cm]current page.west) {\color{white!61.8} \fontsize{24pt}{0}{\textbf{\ExBook@value@PreTitle}}};
             \node[anchor=west, align=left, text width=\textwidth, inner sep=0] at ([yshift=-1cm, xshift=1cm]current page.west) {\fontsize{32pt}{0}{\textbf{\kaishu \ExBook@value@Title}}};
             \node[anchor=west, align=left, text width=\textwidth, inner sep=0] at ([yshift=-2.5cm, xshift=1cm]current page.west) {\fontsize{28pt}{0}{\textbf{\ExBook@value@TitleDescription}}};
             \fill[themeColor!61.8, opacity=0.382] (current page.south west) rectangle ++(\paperwidth,2cm);
@@ -528,7 +528,7 @@
             \node[anchor=north, inner sep=0pt](image) at ([xshift=10cm, yshift=5cm]current page.north west) {\includegraphics[width=\paperwidth, height=\paperheight, keepaspectratio]{\ExBook@value@coverImg}};
 
             \fill[themeColor!6.2] ([yshift=0cm]current page.west) rectangle ++(\paperwidth,2cm);
-            \node[anchor=west, align=left, text width=\textwidth, inner sep=0] at ([yshift=1cm, xshift=1cm]current page.west) {\color{themeColor} \fontsize{24pt}{0}{\textbf{\ExBook@value@Chead · 刷题本系列}}};
+            \node[anchor=west, align=left, text width=\textwidth, inner sep=0] at ([yshift=1cm, xshift=1cm]current page.west) {\color{themeColor} \fontsize{24pt}{0}{\textbf{\ExBook@value@PreTitle}}};
             \node[anchor=west, align=left, text width=\textwidth, inner sep=0] at ([yshift=-1cm, xshift=1cm]current page.west) {\fontsize{32pt}{0}{\textbf{\kaishu \ExBook@value@Title}}};
             \node[anchor=west, align=left, text width=\textwidth, inner sep=0] at ([yshift=-2.5cm, xshift=1cm]current page.west) {\fontsize{28pt}{0}{\textbf{\ExBook@value@TitleDescription}}};
             \fill[themeColor!6.2] (current page.south west) rectangle ++(\paperwidth,2cm);
@@ -833,7 +833,7 @@
             \node[anchor=north, inner sep=0pt](image) at ([xshift=10cm, yshift=0cm]current page.north west) {\includegraphics[width=\paperwidth, height=\paperheight, keepaspectratio]{\ExBook@value@coverImg}};
        
             \fill[themeColor!61.8, opacity=0.382] ([yshift=0cm]current page.west) rectangle ++(\paperwidth,2cm);
-            \node[anchor=west, align=left, text width=\textwidth, inner sep=0] at ([yshift=1cm, xshift=1cm]current page.west) {\color{white!61.8} \fontsize{24pt}{0}{\textbf{\ExBook@value@Chead · 刷题本系列}}};
+            \node[anchor=west, align=left, text width=\textwidth, inner sep=0] at ([yshift=1cm, xshift=1cm]current page.west) {\color{white!61.8} \fontsize{24pt}{0}{\textbf{\ExBook@value@PreTitle}}};
             \node[anchor=west, align=left, text width=\textwidth, inner sep=0] at ([yshift=-1cm, xshift=1cm]current page.west) {\fontsize{32pt}{0}{\textbf{\kaishu \ExBook@value@Title}}};
             \node[anchor=west, align=left, text width=\textwidth, inner sep=0] at ([yshift=-2.8cm, xshift=1cm]current page.west) {\fontsize{28pt}{0}{\textbf{\ExBook@value@TitleDescription}}};
             \fill[themeColor!61.8, opacity=0.382] (current page.south west) rectangle ++(\paperwidth,2cm);
@@ -857,7 +857,7 @@
                 \node[anchor=north, inner sep=0pt](image) at ([xshift=10cm, yshift=0cm]current page.north west) {\includegraphics[width=\paperwidth, height=\paperheight, keepaspectratio]{\ExBook@value@coverImg}};
         
                 \fill[themeColor!6.2] ([yshift=0cm]current page.west) rectangle ++(\paperwidth,2cm);
-                \node[anchor=west, align=left, text width=\textwidth, inner sep=0] at ([yshift=1cm, xshift=1cm]current page.west) {\color{themeColor} \fontsize{24pt}{0}{\textbf{\ExBook@value@Chead · 刷题本系列}}};
+                \node[anchor=west, align=left, text width=\textwidth, inner sep=0] at ([yshift=1cm, xshift=1cm]current page.west) {\color{themeColor} \fontsize{24pt}{0}{\textbf{\ExBook@value@PreTitle}}};
                 \node[anchor=west, align=left, text width=\textwidth, inner sep=0] at ([yshift=-1cm, xshift=1cm]current page.west) {\fontsize{32pt}{0}{\textbf{\kaishu \ExBook@value@Title}}};
                 \node[anchor=west, align=left, text width=\textwidth, inner sep=0] at ([yshift=-2.8cm, xshift=1cm]current page.west) {\fontsize{28pt}{0}{\textbf{\ExBook@value@TitleDescription}}};
                 \fill[themeColor!6.2] (current page.south west) rectangle ++(\paperwidth,2cm);
