@@ -1,18 +1,19 @@
 % 使用 ExBook 文档类，并传递选项
-\documentclass[cs4size,fandol,standard,online]{ExBook} 
-
-
+\documentclass[standard]{ExBook} 
+ 
 \begin{document}
 
-
-% 加载封面  
+% 加载配置  
 \include{config}
 
 % 加载封面
 \maketitle 
-
+ 
 % 加载声明
 \include{contents/pre} 
+
+% 加载广告
+\include{contents/print}
 
 \setcounter{page}{1}
 \tableofcontents 
@@ -22,7 +23,8 @@
 \section{文字录入型做题本第一章}
 \subsection{文字录入型做题本第一章第1节}\qanswerloc{10}
 
-\begin{qitems}[optprefix=(, optsuffix=)]
+\begin{qitems}
+
     \begin{bbox}
         \qitem 设$f(x)$满足$2f(x)+f(1-x)=x^2 abc$，则$ \displaystyle\sum \limits_{n}^{0}f(x)=\blankline.$
     \end{bbox}
@@ -47,7 +49,6 @@
 
     \begin{bbox}
         \qitem  可以用\blankbox 定义一个完整的数据结构。\textwater
-
         \fourchoices{数据元素}{数据对象}{数据关系}{抽象数据类型}     
     \end{bbox}
 
@@ -89,10 +90,11 @@
 
 \end{qitems}
 
-\section{文字录入型做题本第二章}
-\subsection{文字录入型做题本第二章第1节}
+\section{文字录入型做题本第二章（长标题测试长标题测试）}
+\subsection{文字录入型做题本第二章第1节（长标题测试长标题测试）}
 \qanswerloc{20}
-\begin{qitems}[]
+
+\begin{qitems}
     
     \begin{bbox}
         \qitem  已知曲线$L:y=\ln\sqrt{x}(2\leqslant x\leqslant4)$，在$L$ 上的任意点$P(x,y)$作切线，记切线与曲线$L$在 $2\leqslant x\leqslant4$
@@ -101,14 +103,11 @@
             \subqitem 求一点$P_0$，使上述面积$S$关于$x$的变化率为零；
             \subqitem 当点$P(x,y)$在曲线上移动至$(\mathrm{e},\dfrac{1}{2})$时，横坐标关于时间的变化率为1，求此时面积关于时间的变化率$\dfrac{\mathrm{d}S}{\mathrm{d}t}.$
         \end{subqitems}
-
     \end{bbox}
 
     \begin{bbox}
         \qitem 以 $yOz$ 面上的平面曲线段$y=f(z)(z\geqslant0)$ 绕$z$轴旋转一周所成旋转曲面与xOy 面围成一个无上盖容器(见图)，现以 3 cm$^3/$s 的速率把水注人容器内，水面的面积以$\pi$ c$m^2$/ s 的速率增大.已知容器底面积为 16$\pi$ c$m^2$,求曲线$y=f(z)$的方程.
         \imgin[0.4]{}{fig/fig01.png}
-
-        % \includegraphics[width=0.2\textwidth]{img/img01.png}
     \end{bbox}
 
     \begin{bbox}
@@ -147,6 +146,7 @@
             \subqitem 说明你所设计算法的时间复杂度和空间复杂度
         \end{subqitems}
     \end{bbox}
+
 \end{qitems}
 
 \end{document}
