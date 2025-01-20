@@ -54,8 +54,6 @@
 \DeclareOption{single}{\def\@pageformat{single}\def\myPageFormat{4}}  
 \DeclareOption{padp}{\def\@pageformat{padp}\def\myPageFormat{5}}  
 
-% 深色模式
-
 % 加载基础类
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{article}}
 \ProcessOptions\relax
@@ -64,7 +62,7 @@
 %                    *****************************
 %                    **        加载宏包       **
 %                    *****************************
-\RequirePackage[fontset = \@fontset, punct=kaiming,cs4size]{ctex}
+\RequirePackage[fontset = \@fontset, punct=kaiming,zihao=-4]{ctex}
 \RequirePackage{tabularx, ifthen} % 排选项用
 \RequirePackage{xcolor,graphicx,caption} % 彩色、图片、图释
 \RequirePackage{geometry,fancyhdr} % 纸张、边距、页眉、页脚
@@ -995,6 +993,7 @@
 \define@key{qitems}{suffix}[.]{\def\@suffix{#1}} 
 \define@key{qitems}{optprefix}[]{\def\@optprefix{#1}} 
 \define@key{qitems}{optsuffix}[]{\def\@optsuffix{#1}} 
+\define@key{qitems}{startnum}[0]{\def\@startnum{#1}} 
 
 % 定义题目环境
 \newenvironment{qitems}[1][]{
@@ -1017,6 +1016,13 @@
     \fi
     \ifx\@optsuffix\undefined
         \def\@optsuffix{.} 
+    \fi 
+
+    \ifx\@startnum\undefined
+        \def\@startnum{0}
+    \else
+        \setcounter{QuestionCounter}{\@startnum}
+        \addtocounter{QuestionCounter}{-1}
     \fi
 
 	\par \begingroup \par
@@ -1027,15 +1033,17 @@
 }
 
 % 定义题目命令 
-\newcommand{\qitem}[1][]{
+\NewDocumentCommand{\qitem}{O{} O{}}{
 	\stepcounter{QuestionCounter}
     \vspace{2mm} 
     \if@showcounter
-        #1\@prefix\arabic{QuestionCounter}\@suffix
+        #1\@prefix\arabic{QuestionCounter}\@suffix#2
     \else
-        #1\@prefix\@suffix 
+        #1\@prefix\@suffix#2
     \fi
 }
+
+
 
 % 定义小问环境
 \newlist{subqitems}{enumerate}{2}

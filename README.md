@@ -151,6 +151,7 @@ ExBook 提供4种经典颜色和8种个性颜色。
    环境选项：
    * `unshow`：环境内不显示题目编号
    * `unreset`：环境内不重置题目编号（默认重置）
+   * `startnum`：起始编号（数字）
    * `prefix`：自定义题目编号前缀，比如`prefix=（`
    * `suffix`：自定义题目编号后缀，比如`suffix=）`
    * `optprefix`：自定义环境内选择题选项编号前缀，比如`optprefix=(`
@@ -167,7 +168,7 @@ ExBook 提供4种经典颜色和8种个性颜色。
    ```
    
    命令选项：
-   * `\qitem["text"]`，`"text"`会出现在题目编号前缀的前面
+   * `\qitem["text1"][text2]`，`"text1"`会出现在题目编号前缀的前面，`"text2"`会出现在题目编号后缀的后面
 4. 小问环境
    ```latex
     \begin{subqitems}
