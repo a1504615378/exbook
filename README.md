@@ -58,7 +58,7 @@
 1. 在 overleaf 上在线使用 ExBook
 2. 在本地使用 ExBook
 
-具体教程见：[官方网站](https://exbook.github.io/)
+<!-- 具体教程见：[官方网站](https://exbook.github.io/) -->
 
 注意：使用此项目需要一点 Latex 基础！
 
@@ -210,6 +210,10 @@ ExBook 提供4种经典颜色和8种个性颜色。
    * 答案页指示命令
     ```latex
     \qanswerloc{10} % 将会显示 “此部分答案见原书 P10”
+    ```
+   * 自由标题
+    ```latex
+    \autotitle[位置（默认居中），l靠左、r靠右]{标题}{后缀} % 将会显示 “此部分答案见原书 P10”
     ```
 
 ## 页面水印设置

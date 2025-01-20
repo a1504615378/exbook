@@ -298,6 +298,26 @@
     \end{minipage}
 }
 
+\newcommand{\autotilte}[3][]{
+    \par
+
+    \ifx&#1& % 判断是否有对齐参数
+        \centering
+    \else
+        \ifx#1l % 左对齐
+            \raggedright
+        \else
+            \ifx#1r % 右对齐
+                \raggedleft
+            \else % 默认居中
+                \centering
+            \fi
+        \fi
+    \fi
+    \begingroup \heiti{#2} \endgroup #3
+    \par
+}
+
 \newcommand{\insertimg}[5]{
     \foreach \n in {#1,...,#2} {
         \begin{bbox}
