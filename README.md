@@ -16,6 +16,11 @@
     <a href="https://exbook.github.io/">官方网站</a>
 </div>
 
+<div align="center">
+<br>微信交流群⬇️<br><br>
+ <img src="./README.IMAGE/wcqr.png" width="18% alt="wcqr" />
+</div>
+
 <!-- toc -->
 - [简介](#简介)
 - [如何使用](#如何使用)
