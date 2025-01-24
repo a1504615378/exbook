@@ -651,17 +651,16 @@
     
     \newenvironment{bbox}
     {
-
-    \begin{minipage}{\textwidth}
+        \begingroup
     }
     {
-    \end{minipage}
-    \if@water
-    \begin{tikzpicture}[overlay,remember picture]
-        \node[anchor=east, opacity=0.08] at ([xshift=-1.2cm, yshift=4.8cm]current page.south east)  {\includegraphics[width=0.16\textwidth]{\ExBook@value@waterImg}}; 
-    \end{tikzpicture}
-    \fi
-    \newpage % 在环境结束时插入新页面
+        \endgroup
+        \if@water
+        \begin{tikzpicture}[overlay,remember picture]
+            \node[anchor=east, opacity=0.08] at ([xshift=-1.2cm, yshift=4.8cm]current page.south east)  {\includegraphics[width=0.16\textwidth]{\ExBook@value@waterImg}}; 
+        \end{tikzpicture}
+        \fi
+        \newpage % 在环境结束时插入新页面
     }
 \or
  %                         *****************
@@ -981,10 +980,8 @@
     \newenvironment{bbox}
     {
         \begingroup
-        \begin{minipage}{\textwidth}
     }
     {
-        \end{minipage}
         \if@water
         \begin{tikzpicture}[overlay,remember picture]
             \node[anchor=east, opacity=0.08] at ([xshift=-1.2cm, yshift=4.8cm]current page.south east)  {\includegraphics[width=0.16\textwidth]{\ExBook@value@waterImg}}; 
