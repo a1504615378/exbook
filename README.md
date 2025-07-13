@@ -17,7 +17,7 @@
 </div>
 
 <div align="center">
-<br>微信交流群⬇️（如二维码失效，请添加群主微信`shang_an_001`拉你进群）<br><br>
+<br>微信交流群 <br><br>
  <img src="./README.IMAGE/wcqr.png" width="18% alt="wcqr" />
 </div>
 
